@@ -1,0 +1,102 @@
+.u-animate-hide {
+	opacity: 0;
+	overflow-x: hidden;
+}
+
+.u-animate-fade-in {
+	opacity: 0;
+	animation-name: kf-fade-in;
+	animation-duration: vars(transition, med);
+	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes kf-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.u-animate-fade-out {
+	position: relative;
+	animation-name: kf-fade-out;
+	animation-duration: vars(transition, med);
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes kf-fade-out {
+	0% {
+		position: relative;
+		left: 0;
+		opacity: 1;
+		transform: scale(1) rotate(180);
+	}
+
+	50% {
+		left: -50px;
+		opacity: 1;
+		transform: scale(2) rotate(360);
+	}
+
+	100% {
+		left: -200px;
+		opacity: 0;
+		transform: scale(0) rotate(960);
+	}
+}
+
+.u-animate-slide-in {
+	opacity: 0;
+	transform: translateX(-100vw);
+	animation-name: kf-slide-in;
+	animation-duration: vars(transition, med);
+	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes kf-slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(-100vw);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.u-animate-zoom-in {
+	opacity: 0;
+	transform: scale(0);
+	animation-name: kf-zoom-in;
+	animation-duration: vars(transition, med);
+	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes kf-zoom-in {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

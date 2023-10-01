@@ -1,0 +1,115 @@
+.u-spacing-t-sml {
+	padding-top: rem(spacing(2));
+}
+
+.u-spacing-t-med {
+	padding-top: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-top: rem(spacing(2.5));
+	}
+}
+
+.u-spacing-t-lrg {
+	padding-top: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-top: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-top: rem(spacing(3));
+	}
+}
+
+.u-spacing-t-xlrg {
+	@include mq(vars(breakpoint, sml)) {
+		padding-top: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-top: rem(spacing(3));
+	}
+
+	@include mq(vars(breakpoint, lrg)) {
+		padding-top: rem(spacing(3.5));
+	}
+}
+
+.u-spacing-t-xxlrg {
+	padding-top: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-top: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-top: rem(spacing(3));
+	}
+
+	@include mq(vars(breakpoint, lrg)) {
+		padding-top: rem(spacing(3.5));
+	}
+
+	@include mq(vars(breakpoint, xlrg)) {
+		padding-top: rem(spacing(4));
+	}
+}
+
+.u-spacing-b-sml {
+	padding-bottom: rem(spacing(2));
+}
+
+.u-spacing-b-med {
+	padding-bottom: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-bottom: rem(spacing(2.5));
+	}
+}
+
+.u-spacing-b-lrg {
+	padding-bottom: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-bottom: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-bottom: rem(spacing(3));
+	}
+}
+
+.u-spacing-b-xlrg {
+	@include mq(vars(breakpoint, sml)) {
+		padding-bottom: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-bottom: rem(spacing(3));
+	}
+
+	@include mq(vars(breakpoint, lrg)) {
+		padding-bottom: rem(spacing(3.5));
+	}
+}
+
+.u-spacing-b-xxlrg {
+	padding-bottom: rem(spacing(2));
+
+	@include mq(vars(breakpoint, sml)) {
+		padding-bottom: rem(spacing(2.5));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		padding-bottom: rem(spacing(3));
+	}
+
+	@include mq(vars(breakpoint, lrg)) {
+		padding-bottom: rem(spacing(3.5));
+	}
+
+	@include mq(vars(breakpoint, xlrg)) {
+		padding-bottom: rem(spacing(4));
+	}
+}

@@ -1,0 +1,150 @@
+[class*=u-link-] a:not(.u-btn) {
+	display: inline-block;
+	position: relative;
+	text-decoration-skip-ink: auto;
+
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		inset: 0 (-(rem(4px))) 0 (-(rem(4px)));
+
+		@include transition(all);
+		@include hardware(true);
+	}
+
+	&:focus::after {
+		opacity: 1;
+	}
+
+	@include mq-hover {
+		cursor: pointer;
+
+		@include transition;
+
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+}
+
+.u-link-dark a:not(.u-btn) {
+	color: $dark;
+}
+
+.u-link-light a:not(.u-btn) {
+	color: $light;
+}
+
+.u-link-color-1 a:not(.u-btn) {
+	color: $color-1;
+}
+
+.u-link-color-2 a:not(.u-btn) {
+	color: $color-2;
+}
+
+.u-link-color-3 a:not(.u-btn) {
+	color: $color-3;
+}
+
+.u-link-color-4 a:not(.u-btn) {
+	color: $color-4;
+}
+
+.u-link-hover-dark a:not(.u-btn) {
+	&:focus {
+		color: $dark;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $dark;
+		}
+	}
+}
+
+.u-link-hover-light a:not(.u-btn) {
+	&:focus {
+		color: $light;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $light;
+		}
+	}
+}
+
+.u-link-hover-color-1 a:not(.u-btn) {
+	&:focus {
+		color: $color-1;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-1;
+		}
+	}
+}
+
+.u-link-hover-color-2 a:not(.u-btn) {
+	&:focus {
+		color: $color-2;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-2;
+		}
+	}
+}
+
+.u-link-hover-color-3 a:not(.u-btn) {
+	&:focus {
+		color: $color-3;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-3;
+		}
+	}
+}
+
+.u-link-hover-color-4 a:not(.u-btn) {
+	&:focus {
+		color: $color-4;
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-4;
+		}
+	}
+}
+
+.u-link-background-hover-dark a:not(.u-btn)::after {
+	background-color: $dark;
+}
+
+.u-link-background-hover-light a:not(.u-btn)::after {
+	background-color: $light;
+}
+
+.u-link-background-hover-color-1 a:not(.u-btn)::after {
+	background-color: $color-1;
+}
+
+.u-link-background-hover-color-2 a:not(.u-btn)::after {
+	background-color: $color-2;
+}
+
+.u-link-background-hover-color-3 a:not(.u-btn)::after {
+	background-color: $color-3;
+}
+
+.u-link-background-hover-color-4 a:not(.u-btn)::after {
+	background-color: $color-4;
+}

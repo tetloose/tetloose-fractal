@@ -1,0 +1,80 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "target": "ES2020",
+        "module": "esnext",
+        "esModuleInterop": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "es5",
+            "ES2020",
+            "scripthost",
+            "es2015.promise"
+        ],
+        "declaration": false,
+        "moduleResolution": "node",
+        "types": [
+            "node",
+            "vitest/globals",
+            "@testing-library/jest-dom",
+            "vitest-fetch-mock"
+        ],
+        "resolveJsonModule": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "@styles/*": [
+                "./src/scss/*"
+            ],
+            "@components": [
+                "./src/components"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@patterns": [
+                "./src/patterns"
+            ],
+            "@patterns/*": [
+                "./src/patterns/*"
+            ],
+            "@elements": [
+                "src/elements"
+            ],
+            "@utilities": [
+                "src/utilities"
+            ],
+            "@utilities/*": [
+                "src/utilities/*"
+            ],
+            "@config": [
+                "src/config"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ]
+        }
+    },
+    "include": [
+        "src",
+        "declaration.d.ts",
+        "./src/patterns/**/*.ts",
+        "./src/patterns/**/*.scss",
+        "./src/scss/**/*.scss",
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        ".vscode",
+        "node_modules",
+        "dist"
+    ]
+}

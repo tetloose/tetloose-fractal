@@ -1,0 +1,9 @@
+@import '../../../styles/settings';
+
+.alert {
+	background-color: #69a5ff;
+
+	:global(.u-btn) {
+		background-color: rgb(13 0 255);
+	}
+}

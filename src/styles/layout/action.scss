@@ -1,0 +1,37 @@
+.l-action {
+	padding-top: rem(spacing(.5));
+
+	@include mq(vars(breakpoint, sml)) {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-right: -(rem(spacing(.2)));
+		margin-left: -(rem(spacing(.2)));
+		align-items: center;
+	}
+
+	&.is-align-right {
+		@include mq(vars(breakpoint, sml)) {
+			justify-content: flex-end;
+		}
+	}
+
+	&.is-align-center {
+		@include mq(vars(breakpoint, sml)) {
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		margin-top: rem(spacing(.5));
+
+		@include mq(vars(breakpoint, sml), max-width) {
+			display: block;
+			width: 100%;
+		}
+
+		@include mq(vars(breakpoint, sml)) {
+			margin-right: rem(spacing(.2));
+			margin-left: rem(spacing(.2));
+		}
+	}
+}

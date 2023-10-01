@@ -1,0 +1,130 @@
+.u-border {
+	border-width: rem(2px);
+	border-style: solid;
+}
+
+.u-border-b {
+	border-width: 0 0 rem(2px);
+	border-style: solid;
+}
+
+.u-border-t {
+	border-width: rem(2px) 0 0;
+	border-style: solid;
+}
+
+.u-border-r {
+	border-width: 0 rem(2px) 0;
+	border-style: solid;
+}
+
+.u-border-l {
+	border-width: 0 0 0 rem(2px);
+	border-style: solid;
+}
+
+.u-border-l-r {
+	border-width: 0 rem(2px);
+	border-style: solid;
+}
+
+.u-border-t-l {
+	border-width: rem(2px) 0 0 rem(2px);
+	border-style: solid;
+}
+
+.u-border-dark:not(.u-form) {
+	border-color: $dark;
+}
+
+.u-border-light:not(.u-form) {
+	border-color: $light;
+}
+
+.u-border-color-1:not(.u-form) {
+	border-color: $color-1;
+}
+
+.u-border-color-2:not(.u-form) {
+	border-color: $color-2;
+}
+
+.u-border-color-3:not(.u-form) {
+	border-color: $color-3;
+}
+
+.u-border-color-4:not(.u-form) {
+	border-color: $color-4;
+}
+
+.u-border-hover-dark:not(.u-form) {
+	&:focus {
+		border-color: $dark;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $dark;
+		}
+	}
+}
+
+.u-border-hover-light:not(.u-form) {
+	&:focus {
+		border-color: $light;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $light;
+		}
+	}
+}
+
+.u-border-hover-color-1:not(.u-form) {
+	&:focus {
+		border-color: $color-1;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-1;
+		}
+	}
+}
+
+.u-border-hover-color-2:not(.u-form) {
+	&:focus {
+		border-color: $color-2;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-2;
+		}
+	}
+}
+
+.u-border-hover-color-3:not(.u-form) {
+	&:focus {
+		border-color: $color-3;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-3;
+		}
+	}
+}
+
+.u-border-hover-color-4:not(.u-form) {
+	&:focus {
+		border-color: $color-4;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-4;
+		}
+	}
+}

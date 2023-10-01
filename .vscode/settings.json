@@ -1,0 +1,59 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "SCSS": "CSS",
+        "nunjucks": "html",
+        "njk": "html",
+        "nj": "html",
+        "javascript": "javascriptreact",
+        "typescript": "typescript"
+    },
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "files.exclude": {
+        ".editorconfig": false,
+        ".env": false,
+        ".env.example": false,
+        ".eslintrc.js": false,
+        ".gitignore": false,
+        ".prettierrc": false,
+        ".stylelintrc.js": false,
+        "dist": false,
+        "coverage": false,
+        "vitest.config.ts": false,
+        "vitest.setup.ts": false,
+        "declaration.d.ts": false,
+        "gulpfile.babel.js": false,
+        "package.json": false,
+        "postcss.config.js": false,
+        "toolkit": false,
+        "tsconfig.json": false,
+        "webpack.config.js": false,
+        "yarn.lock": false,
+        ".gulp": false,
+        ".husky": false,
+        ".scripts": false,
+        "node_modules": false,
+        ".vscode": false,
+        "README.md": false,
+        "package": false
+    },
+    "workspace.isHidden": false
+}

@@ -1,0 +1,550 @@
+@import '../reset/form';
+@import 'elem/date';
+@import 'elem/datetime-local';
+@import 'elem/email';
+@import 'elem/file';
+@import 'elem/label';
+@import 'elem/month';
+@import 'elem/number';
+@import 'elem/password';
+@import 'elem/search';
+@import 'elem/select';
+@import 'elem/tel';
+@import 'elem/text';
+@import 'elem/textarea';
+@import 'elem/url';
+@import 'elem/week';
+
+.u-form {
+	$form: &;
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	label[for] {
+		@include mq-hover {
+			cursor: pointer;
+		}
+	}
+
+	.wpcf7 {
+		margin-top: -(rem(spacing(1)));
+
+		.wpcf7-acceptance {
+			display: block;
+			width: 100%;
+			text-align: right;
+		}
+
+		.wpcf7-response-output {
+			margin: 0;
+			padding: rem(spacing(1) 0 0 0);
+			border-width: 0;
+			text-align: center;
+
+			@include type-small;
+
+			.u-form-validation-light & {
+				color: $light;
+			}
+
+			.u-form-validation-dark & {
+				color: $dark;
+			}
+
+			.u-form-validation-color-1 & {
+				color: $color-1;
+			}
+
+			.u-form-validation-color-2 & {
+				color: $color-2;
+			}
+
+			.u-form-validation-color-3 & {
+				color: $color-3;
+			}
+
+			.u-form-validation-color-4 & {
+				color: $color-4;
+			}
+		}
+	}
+
+	&__field {
+		margin-top: rem(spacing(1));
+
+		input {
+			margin-top: rem(spacing(.5));
+		}
+
+		&:first-of-type {
+			margin-top: 0;
+
+			input {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.wpcf7-not-valid-tip,
+	&__validation {
+		display: block;
+		padding: rem(spacing(.5) 0 0 0);
+
+		@include type-small;
+
+		.u-form-validation-light & {
+			color: $light;
+		}
+
+		.u-form-validation-dark & {
+			color: $dark;
+		}
+
+		.u-form-validation-color-1 & {
+			color: $color-1;
+		}
+
+		.u-form-validation-color-2 & {
+			color: $color-2;
+		}
+
+		.u-form-validation-color-3 & {
+			color: $color-3;
+		}
+
+		.u-form-validation-color-4 & {
+			color: $color-4;
+		}
+	}
+
+	&__options {
+		margin-top: rem(spacing(1));
+
+		label {
+			position: relative;
+
+			@include mq(vars(breakpoint, lrg), max-width) {
+				padding-right: rem(spacing(1.5));
+			}
+
+			@include mq(vars(breakpoint, lrg)) {
+				padding-right: rem(spacing(1));
+			}
+
+			@include mq-hover {
+				cursor: pointer;
+			}
+		}
+
+		input {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%) scale(1.1);
+
+			@include transition(all);
+
+			&:focus {
+				transform: translateY(-50%) scale(1.3);
+			}
+		}
+	}
+}
+
+.u-form-light textarea,
+.u-form-light input:not([type=submit]) {
+	color: $light;
+
+	&::placeholder {
+		color: $light;
+	}
+}
+
+.u-form-dark textarea,
+.u-form-dark input:not([type=submit]) {
+	color: $dark;
+
+	&::placeholder {
+		color: $dark;
+	}
+}
+
+.u-form-color-1 textarea,
+.u-form-color-1 input:not([type=submit]) {
+	color: $color-1;
+
+	&::placeholder {
+		color: $color-1;
+	}
+}
+
+.u-form-color-2 textarea,
+.u-form-color-2 input:not([type=submit]) {
+	color: $color-2;
+
+	&::placeholder {
+		color: $color-2;
+	}
+}
+
+.u-form-color-3 textarea,
+.u-form-color-3 input:not([type=submit]) {
+	color: $color-3;
+
+	&::placeholder {
+		color: $color-3;
+	}
+}
+
+.u-form-color-4 textarea,
+.u-form-color-4 input:not([type=submit]) {
+	color: $color-4;
+
+	&::placeholder {
+		color: $color-4;
+	}
+}
+
+.u-form-hover-light textarea,
+.u-form-hover-light input:not([type=submit]) {
+	&:focus {
+		color: $light;
+
+		&::placeholder {
+			color: $light;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $light;
+
+			&::placeholder {
+				color: $light;
+			}
+		}
+	}
+}
+
+.u-form-hover-dark textarea,
+.u-form-hover-dark input:not([type=submit]) {
+	&:focus {
+		color: $dark;
+
+		&::placeholder {
+			color: $dark;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $dark;
+
+			&::placeholder {
+				color: $dark;
+			}
+		}
+	}
+}
+
+.u-form-hover-color-1 textarea,
+.u-form-hover-color-1 input:not([type=submit]) {
+	&:focus {
+		color: $color-1;
+
+		&::placeholder {
+			color: $color-1;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-1;
+
+			&::placeholder {
+				color: $color-1;
+			}
+		}
+	}
+}
+
+.u-form-hover-color-2 textarea,
+.u-form-hover-color-2 input:not([type=submit]) {
+	&:focus {
+		color: $color-2;
+
+		&::placeholder {
+			color: $color-2;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-2;
+
+			&::placeholder {
+				color: $color-2;
+			}
+		}
+	}
+}
+
+.u-form-hover-color-3 textarea,
+.u-form-hover-color-3 input:not([type=submit]) {
+	&:focus {
+		color: $color-3;
+
+		&::placeholder {
+			color: $color-3;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-3;
+
+			&::placeholder {
+				color: $color-3;
+			}
+		}
+	}
+}
+
+.u-form-hover-color-4 textarea,
+.u-form-hover-color-4 input:not([type=submit]) {
+	&:focus {
+		color: $color-4;
+
+		&::placeholder {
+			color: $color-4;
+		}
+	}
+
+	@include mq-hover {
+		&:hover {
+			color: $color-4;
+
+			&::placeholder {
+				color: $color-4;
+			}
+		}
+	}
+}
+
+.u-form-bg-light textarea,
+.u-form-bg-light input:not([type=submit]) {
+	background-color: $light;
+}
+
+.u-form-bg-dark textarea,
+.u-form-bg-dark input:not([type=submit]) {
+	background-color: $dark;
+}
+
+.u-form-bg-color-1 textarea,
+.u-form-bg-color-1 input:not([type=submit]) {
+	background-color: $color-1;
+}
+
+.u-form-bg-color-2 textarea,
+.u-form-bg-color-2 input:not([type=submit]) {
+	background-color: $color-2;
+}
+
+.u-form-bg-color-3 textarea,
+.u-form-bg-color-3 input:not([type=submit]) {
+	background-color: $color-3;
+}
+
+.u-form-bg-color-4 textarea,
+.u-form-bg-color-4 input:not([type=submit]) {
+	background-color: $color-4;
+}
+
+.u-form-bg-hover-light textarea,
+.u-form-bg-hover-light input:not([type=submit]) {
+	&:focus {
+		background-color: $light;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $light;
+		}
+	}
+}
+
+.u-form-bg-hover-dark textarea,
+.u-form-bg-hover-dark input:not([type=submit]) {
+	&:focus {
+		background-color: $dark;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $dark;
+		}
+	}
+}
+
+.u-form-bg-hover-color-1 textarea,
+.u-form-bg-hover-color-1 input:not([type=submit]) {
+	&:focus {
+		background-color: $color-1;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $color-1;
+		}
+	}
+}
+
+.u-form-bg-hover-color-2 textarea,
+.u-form-bg-hover-color-2 input:not([type=submit]) {
+	&:focus {
+		background-color: $color-2;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $color-2;
+		}
+	}
+}
+
+.u-form-bg-hover-color-3 textarea,
+.u-form-bg-hover-color-3 input:not([type=submit]) {
+	&:focus {
+		background-color: $color-3;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $color-3;
+		}
+	}
+}
+
+.u-form-bg-hover-color-4 textarea,
+.u-form-bg-hover-color-4 input:not([type=submit]) {
+	&:focus {
+		background-color: $color-4;
+	}
+
+	@include mq-hover {
+		&:hover {
+			background-color: $color-4;
+		}
+	}
+}
+
+.u-form-border-light textarea,
+.u-form-border-light input:not([type=submit]) {
+	border-color: $light;
+}
+
+.u-form-border-dark textarea,
+.u-form-border-dark input:not([type=submit]) {
+	border-color: $dark;
+}
+
+.u-form-border-color-1 textarea,
+.u-form-border-color-1 input:not([type=submit]) {
+	border-color: $color-1;
+}
+
+.u-form-border-color-2 textarea,
+.u-form-border-color-2 input:not([type=submit]) {
+	border-color: $color-2;
+}
+
+.u-form-border-color-3 textarea,
+.u-form-border-color-3 input:not([type=submit]) {
+	border-color: $color-3;
+}
+
+.u-form-border-color-4 textarea,
+.u-form-border-color-4 input:not([type=submit]) {
+	border-color: $color-4;
+}
+
+.u-form-border-hover-light textarea,
+.u-form-border-hover-light input:not([type=submit]) {
+	&:focus {
+		border-color: $light;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $light;
+		}
+	}
+}
+
+.u-form-border-hover-dark textarea,
+.u-form-border-hover-dark input:not([type=submit]) {
+	&:focus {
+		border-color: $dark;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $dark;
+		}
+	}
+}
+
+.u-form-border-hover-color-1 textarea,
+.u-form-border-hover-color-1 input:not([type=submit]) {
+	&:focus {
+		border-color: $color-1;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-1;
+		}
+	}
+}
+
+.u-form-border-hover-color-2 textarea,
+.u-form-border-hover-color-2 input:not([type=submit]) {
+	&:focus {
+		border-color: $color-2;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-2;
+		}
+	}
+}
+
+.u-form-border-hover-color-3 textarea,
+.u-form-border-hover-color-3 input:not([type=submit]) {
+	&:focus {
+		border-color: $color-3;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-3;
+		}
+	}
+}
+
+.u-form-border-hover-color-4 textarea,
+.u-form-border-hover-color-4 input:not([type=submit]) {
+	&:focus {
+		border-color: $color-4;
+	}
+
+	@include mq-hover {
+		&:hover {
+			border-color: $color-4;
+		}
+	}
+}

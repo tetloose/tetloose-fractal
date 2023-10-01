@@ -1,0 +1,7 @@
+.u-content ul,
+.u-ul {
+	margin-left: rem(18px);
+	list-style-type: disc;
+
+	@include type-paragraph;
+}

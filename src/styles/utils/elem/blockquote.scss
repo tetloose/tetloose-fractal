@@ -1,0 +1,50 @@
+.u-content blockquote,
+.u-blockquote {
+	position: relative;
+	padding-left: rem(spacing(1));
+
+	footer {
+		@include type-small;
+		@include f-body-bold;
+
+		padding-top: rem(spacing(.2));
+	}
+
+	> *:first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: rem(4px);
+
+		.u-dark & {
+			background-color: $dark;
+		}
+
+		.u-light & {
+			background-color: $light;
+		}
+
+		.u-color-1 & {
+			background-color: $color-1;
+		}
+
+		.u-color-2 & {
+			background-color: $color-2;
+		}
+
+		.u-color-3 & {
+			background-color: $color-3;
+		}
+
+		.u-color-4 & {
+			background-color: $color-4;
+		}
+	}
+}

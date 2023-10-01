@@ -1,0 +1,16 @@
+<div
+    style="opacity: 0"
+    data-module="{{component.module}}"
+    data-animation="{{component.animation}}"
+    data-duration="{{component.duration}}"
+    data-styles="{{component.styles}}"
+    class="u-animate-hide {{component.utilities}}">
+    <div class="l-row">
+        <div class="l-row__col is-half">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="l-row__col is-half">
+            {{> @button }}
+        </div>
+    </div>
+</div>

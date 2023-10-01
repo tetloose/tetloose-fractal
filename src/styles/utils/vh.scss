@@ -1,0 +1,21 @@
+.u-vh-fullscreen {
+	@include mq(vars(breakpoint, med), max-width) {
+		min-height: calc(vars(vh, fullscreen) - rem(80px));
+	}
+
+	@include mq(vars(breakpoint, med)) {
+		min-height: calc(vars(vh, fullscreen) - rem(120px));
+	}
+}
+
+.u-vh-half {
+	min-height: vars(vh, half);
+}
+
+.u-vh-1-third {
+	min-height: vars(vh, one-third);
+}
+
+.u-vh-2-third {
+	min-height: vars(vh, two-third);
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Button",
+    "name": "Button",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "title": "Button"
+    },
+	"variants": [
+		{
+			"name": "Button Style 2",
+            "context": {
+                "title": "Button 2"
+            }
+		},
+		{
+			"name": "Button Style 3",
+            "context": {
+                "title": "Button 3"
+            }
+		}
+	]
+}

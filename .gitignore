@@ -1,0 +1,14 @@
+.husky
+coverage
+.htaccess
+.env
+!.env.example
+!.gitkeep
+sftp-config.json
+*.log
+*.map
+node_modules/
+.DS_Store
+*.sql
+dist
+dist/**/*

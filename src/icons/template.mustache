@@ -1,0 +1,17 @@
+@include font-face('icons', '../icons/icons');
+
+[class*=u-icon-] {
+	display: inline-block;
+	font-style: normal;
+	font-family: icons, sans-serif;
+	line-height: 1;
+	text-rendering: auto;
+
+	@include font-smoothing;
+}
+{{#icons}}
+
+.u-icon-{{name}}::before {
+	content: '\{{code}}';
+}
+{{/icons}}

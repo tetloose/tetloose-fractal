@@ -1,0 +1,47 @@
+.u-content pre,
+.u-pre {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	padding: rem(spacing(1));
+	overflow: auto;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	page-break-inside: avoid;
+
+	@include type-paragraph;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: rem(4px);
+
+		.u-dark & {
+			background-color: colors('dark');
+		}
+
+		.u-light & {
+			background-color: colors('light');
+		}
+
+		.u-color-1 & {
+			background-color: colors('color-1');
+		}
+
+		.u-color-2 & {
+			background-color: colors('color-2');
+		}
+
+		.u-color-3 & {
+			background-color: colors('color-3');
+		}
+
+		.u-color-4 & {
+			background-color: colors('color-4');
+		}
+	}
+}

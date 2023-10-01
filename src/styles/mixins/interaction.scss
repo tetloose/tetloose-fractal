@@ -1,0 +1,11 @@
+@mixin interaction($disabled: false) {
+	@if $disabled {
+		cursor: default;
+		pointer-events: none;
+		user-select: none;
+	} @else {
+		cursor: auto;
+		pointer-events: all;
+		user-select: all;
+	}
+}

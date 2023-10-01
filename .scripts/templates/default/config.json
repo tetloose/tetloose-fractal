@@ -1,0 +1,21 @@
+{
+    "title": "ObjectName",
+    "name": "ObjectName",
+    "tags": [
+        "sprint-{UPDATE-ME}",
+        "author:{UPDATE-ME}"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+
+    },
+	"variants": [
+		{
+			"name": "Variant",
+            "context": {}
+		}
+	]
+}

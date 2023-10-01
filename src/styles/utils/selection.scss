@@ -1,0 +1,71 @@
+.u-selection-color-light {
+	::selection {
+		color: $light;
+	}
+}
+
+.u-selection-background-light {
+	::selection {
+		background-color: $light;
+	}
+}
+
+.u-selection-color-dark {
+	::selection {
+		color: $dark;
+	}
+}
+
+.u-selection-background-dark {
+	::selection {
+		background-color: $dark;
+	}
+}
+
+.u-selection-color-color-1 {
+	::selection {
+		color: $color-1;
+	}
+}
+
+.u-selection-background-color-1 {
+	::selection {
+		background-color: $color-1;
+	}
+}
+
+.u-selection-color-color-2 {
+	::selection {
+		color: $color-2;
+	}
+}
+
+.u-selection-background-color-2 {
+	::selection {
+		background-color: $color-2;
+	}
+}
+
+.u-selection-color-color-3 {
+	::selection {
+		color: $color-3;
+	}
+}
+
+.u-selection-background-color-3 {
+	::selection {
+		background-color: $color-3;
+	}
+}
+
+.u-selection-color-color-4 {
+	::selection {
+		color: $color-4;
+	}
+}
+
+.u-selection-background-color-4 {
+	::selection {
+		background-color: $color-4;
+	}
+}

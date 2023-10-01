@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+@mixin fluid-type($minVw, $maxVw, $minFontSize, $maxFontSize) {
+	@include mq($minVw, max-width) {
+		font-size: rem($minFontSize);
+	}
+
+	@include mq($minVw) {
+		font-size: rem(calc(#{$minFontSize} + #{strip-unit($maxFontSize - $minFontSize)} * ((100vw - #{$minVw}) / #{strip-unit($maxVw - $minVw)})));
+	}
+
+	@include mq($maxVw) {
+		font-size: rem($maxFontSize);
+	}
+}

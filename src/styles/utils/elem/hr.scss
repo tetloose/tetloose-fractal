@@ -1,0 +1,29 @@
+.u-content hr,
+.u-hr {
+	width: 100%;
+	height: 2px;
+
+	.u-dark & {
+		background-color: $dark;
+	}
+
+	.u-light & {
+		background-color: $light;
+	}
+
+	.u-color-1 & {
+		background-color: $color-1;
+	}
+
+	.u-color-2 & {
+		background-color: $color-2;
+	}
+
+	.u-color-3 & {
+		background-color: $color-3;
+	}
+
+	.u-color-4 & {
+		background-color: $color-4;
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Flex",
+    "name": "Flex",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "title": "Flex Layout"
+    },
+	"variants": [
+		{
+			"name": "Flex Style 2",
+            "context": {
+                "title": "Flex Layout 2"
+            }
+		},
+		{
+			"name": "Flex Style 3",
+            "context": {
+                "title": "Flex Layout 3"
+            }
+		}
+	]
+}

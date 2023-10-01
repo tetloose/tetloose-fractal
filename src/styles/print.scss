@@ -1,0 +1,62 @@
+@import 'settings';
+
+@media print and (color) {
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+}
+
+@media print {
+	* {
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+		filter: none !important;
+	}
+
+	@page {
+		margin: 2cm;
+	}
+
+	object,
+	iframe {
+		display: none !important;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+
+	form,
+	p,
+	ol,
+	ul,
+	img,
+	table {
+		break-inside: avoid;
+	}
+
+	article {
+		page-break-before: always;
+	}
+
+	a {
+		font-weight: 700;
+		text-decoration: none;
+
+		&::after {
+			content: '(' attr(href) ')';
+			font-size: .5em;
+		}
+
+		&[href^=\#]::after {
+			content: '';
+		}
+	}
+}

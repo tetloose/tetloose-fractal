@@ -1,0 +1,29 @@
+{
+    "title": "Spacing",
+    "name": "Spacing",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "title": "Spacing"
+    },
+	"variants": [
+		{
+			"name": "Spacing Style 2",
+            "context": {
+                "title": "Spacing 2"
+            }
+		},
+		{
+			"name": "Spacing Style 3",
+            "context": {
+                "title": "Spacing 3"
+            }
+		}
+	]
+}

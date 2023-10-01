@@ -1,0 +1,143 @@
+.u-content table,
+.u-table {
+	width: 100%;
+	border-style: solid;
+
+	@include mq(vars(breakpoint, med)) {
+		border-collapse: collapse;
+		border-width: 0 0 1px 1px;
+		table-layout: fixed;
+	}
+
+	@include mq(vars(breakpoint, med), max-width) {
+		display: block;
+		border-width: 0 0 1px;
+	}
+
+	tr {
+		@include mq(vars(breakpoint, med)) {
+			border-width: 1px 0 0;
+			border-style: solid;
+		}
+
+		@include mq(vars(breakpoint, med), max-width) {
+			display: block;
+			width: 100%;
+			border-width: 0;
+		}
+
+		.u-dark & {
+			border-color: colors('dark');
+		}
+
+		.u-light & {
+			border-color: colors('light');
+		}
+
+		.u-color-1 & {
+			border-color: colors('color-1');
+		}
+
+		.u-color-2 & {
+			border-color: colors('color-2');
+		}
+
+		.u-color-3 & {
+			border-color: colors('color-3');
+		}
+
+		.u-color-4 & {
+			border-color: colors('color-4');
+		}
+	}
+
+	tfoot,
+	tbody {
+		@include mq(vars(breakpoint, med), max-width) {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	th,
+	td {
+		border-style: solid;
+		text-align: inherit;
+
+		@include type-paragraph;
+
+		@include mq(vars(breakpoint, med)) {
+			padding: rem(spacing(1));
+			border-width: 0 1px 0 0;
+		}
+
+		@include mq(vars(breakpoint, med), max-width) {
+			padding: rem(spacing(1) 0);
+			border-width: 1px 0 0;
+		}
+
+		&.text-align-left {
+			text-align: left;
+		}
+
+		&.text-align-right {
+			text-align: right;
+		}
+
+		&.text-align-center {
+			text-align: center;
+		}
+
+		.u-dark & {
+			border-color: colors('dark');
+		}
+
+		.u-light & {
+			border-color: colors('light');
+		}
+
+		.u-color-1 & {
+			border-color: colors('color-1');
+		}
+
+		.u-color-2 & {
+			border-color: colors('color-2');
+		}
+
+		.u-color-3 & {
+			border-color: colors('color-3');
+		}
+
+		.u-color-4 & {
+			border-color: colors('color-4');
+		}
+	}
+
+	td {
+		@include mq(vars(breakpoint, med), max-width) {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	thead,
+	th {
+		@include mq(vars(breakpoint, med), max-width) {
+			display: none;
+		}
+
+		@include mq(vars(breakpoint, med)) {
+			@include f-heading-bold;
+		}
+	}
+
+	&__th {
+		@include mq(vars(breakpoint, med), max-width) {
+			@include f-heading-bold;
+		}
+
+		@include mq(vars(breakpoint, med)) {
+			display: none;
+		}
+	}
+}

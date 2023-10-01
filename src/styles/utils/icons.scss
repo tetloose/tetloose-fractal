@@ -1,0 +1,71 @@
+@include font-face('icons', '../icons/icons');
+
+[class*=u-icon-] {
+	display: inline-block;
+	font-style: normal;
+	font-family: icons, sans-serif;
+	line-height: 1;
+	text-rendering: auto;
+
+	@include font-smoothing;
+}
+
+.u-icon-news::before {
+	content: '\e90a';
+}
+
+.u-icon-prev::before {
+	content: '\e90b';
+}
+
+.u-icon-next::before {
+	content: '\e90c';
+}
+
+.u-icon-first::before {
+	content: '\e90d';
+}
+
+.u-icon-last::before {
+	content: '\e90e';
+}
+
+.u-icon-songkick::before {
+	content: '\e900';
+}
+
+.u-icon-youtube::before {
+	content: '\e901';
+}
+
+.u-icon-tiktok::before {
+	content: '\e902';
+}
+
+.u-icon-bandcamp::before {
+	content: '\e903';
+}
+
+.u-icon-spotify::before {
+	content: '\e904';
+}
+
+.u-icon-linkedin::before {
+	content: '\e905';
+}
+
+.u-icon-twitter::before {
+	content: '\e906';
+}
+
+.u-icon-vimeo::before {
+	content: '\e907';
+}
+
+.u-icon-instagram::before {
+	content: '\e908';
+}
+
+.u-icon-facebook::before {
+	content: '\e909';
+}

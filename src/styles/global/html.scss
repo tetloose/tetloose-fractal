@@ -1,0 +1,22 @@
+html {
+	min-height: vars(vh, fullscreen);
+	visibility: visible;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	line-height: 1.5;
+	text-rendering: optimizespeed;
+
+	@include f-body;
+	@include f-body-regular;
+	@include font-smoothing;
+	@include fluid-type(vars(breakpoint, sml), vars(layout, maxwidth), vars(type, sml), vars(type, lrg));
+
+	&.no-scroll {
+		position: relative;
+		overflow: hidden;
+
+		body {
+			overflow: hidden;
+		}
+	}
+}

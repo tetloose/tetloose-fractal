@@ -1,0 +1,27 @@
+{
+    "title": "ObjectName",
+    "name": "ObjectName",
+    "tags": [
+        "sprint-{UPDATE-ME}",
+        "author:{UPDATE-ME}"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "component": {
+            "module": "ObjectName",
+            "animation": "fade-in",
+            "duration": 400,
+            "styles": "moduleName",
+            "utilities": "u-spacing-t-lrg"
+        }
+    },
+	"variants": [
+		{
+			"name": "Variant",
+            "context": {}
+		}
+	]
+}

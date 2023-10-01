@@ -1,0 +1,68 @@
+@import 'elem/blockquote';
+@import 'elem/em';
+@import 'elem/embed';
+@import 'elem/h1';
+@import 'elem/h2';
+@import 'elem/h3';
+@import 'elem/h4';
+@import 'elem/h5';
+@import 'elem/h6';
+@import 'elem/hr';
+@import 'elem/link';
+@import 'elem/ol';
+@import 'elem/p';
+@import 'elem/pre';
+@import 'elem/small';
+@import 'elem/strong';
+@import 'elem/sub';
+@import 'elem/sup';
+@import 'elem/table';
+@import 'elem/ul';
+
+.u-content {
+	> *:first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	&.text-align-left {
+		text-align: left;
+	}
+
+	&.text-align-right {
+		text-align: right;
+	}
+
+	&.text-align-center {
+		text-align: center;
+	}
+
+	.u-table,
+	.u-figure,
+	.u-embed,
+	pre,
+	hr,
+	img,
+	blockquote {
+		margin: rem(spacing(1)) 0 0 0;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding: rem(spacing(1)) 0 0 0;
+	}
+
+	ul,
+	ol {
+		padding: rem(spacing(.5)) 0 0 0;
+
+		li {
+			padding: rem(spacing(.5)) 0 0 0;
+		}
+	}
+}

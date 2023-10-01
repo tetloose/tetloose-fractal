@@ -1,0 +1,66 @@
+#!/bin/bash
+#generate-component
+
+clear
+
+read -p "Enter the number of the component type:
+
+[0] Principle
+[1] Partial
+[2] Component
+[3] Layout
+
+[0/1/2/3]: " DB_PULL_SWITCH
+if [ "$DB_PULL_SWITCH" = "0" ]; then
+    DIR="src/patterns/01-principles"
+    TYPE="principle"
+elif [ "$DB_PULL_SWITCH" = "1" ]; then
+    DIR="src/patterns/02-partials"
+    TYPE="partial"
+elif [ "$DB_PULL_SWITCH" = "2" ]; then
+    DIR="src/patterns/03-components"
+    TYPE="component"
+elif [ "$DB_PULL_SWITCH" = "3" ]; then
+    DIR="src/patterns/04-layouts"
+    TYPE="layout"
+fi
+
+if [ "$DB_PULL_SWITCH" ]; then
+    read -p "Enter $TYPE Name i.e navigation-bar press [ENTER]: " COMPONENT
+    echo ""
+    echo ""
+    mkdir -p $DIR/"$COMPONENT"
+
+    cp .scripts/templates/default/readme.md $DIR/"$COMPONENT"/"$COMPONENT".readme.md
+
+    if [ "$TYPE" = "partial" ] || [ "$TYPE" = "component" ]; then
+        cp .scripts/templates/component/markup.html $DIR/"$COMPONENT"/"$COMPONENT".html
+        cp .scripts/templates/component/config.json $DIR/"$COMPONENT"/"$COMPONENT".config.json
+        cp .scripts/templates/component/script.ts $DIR/"$COMPONENT"/"$COMPONENT".$TYPE.ts
+        cp .scripts/templates/component/style.scss $DIR/"$COMPONENT"/"$COMPONENT".module.scss
+        touch $DIR/"$COMPONENT"/"$COMPONENT".types.ts
+        cp .scripts/templates/component/test.ts $DIR/"$COMPONENT"/"$COMPONENT".test.ts
+    else
+        touch $DIR/"$COMPONENT"/"$COMPONENT".html
+        cp .scripts/templates/default/config.json $DIR/"$COMPONENT"/"$COMPONENT".config.json
+    fi
+
+    echo ""
+    echo ""
+    echo "$COMPONENT created"
+    echo ""
+    echo ""
+
+    if [ "$TYPE" = "partial" ] || [ "$TYPE" = "component" ]; then
+        echo "Replace {ObjectName} / {moduleName} with $TYPE name"
+        echo ""
+        echo "Add {ObjectName} to src/config/modules.config.ts"
+    else
+        echo "Replace {ObjectName} with $TYPE name"
+    fi
+
+    echo ""
+    echo ""
+else
+  echo "Enter 0 - 3, Toolkit Stopping"
+fi
