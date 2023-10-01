@@ -29,6 +29,7 @@ exports.fractalServe = series(
 exports.fractalBuild = fractalBuild
 exports.favicon = favicon
 exports.default = series(
+    favicon,
     iconMoveFont,
     iconGenerate,
     scriptsLint,
@@ -38,10 +39,10 @@ exports.default = series(
     print,
     fractal,
     images,
-    fonts,
-    favicon
+    fonts
 )
 exports.build = series(
+    favicon,
     iconMoveFont,
     iconGenerate,
     scriptsLint,
@@ -51,6 +52,5 @@ exports.build = series(
     print,
     fractal,
     images,
-    fonts,
-    favicon
+    fonts
 )

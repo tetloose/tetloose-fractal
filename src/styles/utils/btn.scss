@@ -1,4 +1,6 @@
 .u-btn {
+	$btn: &;
+
 	position: relative;
 	padding: rem(spacing(.6) spacing(2));
 	background-color: transparent;
@@ -35,290 +37,36 @@
 		@include interaction(disable);
 	}
 
-	.btn-light & {
-		color: $light;
-	}
+	&.is-primary {
+		background-color: #ff69b4;
+		color: #fff;
 
-	.btn-dark & {
-		color: $dark;
-	}
-
-	.btn-color-1 & {
-		color: $color-1;
-	}
-
-	.btn-color-2 & {
-		color: $color-2;
-	}
-
-	.btn-color-3 & {
-		color: $color-3;
-	}
-
-	.btn-color-4 & {
-		color: $color-4;
-	}
-
-	.btn-hover-light & {
 		&:focus {
-			color: $light;
+			background-color: #00ffc3;
+			color: #000;
 		}
 
 		@include mq-hover {
 			&:hover {
-				color: $light;
+				background-color: #00ffc3;
+				color: #000;
 			}
 		}
 	}
 
-	.btn-hover-dark & {
+	&.is-secondary {
+		background-color: #00ffc3;
+		color: #000;
+
 		&:focus {
-			color: $dark;
+			background-color: #ff69b4;
+			color: #fff;
 		}
 
 		@include mq-hover {
 			&:hover {
-				color: $dark;
-			}
-		}
-	}
-
-	.btn-hover-color-1 & {
-		&:focus {
-			color: $color-1;
-		}
-
-		@include mq-hover {
-			&:hover {
-				color: $color-1;
-			}
-		}
-	}
-
-	.btn-hover-color-2 & {
-		&:focus {
-			color: $color-2;
-		}
-
-		@include mq-hover {
-			&:hover {
-				color: $color-2;
-			}
-		}
-	}
-
-	.btn-hover-color-3 & {
-		&:focus {
-			color: $color-3;
-		}
-
-		@include mq-hover {
-			&:hover {
-				color: $color-3;
-			}
-		}
-	}
-
-	.btn-hover-color-4 & {
-		&:focus {
-			color: $color-4;
-		}
-
-		@include mq-hover {
-			&:hover {
-				color: $color-4;
-			}
-		}
-	}
-
-	.btn-border-light & {
-		border-color: $light;
-	}
-
-	.btn-border-dark & {
-		border-color: $dark;
-	}
-
-	.btn-border-color-1 & {
-		border-color: $color-1;
-	}
-
-	.btn-border-color-2 & {
-		border-color: $color-2;
-	}
-
-	.btn-border-color-3 & {
-		border-color: $color-3;
-	}
-
-	.btn-border-color-4 & {
-		border-color: $color-4;
-	}
-
-	.btn-border-hover-light & {
-		&:focus {
-			border-color: $light;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $light;
-			}
-		}
-	}
-
-	.btn-border-hover-dark & {
-		&:focus {
-			border-color: $dark;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $dark;
-			}
-		}
-	}
-
-	.btn-border-hover-color-1 & {
-		&:focus {
-			border-color: $color-1;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $color-1;
-			}
-		}
-	}
-
-	.btn-border-hover-color-2 & {
-		&:focus {
-			border-color: $color-2;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $color-2;
-			}
-		}
-	}
-
-	.btn-border-hover-color-3 & {
-		&:focus {
-			border-color: $color-3;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $color-3;
-			}
-		}
-	}
-
-	.btn-border-hover-color-4 & {
-		&:focus {
-			border-color: $color-4;
-		}
-
-		@include mq-hover {
-			&:hover {
-				border-color: $color-4;
-			}
-		}
-	}
-
-	.btn-bg-light & {
-		background-color: $light;
-	}
-
-	.btn-bg-dark & {
-		background-color: $dark;
-	}
-
-	.btn-bg-color-1 & {
-		background-color: $color-1;
-	}
-
-	.btn-bg-color-2 & {
-		background-color: $color-2;
-	}
-
-	.btn-bg-color-3 & {
-		background-color: $color-3;
-	}
-
-	.btn-bg-color-4 & {
-		background-color: $color-4;
-	}
-
-	.btn-bg-hover-light & {
-		&:focus {
-			background-color: $light;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $light;
-			}
-		}
-	}
-
-	.btn-bg-hover-dark & {
-		&:focus {
-			background-color: $dark;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $dark;
-			}
-		}
-	}
-
-	.btn-bg-hover-color-1 & {
-		&:focus {
-			background-color: $color-1;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $color-1;
-			}
-		}
-	}
-
-	.btn-bg-hover-color-2 & {
-		&:focus {
-			background-color: $color-2;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $color-2;
-			}
-		}
-	}
-
-	.btn-bg-hover-color-3 & {
-		&:focus {
-			background-color: $color-3;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $color-3;
-			}
-		}
-	}
-
-	.btn-bg-hover-color-4 & {
-		&:focus {
-			background-color: $color-4;
-		}
-
-		@include mq-hover {
-			&:hover {
-				background-color: $color-4;
+				background-color: #ff69b4;
+				color: #fff;
 			}
 		}
 	}

@@ -10,19 +10,15 @@
     },
     "preview": "@preview",
     "context": {
-        "title": "Button"
+        "title": "Primary",
+        "modifier": "is-inline is-primary"
     },
 	"variants": [
 		{
-			"name": "Button Style 2",
+			"name": "Secondary",
             "context": {
-                "title": "Button 2"
-            }
-		},
-		{
-			"name": "Button Style 3",
-            "context": {
-                "title": "Button 3"
+                "title": "Secondary",
+                "modifier": "is-inline is-secondary"
             }
 		}
 	]

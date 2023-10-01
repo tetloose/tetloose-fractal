@@ -7,10 +7,18 @@
     class="u-animate-hide {{component.utilities}}">
     <div class="l-row">
         <div class="l-row__col is-half">
-            <h1>{{ title }}</h1>
+            <div class="u-content">
+                <h1>{{ title }}</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, voluptas officiis illo modi rem quis provident praesentium sed facere odit blanditiis iste harum dolores ea excepturi itaque aliquid voluptates dolore.</p>
+                {{> @button primaryCta }}
+            </div>
         </div>
         <div class="l-row__col is-half">
-            {{> @button }}
+            <div class="u-content">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, voluptas officiis illo modi rem quis provident praesentium sed facere odit blanditiis iste harum dolores ea excepturi itaque aliquid voluptates dolore.</p>
+                {{> @button--secondary secondaryCta }}
+            </div>
         </div>
     </div>
 </div>

@@ -17,7 +17,15 @@
             "styles": "alert",
             "utilities": "u-spacing-t-lrg u-spacing-b-lrg u-bg-dark u-light"
         },
-        "title": "Our users"
+        "title": "Our users",
+        "primaryCta": {
+            "title": "Primary",
+            "modifier": "is-block is-primary"
+        },
+        "secondaryCta": {
+            "title": "Secondary",
+            "modifier": "is-block is-secondary"
+        }
     },
 	"variants": [
 		{

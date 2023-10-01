@@ -24,7 +24,8 @@
     "private": true,
     "scripts": {
         "setup": "./toolkit setup",
-        "dev": "gulp clean; ENV=dev gulp; ENV=dev gulp fractalServe",
+        "serve": "ENV=dev gulp fractalServe",
+        "dev": "gulp clean; ENV=dev gulp; yarn serve",
         "build": "gulp clean; gulp build; gulp fractalBuild",
         "favicon": "gulp cleanFavicon; gulp favicon",
         "git:commit": "./toolkit git-commit",
