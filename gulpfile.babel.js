@@ -14,10 +14,8 @@ fractalDev.set('project.title', config.fractal.projectName)
 fractalDev.components.set('path', `${__dirname}/src/patterns`)
 fractalDev.components.set('ext', '.html')
 fractalDev.docs.set('path', `${__dirname}/src/docs`)
-fractalDev.web.set('static.path', `${__dirname}/dist/assets`)
-fractalDev.web.set('builder.dest', `${__dirname}/dist`)
-
-tetlooseTheme.addStatic(`${__dirname}/dist`)
+fractalDev.web.set('static.path', `${__dirname}/public/assets`)
+fractalDev.web.set('builder.dest', `${__dirname}/build`)
 fractalDev.web.theme(tetlooseTheme)
 
 exports.clean = clean

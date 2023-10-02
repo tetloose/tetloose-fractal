@@ -10,7 +10,7 @@ module.exports = {
     webpack: {
         mode: isDev,
         entry: `${base}/src/app.ts`,
-        output: `${base}/dist/assets`
+        output: `${base}/public/assets`
     },
     fractal: {
         port: process.env.PROXY,
@@ -23,13 +23,13 @@ module.exports = {
         error: () => notification('❌ SCRIPTS ❌', 'Error', 'Check Terminal')
     },
     clean: {
-        assets: `${base}/dist/assets`,
-        css: `${base}/dist/assets/css`,
-        js: `${base}/dist/assets/js`,
-        images: `${base}/dist/assets/images`,
-        fonts: `${base}/dist/assets/fonts`,
-        icons: `${base}/dist/assets/icons`,
-        favicon: `${base}/dist/assets/favicon`
+        assets: `${base}/public/assets`,
+        css: `${base}/public/assets/css`,
+        js: `${base}/public/assets/js`,
+        images: `${base}/public/assets/images`,
+        fonts: `${base}/public/assets/fonts`,
+        icons: `${base}/public/assets/icons`,
+        favicon: `${base}/public/assets/favicon`
     },
     styles: {
         mode: isDev,
@@ -37,29 +37,29 @@ module.exports = {
         appEntry: `${base}/src/styles/app.scss`,
         printEntry: `${base}/src/styles/print.scss`,
         fractal: `${base}/src/styles/fractal.scss`,
-        output: `${base}/dist/assets/css`,
+        output: `${base}/public/assets/css`,
         error: () => notification('❌ STYLES ❌', 'Error', 'Check Terminal')
     },
     images: {
         files: `${base}/src/images/**/*`,
-        output: `${base}/dist/assets/images`
+        output: `${base}/public/assets/images`
     },
     fonts: {
         files: `${base}/src/fonts/**/*`,
-        output: `${base}/dist/assets/fonts`
+        output: `${base}/public/assets/fonts`
     },
     icons: {
         json: `${base}/src/icons/*.json`,
         template: `${base}/src/icons/template.mustache`,
         output: `${base}/src/styles/utils/icons.scss`,
         fonts: `${base}/src/icons/*.{svg,ttf,woff}`,
-        fontOutput: `${base}/dist/assets/icons`,
+        fontOutput: `${base}/public/assets/icons`,
         error: () => notification('❌ ICONS ❌', 'Error', 'Check Terminal'),
         success: () => notification('💃 Icons 💃', 'Saved', 'scss/utils/icons.scss')
     },
     favicon: {
         entry: `${base}/src/favicon/favicon.png`,
-        output: `${base}/dist/assets/favicon/`,
+        output: `${base}/public/assets/favicon/`,
         appColor: '#c2ad8d',
         jsonTemplate: `${base}/src/favicon/favicon-data.json`,
         success: () => notification('🦙 Favicon 🦙', 'Saved', 'src/patterns/head.html')

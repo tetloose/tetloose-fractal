@@ -13,7 +13,7 @@ export class ComponentClass {
         this.animation = module.dataset.animation && module.dataset.animation
         this.duration = module.dataset.duration && module.dataset.duration
 
-        this.animate()
+        this.state = {}
     }
 
     animate() {
@@ -63,6 +63,8 @@ export class ComponentClass {
                     }
                 })
         }
+
+        this.animate()
     }
 
     cleanUp() {

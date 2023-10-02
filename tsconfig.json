@@ -75,6 +75,9 @@
     "exclude": [
         ".vscode",
         "node_modules",
-        "dist"
+        "public",
+        "build",
+        ".scripts",
+        "fractal.config.js"
     ]
 }

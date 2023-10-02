@@ -1,0 +1,43 @@
+---
+title: Tetloose-Fractal
+---
+
+Tetloose Fractal is a custom [fractal.build](https://fractal.build/) component library.
+
+## Recommended VSCode Extensions
+
+`cmd shift p` then type recommended.
+
+The sidebar will open with a list of recommended extensions to be installed.
+
+'Workspaces' is a great plugin that allows you to show hide files.
+
+See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.workspace) docs.
+
+## Features
+
+- Typescript
+- Vitest
+- SCSS modules
+- SCSS
+- Favicon generation
+- Icon generation from [icomoon](https://icomoon.io/)
+- Performance optimized with dynamic Module loading
+
+## Commands
+
+- `yarn setup` - Setup the project
+- `yarn dev` - Start dev server
+- `yarn serve` - Start dev server without asset generation
+- `yarn build` - Build application
+- `yarn lint` - Lint js
+- `yarn test` - Start Vitest testing suite
+- `yarn coverage` - Get Vitest coverage stats
+- `yarn favicon` - Generate favicon
+- `yarn git:commit` - Commit changes
+- `yarn gen:component` - Generate components
+
+## WIKI
+
+- [SETUP >>](/docs/setup)
+

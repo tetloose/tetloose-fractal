@@ -17,7 +17,7 @@ test('ObjectName should exist and be a function', (): void => {
 
 test('A Config should exist and return default attributes', (): void => {
     const { name, context } = config
-    const { module, animation, duration, utilities, styles } = context.component
+    const { module, animation, duration, modifier, styles } = context.component
 
     expect(config).toBeTypeOf('object')
     expect(name).toBe('ObjectName')
@@ -25,5 +25,5 @@ test('A Config should exist and return default attributes', (): void => {
     expect(styles).toBe('moduleName')
     expect(animation).toBeTypeOf('string')
     expect(duration).toBeTypeOf('number')
-    expect(utilities).toBeTypeOf('string')
+    expect(modifier).toBeTypeOf('string')
 })

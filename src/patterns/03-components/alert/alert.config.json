@@ -14,18 +14,14 @@
             "module": "Alert",
             "animation": "fade-in",
             "duration": 400,
-            "styles": "alert",
-            "utilities": "u-spacing-t-lrg u-spacing-b-lrg u-bg-dark u-light"
+            "modifier": "u-spacing-t-lrg u-spacing-b-lrg u-bg-dark u-light",
+            "styles": "alert"
         },
-        "title": "Our users",
-        "primaryCta": {
-            "title": "Primary",
-            "modifier": "is-block is-primary"
-        },
-        "secondaryCta": {
-            "title": "Secondary",
-            "modifier": "is-block is-secondary"
-        }
+        "title": "Alert",
+        "topImage": "@figure",
+        "primaryCta": "@button",
+        "secondaryCta": "@button--secondary",
+        "bottomImage": "@figure"
     },
 	"variants": [
 		{

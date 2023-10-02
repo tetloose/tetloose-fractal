@@ -27,9 +27,9 @@ export type BreakPointProps = {
     xxlrg?: BreakPointGenerics
 }
 
-export type FigureProps = {
+export type ImageProps = {
     className?: string
-    sizing?: 'cover' | 'contain' | undefined
+    styles?: string
     alt?: string
     sizes: {
         mobile: string

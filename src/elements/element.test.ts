@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
-import { containerElement, sectionElement, rowElement, columnElement, contentElement, btnElement, figureElement, iframeElement } from '@/elements'
-import { FigureProps, iframeProps } from './element.types'
+import { containerElement, sectionElement, rowElement, columnElement, contentElement, btnElement, imageElement, iframeElement } from '@/elements'
+import { ImageProps, iframeProps } from './element.types'
 
 const contentData = {
     content: 'this is content',
@@ -12,9 +12,9 @@ const btn = btnElement(
     'Tracking Title',
     'js-trackingBtn'
 )
-const figureData: FigureProps = {
+const imageData: ImageProps = {
     className: 'class-name',
-    sizing: 'contain',
+    styles: 'style-name',
     alt: 'This is alt text',
     sizes: {
         mobile: 'https://picsum.photos/200/200',
@@ -27,7 +27,7 @@ const iframeData: iframeProps = {
     ratio: '16x9',
     rest: 'title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen'
 }
-const figure = figureElement(figureData)
+const image = imageElement(imageData)
 const iframe = iframeElement(iframeData)
 const content = contentElement(
     contentData.content,
@@ -52,10 +52,10 @@ const container = containerElement(
     'test-class'
 )
 
-test('Figure function exists and returns a string', (): void => {
-    expect(figure).toBeTruthy()
-    expect(figure).toBeTypeOf('string')
-    expect(figure).toMatch(/(class-name|contain|This is alt text)/i)
+test('Image function exists and returns a string', (): void => {
+    expect(image).toBeTruthy()
+    expect(image).toBeTypeOf('string')
+    expect(image).toMatch(/(class-name|style-name|This is alt text)/i)
 })
 
 test('iFrame function exists and returns a string', (): void => {

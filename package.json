@@ -1,7 +1,7 @@
 {
     "name": "tetloose-fractal",
     "version": "1.0.0",
-    "description": "",
+    "description": "Tetloose Fractal is a custom fractal.build component library",
     "main": "./gulpfile.babel.js",
     "keywords": [
         "Fractal",
@@ -14,8 +14,9 @@
         "WCAG AAA",
         "Speed Performance"
     ],
-    "author": "James Tetley tetloose.com",
-    "license": "ISC",
+    "repository": "git@github.com:tetloose/tetloose-fractal.git",
+    "author": "James Tetley <tetloose@gmail.com>",
+    "license": "MIT",
     "babel": {
         "presets": [
             "@babel/preset-env"
@@ -26,7 +27,7 @@
         "setup": "./toolkit setup",
         "serve": "ENV=dev gulp fractalServe",
         "dev": "gulp clean; ENV=dev gulp; yarn serve",
-        "build": "gulp clean; gulp build; gulp fractalBuild",
+        "build": "gulp clean; gulp build; gulp fractalBuild --silent",
         "favicon": "gulp cleanFavicon; gulp favicon",
         "git:commit": "./toolkit git-commit",
         "test": "vitest",

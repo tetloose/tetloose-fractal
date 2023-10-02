@@ -1,0 +1,103 @@
+{
+    "title": "Figure",
+    "name": "Figure",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "component": {
+            "module": "Figure",
+            "animation": "fade-in",
+            "duration": 400,
+            "modifier": "",
+            "styles": "figure"
+        },
+        "image": {
+            "modifier": "",
+            "styles": "",
+            "alt": "Image from unsplash.it",
+            "desktop": "https://unsplash.it/1024",
+            "tablet": "https://unsplash.it/768",
+            "mobile": "https://unsplash.it/480"
+        }
+    },
+	"variants": [
+		{
+			"name": "Contain",
+            "context": {
+                "image": {
+                    "styles": "is-contain"
+                }
+            }
+		},
+		{
+			"name": "Image Center Bottom",
+            "context": {
+                "image": {
+                    "styles": "is-center-bottom"
+                }
+            }
+		},
+		{
+			"name": "Image Center Top",
+            "context": {
+                "image": {
+                    "styles": "is-center-top"
+                }
+            }
+		},
+		{
+			"name": "Image Left Bottom",
+            "context": {
+                "image": {
+                    "styles": "is-left-bottom"
+                }
+            }
+		},
+		{
+			"name": "Image Left Center",
+            "context": {
+                "image": {
+                    "styles": "is-left-center"
+                }
+            }
+		},
+		{
+			"name": "Image Left Top",
+            "context": {
+                "image": {
+                    "styles": "is-left-top"
+                }
+            }
+		},
+		{
+			"name": "Image Right Bottom",
+            "context": {
+                "image": {
+                    "styles": "is-right-bottom"
+                }
+            }
+		},
+		{
+			"name": "Image Right Center",
+            "context": {
+                "image": {
+                    "styles": "is-right-center"
+                }
+            }
+		},
+		{
+			"name": "Image Right Top",
+            "context": {
+                "image": {
+                    "styles": "is-right-top"
+                }
+            }
+		}
+	]
+}

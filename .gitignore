@@ -10,5 +10,7 @@ sftp-config.json
 node_modules/
 .DS_Store
 *.sql
-dist
-dist/**/*
+public
+public/**/*
+build
+build/**/*

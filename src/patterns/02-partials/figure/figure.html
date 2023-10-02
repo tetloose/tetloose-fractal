@@ -1,0 +1,16 @@
+{{#if image}}
+<figure
+    style="opacity: 0"
+    data-module="{{component.module}}"
+    data-animation="{{component.animation}}"
+    data-duration="{{component.duration}}"
+    data-styles="{{component.styles}}"
+    class="u-animate-hide {{component.modifier}}"
+    data-image-class-name="{{#if image.modifier}} {{image.modifier}}{{/if}}"
+    data-image-styles="figure__img{{#if image.styles}} {{image.styles}}{{/if}}"
+    data-image-alt="{{#if image.alt }} {{ image.alt }}{{/if}}"
+    data-image-mobile="{{#if image.mobile }} {{ image.mobile }}{{/if}}"
+    data-image-tablet="{{#if image.tablet }} {{ image.tablet }}{{/if}}"
+    data-image-desktop="{{#if image.desktop }} {{ image.desktop }}{{/if}}"
+></figure>
+{{/if}}
