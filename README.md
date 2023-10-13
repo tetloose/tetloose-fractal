@@ -1,10 +1,10 @@
-# Tetloose-Fractal
+# Tetloose Fractal
 
-Sony [fractal.build](https://fractal.build/) component library.
+Tetloose Fractal is a custom [fractal.build](https://fractal.build/) component library.
 
 ## Recommended VSCode Extensions
 
-`cmd shift p recommended`
+`cmd shift p` then type recommended.
 
 The sidebar will open with a list of recommended extensions to be installed.
 

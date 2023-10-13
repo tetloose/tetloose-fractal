@@ -39,7 +39,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 - `yarn gen:component` - Generate components
 - `yarn accessibility` - Generate accessibility reports
 
-## WIKI
+## Docs
 
 - [SETUP >>](/docs/setup)
 
