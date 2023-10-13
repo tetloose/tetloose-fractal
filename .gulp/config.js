@@ -67,5 +67,13 @@ module.exports = {
         favicon: process.env.FAVICON,
         styles: process.env.STYLES
     },
-    hbs: handlebarConfig
+    beautify: {
+        entry: `${base}/build/**/*.html`,
+        output: `${base}/build`
+    },
+    hbs: handlebarConfig,
+    accessibility: {
+        entry: `${base}/src/patterns/**/*.html`,
+        output: `${base}/accessibility-report`
+    }
 }

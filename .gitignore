@@ -14,3 +14,5 @@ public
 public/**/*
 build
 build/**/*
+accessibility-report
+accessibility-report/**/*

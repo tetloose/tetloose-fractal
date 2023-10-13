@@ -1,5 +1,5 @@
 import { series } from 'gulp'
-import { fractalDev, fractalHbs, fractalTheme, fractalServe, fractalBuild } from './.gulp/tasks/fractal.js'
+import { fractalDev, fractalHbs, fractalTheme, fractalServe, fractalBuild, beautifyBuild } from './.gulp/tasks/fractal.js'
 import { clean, cleanFavicon } from './.gulp/tasks/clean'
 import { favicon } from './.gulp/tasks/favicon.js'
 import { iconMoveFont, iconGenerate } from './.gulp/tasks/icons.js'
@@ -8,6 +8,7 @@ import { stylesLint, styles, print, fractal } from './.gulp/tasks/styles.js'
 import { images } from './.gulp/tasks/images.js'
 import { fonts } from './.gulp/tasks/fonts.js'
 import monitor from './.gulp/tasks/monitor.js'
+import { accessibility } from './.gulp/tasks/accessibility.js'
 import config from './.gulp/config'
 
 fractalDev.set('project.title', config.fractal.projectName)
@@ -54,3 +55,5 @@ exports.build = series(
     images,
     fonts
 )
+exports.accessibility = accessibility
+exports.beautify = beautifyBuild

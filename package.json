@@ -27,7 +27,8 @@
         "setup": "./toolkit setup",
         "serve": "ENV=dev gulp fractalServe",
         "dev": "gulp clean; ENV=dev gulp; yarn serve",
-        "build": "gulp clean; gulp build; gulp fractalBuild --silent",
+        "build": "gulp clean; gulp build; gulp fractalBuild; yarn beautify",
+        "beautify": "gulp beautify",
         "favicon": "gulp cleanFavicon; gulp favicon",
         "git:commit": "./toolkit git-commit",
         "test": "vitest",
@@ -36,12 +37,13 @@
         "pre-commit": "yarn lint && vitest --watch false",
         "create-hook": "husky add .husky/pre-commit \"yarn pre-commit\"",
         "prepare": "husky install",
-        "gen:component": "./toolkit generate-component"
+        "gen:component": "./toolkit generate-component",
+        "accessibility": "gulp accessibility"
     },
     "dependencies": {
         "@frctl/fractal": "^1.5.15",
-        "@frctl/nunjucks": "^2.0.15",
         "@frctl/handlebars": "^1.2.13",
+        "@frctl/nunjucks": "^2.0.15",
         "gulp-shell": "^0.8.0"
     },
     "devDependencies": {
@@ -62,6 +64,7 @@
         "eslint": "^8.31.0",
         "fs": "^0.0.1-security",
         "gulp": "^4.0.2",
+        "gulp-accessibility": "^3.1.1",
         "gulp-autoprefixer": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-dart-sass": "^1.0.2",
@@ -69,6 +72,7 @@
         "gulp-filter": "^7.0.0",
         "gulp-icomoon-builder": "^1.0.0",
         "gulp-if": "^3.0.0",
+        "gulp-jsbeautifier": "^3.0.1",
         "gulp-plumber": "^1.2.1",
         "gulp-real-favicon": "^0.3.2",
         "gulp-rename": "^2.0.0",
