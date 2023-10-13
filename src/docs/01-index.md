@@ -1,8 +1,8 @@
 ---
-title: Sony
+title: Tetloose Fractal
 ---
 
-Sony [fractal.build](https://fractal.build/) component library.
+Tetloose Fractal is a custom [fractal.build](https://fractal.build/) component library.
 
 ## Recommended VSCode Extensions
 
@@ -23,11 +23,12 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 - Favicon generation
 - Icon generation from [icomoon](https://icomoon.io/)
 - Performance optimized with dynamic Module loading
+- WCAG2AAA reports via [AccessSniff](https://github.com/yargalot/AccessSniff)
 
 ## Commands
 
 - `yarn setup` - Setup the project
-- `yarn dev` - Start dev server
+- `yarn dev` - Start dev server with asset generation
 - `yarn serve` - Start dev server without asset generation
 - `yarn build` - Build application
 - `yarn lint` - Lint js
@@ -36,6 +37,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 - `yarn favicon` - Generate favicon
 - `yarn git:commit` - Commit changes
 - `yarn gen:component` - Generate components
+- `yarn accessibility` - Generate accessibility reports
 
 ## WIKI
 

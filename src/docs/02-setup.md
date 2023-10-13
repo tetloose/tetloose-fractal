@@ -2,6 +2,12 @@
 title: Setup
 ---
 
+1. `git clone git@github.com:tetloose/tetloose-fractal.git`
+2. Update `PROJECT_NAME` in `.env.example`
+3. `cmd shift p recommended` install recommended plugins
+4. `yarn setup`
+5. Web browser will open `http://localhost:3000/`
+
 `yarn setup`
 
 This will install everything with yarn, set up husky then spin up a dev server via `yarn dev`.
@@ -14,4 +20,4 @@ This runs the dev server.
 
 If you have already run `yarn dev` and want to spin up the dev server without generating all the assets use `yarn serve`.
 
-- [COMPONENTS >>](/docs/components)
+- [STRUCTURE >>](/docs/structure)
