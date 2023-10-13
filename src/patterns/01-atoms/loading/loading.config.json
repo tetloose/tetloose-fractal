@@ -1,0 +1,36 @@
+{
+    "title": "Loading",
+    "name": "Loading",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "collated": true,
+    "context": {
+        "src": "/images/loading/spinner.svg",
+        "modifier": "",
+        "styles": ""
+    },
+    "variants": [
+		{
+			"name": "Centered",
+            "context": {
+                "src": "/images/loading/spinner.svg",
+                "modifier": "is-align-middle",
+                "styles": ""
+            }
+		},
+		{
+			"name": "Zelda",
+            "context": {
+                "src": "/images/loading/zelda.svg",
+                "modifier": "",
+                "styles": ""
+            }
+		}
+    ]
+}

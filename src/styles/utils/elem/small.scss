@@ -1,4 +1,4 @@
 .u-content small,
 .u-small {
-	@include type-small;
+	@extend %type-small;
 }

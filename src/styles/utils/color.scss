@@ -6,18 +6,18 @@
 	color: $light;
 }
 
-.u-color-1 {
-	color: $color-1;
+.u-primary {
+	color: colors(default, primary);
 }
 
-.u-color-2 {
-	color: $color-2;
+.u-secondary {
+	color: colors(default, secondary);
 }
 
-.u-color-3 {
-	color: $color-3;
+.u-tertiary {
+	color: colors(default, tertiary);
 }
 
-.u-color-4 {
-	color: $color-4;
+.u-quaternary {
+	color: colors(default, quaternary);
 }

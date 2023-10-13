@@ -1,0 +1,8 @@
+.l-media {
+	margin-top: -(rem(vars(layout, gutter)));
+
+	iframe,
+	figure {
+		margin-top: rem(vars(layout, gutter));
+	}
+}

@@ -1,0 +1,16 @@
+{
+    "title": "Action",
+    "name": "Action",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "modifier": "",
+        "styles": ""
+    }
+}

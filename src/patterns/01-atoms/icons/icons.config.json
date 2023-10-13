@@ -1,0 +1,81 @@
+{
+    "title": "Icons",
+    "name": "Icons",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview-fractal",
+    "context": {
+        "title": "Icons",
+        "applicationTitle": "Application Icons",
+        "applicationIcons": [
+            {
+                "name": "News",
+                "className": "u-icon-news"
+            },
+            {
+                "name": "Prev",
+                "className": "u-icon-prev"
+            },
+            {
+                "name": "Next",
+                "className": "u-icon-next"
+            },
+            {
+                "name": "First",
+                "className": "u-icon-first"
+            },
+            {
+                "name": "Last",
+                "className": "u-icon-last"
+            }
+        ],
+        "socialTitle": "Social Icons",
+        "socialIcons": [
+            {
+                "name": "Songkick",
+                "className": "u-icon-songkick"
+            },
+            {
+                "name": "Youtube",
+                "className": "u-icon-youtube"
+            },
+            {
+                "name": "Tiktok",
+                "className": "u-icon-tiktok"
+            },
+            {
+                "name": "Bandcamp",
+                "className": "u-icon-bandcamp"
+            },
+            {
+                "name": "Spotify",
+                "className": "u-icon-spotify"
+            },
+            {
+                "name": "Linkedin",
+                "className": "u-icon-linkedin"
+            },
+            {
+                "name": "Twitter",
+                "className": "u-icon-twitter"
+            },
+            {
+                "name": "Vimeo",
+                "className": "u-icon-vimeo"
+            },
+            {
+                "name": "Instagram",
+                "className": "u-icon-instagram"
+            },
+            {
+                "name": "Facebook",
+                "className": "u-icon-facebook"
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Logo",
+    "name": "Logo",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "collated": true,
+    "context": {
+        "src": "/images/logos/logo-1.svg",
+        "alt": "Logo 1",
+        "modifier": "is-primary",
+        "styles": ""
+    },
+	"variants": [
+		{
+			"name": "Logo 2",
+            "context": {
+                "src": "/images/logos/logo-2.svg",
+                "alt": "Logo 2",
+                "modifier": "is-secondary",
+                "styles": ""
+            }
+		},
+		{
+			"name": "Logo 3",
+            "context": {
+                "src": "/images/logos/logo-3.svg",
+                "alt": "Logo 3",
+                "modifier": "is-tertiary",
+                "styles": ""
+            }
+		}
+    ]
+}

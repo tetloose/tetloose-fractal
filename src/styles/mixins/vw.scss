@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+@function vw($val, $breakpoint) {
+	$vw-context: $breakpoint * .01 * 1;
+
+	@return #{math.div($val, $vw-context) * 1}vw;
+}
+
+// usage
+// @include mq(vars(breakpoint, med)) {
+//     font-size: vw(16px, vars(breakpoint, lrg));
+// }
+
+// @include mq(vars(breakpoint, lrg)) {
+//     font-size: rem(16px);
+// }
+
+// @include mq(vars(breakpoint, med), max-width) {
+//     font-size: vw(24px, vars(breakpoint, sml));
+// }

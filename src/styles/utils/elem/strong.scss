@@ -1,5 +1,5 @@
 .u-content strong,
 .u-content b,
 .u-bold {
-	@include f-body-bold;
+	@extend %f-body-bold;
 }

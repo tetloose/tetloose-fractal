@@ -1,8 +1,10 @@
 @import 'variables';
 @import '../mixins/strip-unit';
+@import '../mixins/string-replace';
 @import '../mixins/rem';
-@import '../mixins/media-querys';
+@import '../mixins/media-query';
 @import '../mixins/spacing';
+@import '../mixins/vw';
 @import '../mixins/acceleration';
 @import '../mixins/background-image';
 @import '../mixins/column-width';
@@ -17,5 +19,4 @@
 @import '../mixins/transition';
 @import '../mixins/visually-hidden';
 @import 'colors';
-@import 'fonts';
 @import 'typography';

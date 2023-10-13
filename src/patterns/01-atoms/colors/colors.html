@@ -1,0 +1,27 @@
+<main class="Fractal-spacing-t">
+    <section class="l-row">
+        <div class="l-row__col">
+            <div class="u-content Fractal-spacing-b">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+    </section>
+    {{#each colors}}
+        <section
+            style="background-color: {{this.hex}}"
+            class="Fractal-spacing-t Fractal-spacing-t Fractal-spacing-b {{this.modifier}}"
+        >
+            <div class="l-row">
+                <div class="l-row__col">
+                    <div class="u-content">
+                        <h2>Name: {{this.name}}</h2>
+                        <ul>
+                            <li>Hex: {{this.hex}}</li>
+                            <li>SCSS: {{this.scss}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/each}}
+</main>

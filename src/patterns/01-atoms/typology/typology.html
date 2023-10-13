@@ -1,0 +1,26 @@
+<main>
+    <section class="Fractal-spacing-t Fractal-spacing-b Fractal-bg-primary Fractal-secondary">
+        <div class="l-row">
+            <div class="l-row__col">
+                {{#> @content}}
+                    <h1>{{title}}</h1>
+                {{/@content}}
+            </div>
+        </div>
+    </section>
+    {{#if content}}
+    <section class="Fractal-spacing-t Fractal-spacing-b">
+        <div class="l-row">
+            <div class="l-row__col">
+                {{#if component}}
+                    {{#> @content}}
+                        {{{content}}}
+                    {{/@content}}
+                {{else}}
+                    {{{content}}}
+                {{/if}}
+            </div>
+        </div>
+    </section>
+    {{/if}}
+</main>

@@ -11,19 +11,19 @@
     "preview": "@preview",
     "context": {
         "component": {
-            "module": "Figure",
-            "animation": "fade-in",
             "duration": 400,
-            "modifier": "",
-            "styles": "figure"
+            "animation": "skeleton",
+            "styles": "",
+            "modifier": ""
         },
         "image": {
             "modifier": "",
             "styles": "",
             "alt": "Image from unsplash.it",
-            "desktop": "https://unsplash.it/1024",
-            "tablet": "https://unsplash.it/768",
-            "mobile": "https://unsplash.it/480"
+            "placeholder": "/images/placeholder.png",
+            "desktop": "/images/desktop.jpg",
+            "tablet": "/images/tablet.jpg",
+            "mobile": "/images/mobile.jpg"
         }
     },
 	"variants": [

@@ -18,7 +18,7 @@ $vars: (
 		sml: 14px
 	),
 	layout: (
-		maxwidth: 1024px,
+		max-width: 1024px,
 		gutter: 20px,
 		browser-context: 16px,
 		spacing: 16px
@@ -32,12 +32,11 @@ $vars: (
 		xxlrg: 1520px
 	),
 	radius: (
-		tny: 2px,
-		sml: 4px,
-		med: 6px,
-		lrg: 8px,
-		xlrg: 50%,
-		xxlrg: 100%
+		sml: 2px,
+		med: 4px,
+		lrg: 6px,
+		xlrg: 8px,
+		round: 50%
 	),
 	vh: (
 		fullscreen: 100vh,
@@ -46,10 +45,13 @@ $vars: (
 		two-third: 66.6666vh
 	),
 	transition: (
+		xxxslow: 800ms,
+		xxslow: 700ms,
+		xslow: 600ms,
 		slow: 500ms,
 		med: 400ms,
 		fast: 300ms,
 		xfast: 200ms,
 		xxfast: 100ms
-	),
+	)
 );

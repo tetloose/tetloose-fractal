@@ -7,7 +7,7 @@ import styles from './moduleName.module.scss'
 test('SCSS Module returns an object and contains moduleName', (): void => {
     expect(styles).toBeTruthy()
     expect(styles).toBeTypeOf('object')
-    expect(styles.moduleName).toMatch(/(moduleName)/i)
+    expect(styles.figure).toMatch(/(moduleName)/i)
 })
 
 test('ObjectName should exist and be a function', (): void => {
@@ -15,15 +15,11 @@ test('ObjectName should exist and be a function', (): void => {
     expectTypeOf(modules.ObjectName).toBeFunction()
 })
 
-test('A Config should exist and return default attributes', (): void => {
-    const { name, context } = config
-    const { module, animation, duration, modifier, styles } = context.component
+test('Component config exists and returns correct attributes', (): void => {
+    const { animation, duration, modifier, styles } = config.context.component
 
-    expect(config).toBeTypeOf('object')
-    expect(name).toBe('ObjectName')
-    expect(module).toBe('ObjectName')
-    expect(styles).toBe('moduleName')
     expect(animation).toBeTypeOf('string')
     expect(duration).toBeTypeOf('number')
     expect(modifier).toBeTypeOf('string')
+    expect(styles).toBeTypeOf('string')
 })

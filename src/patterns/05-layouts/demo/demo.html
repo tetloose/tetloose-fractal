@@ -1,0 +1,33 @@
+<main class="u-spacing-b-lrg">
+    <section class="u-spacing-t-lrg">
+        <div class="l-row">
+            <div class="l-row__col">
+                {{#> '@media' }}
+                    <div class="l-row">
+                        <div class="l-row__col is-6 is-lrg-3">
+                            {{ render '@figure' }}
+                        </div>
+                        <div class="l-row__col is-6 is-lrg-3">
+                            {{ render '@figure' }}
+                        </div>
+                        <div class="l-row__col is-6 is-lrg-3">
+                            {{ render '@figure' }}
+                        </div>
+                        <div class="l-row__col is-6 is-lrg-3">
+                            {{ render '@figure' }}
+                        </div>
+                    </div>
+                {{/@media}}
+                {{#> '@content' this.content }}
+                    <h1>{{title}}</h1>
+                    <p>{{body}}</p>
+                {{/@content}}
+                {{> '@accordion' accordion }}
+                {{#> '@action' this.action }}
+                    {{ render '@button' }}
+                    {{ render '@button--secondary' }}
+                {{/@action}}
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,63 +1,119 @@
-@mixin type-h1 {
-	font-size: rem(vars(type, xxxxxlrg));
-	line-height: 1.2;
-
-	@include f-heading;
+%f-body {
+	font-family: Body, serif;
 }
 
-@mixin type-h2 {
+%f-heading {
+	font-family: Heading, serif;
+}
+
+%f-body-light {
+	font-weight: 300;
+}
+
+%f-heading-light {
+	font-weight: 300;
+}
+
+%f-body-regular {
+	font-weight: 400;
+}
+
+%f-heading-regular {
+	font-weight: 400;
+}
+
+%f-body-medium {
+	font-weight: 500;
+}
+
+%f-heading-medium {
+	font-weight: 500;
+}
+
+%f-body-bold {
+	font-weight: 700;
+}
+
+%f-heading-bold {
+	font-weight: 600;
+}
+
+%f-italic {
+	font-style: italic;
+}
+
+%f-uppercase {
+	text-transform: uppercase;
+}
+
+%f-capitalize {
+	text-transform: capitalize;
+}
+
+%f-lowercase {
+	text-transform: lowercase;
+}
+
+%type-h1 {
 	font-size: rem(vars(type, xxxxlrg));
 	line-height: 1.2;
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-h3 {
+%type-h2 {
+	font-size: rem(vars(type, xxxxlrg));
+	line-height: 1.2;
+
+	@extend %f-heading;
+}
+
+%type-h3 {
 	font-size: rem(vars(type, xxxlrg));
 	line-height: 1.2;
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-h4 {
+%type-h4 {
 	font-size: rem(vars(type, xxlrg));
 	line-height: 1.2;
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-h5 {
+%type-h5 {
 	font-size: rem(vars(type, xlrg));
 	line-height: 1.3;
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-h6 {
+%type-h6 {
 	font-size: rem(vars(type, lrg));
 	line-height: 1.3;
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-small {
+%type-small {
 	font-size: rem(vars(type, sml));
 }
 
-@mixin type-paragraph {
+%type-paragraph {
 	font-size: rem(vars(type, med));
 }
 
-@mixin type-btn {
+%type-btn {
 	font-size: rem(vars(type, sml));
 
-	@include f-heading;
+	@extend %f-heading;
 }
 
-@mixin type-label {
+%type-label {
 	font-size: rem(vars(type, med));
 }
 
-@mixin type-icon {
+%type-icon {
 	font-size: rem(vars(type, lrg));
 }

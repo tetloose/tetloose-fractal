@@ -3,7 +3,8 @@ import { StateProps } from './utilities.types'
 export class ComponentClass {
     module: HTMLElement
     animation?: string
-    duration?: string
+    duration?: number
+    type?: string
     state?: {
         [key: string]: StateProps
     }
@@ -11,25 +12,34 @@ export class ComponentClass {
     constructor(module: HTMLElement) {
         this.module = module
         this.animation = module.dataset.animation && module.dataset.animation
-        this.duration = module.dataset.duration && module.dataset.duration
+        this.duration = module.dataset.duration ? parseInt(module.dataset.duration) : 0
+        this.type = module.dataset.type ? module.dataset.type : ''
 
         this.state = {}
     }
 
     animate() {
-        const { module, animation, duration } = this
+        const { module, animation, duration, type } = this
+
         module.removeAttribute('style')
 
-        if (module && animation && duration) {
-            setTimeout(() => {
-                module.classList.add(`u-animate-${this.animation}`)
+        setTimeout(() => {
+            if (animation) {
+                module.classList.add(`u-animate-${animation}`)
+            }
 
-                setTimeout(() => {
-                    module.classList.remove('u-animate-hide', `u-animate-${this.animation}`)
-                    this.cleanUp()
-                }, parseInt(duration))
-            }, parseInt(duration))
-        }
+            setTimeout(() => {
+                if (type === 'figure') {
+                    setTimeout(() => {
+                        module.classList.forEach(className => className.includes('u-animate-') && module.classList.remove(className))
+                        module.querySelector('.js-figurePlaceholder')?.remove()
+                        module.querySelector('.js-loading')?.remove()
+                    }, duration)
+                } else {
+                    module.classList.forEach(className => className.includes('u-animate-') && module.classList.remove(className))
+                }
+            }, duration)
+        }, duration)
     }
 
     updateState(key: string, value: StateProps) {
@@ -65,16 +75,5 @@ export class ComponentClass {
         }
 
         this.animate()
-    }
-
-    cleanUp() {
-        const { module } = this
-
-        module.removeAttribute('data-styles')
-        module.querySelectorAll('[data-styles]')
-            .forEach(attr => attr.removeAttribute('data-styles'))
-        module.removeAttribute('data-animation')
-        module.removeAttribute('data-duration')
-        module.removeAttribute('data-module')
     }
 }

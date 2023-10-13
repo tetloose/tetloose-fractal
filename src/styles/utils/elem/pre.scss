@@ -10,7 +10,7 @@
 	word-wrap: break-word;
 	page-break-inside: avoid;
 
-	@include type-paragraph;
+	@extend %type-paragraph;
 
 	&::before {
 		content: '';
@@ -19,29 +19,5 @@
 		bottom: 0;
 		left: 0;
 		width: rem(4px);
-
-		.u-dark & {
-			background-color: colors('dark');
-		}
-
-		.u-light & {
-			background-color: colors('light');
-		}
-
-		.u-color-1 & {
-			background-color: colors('color-1');
-		}
-
-		.u-color-2 & {
-			background-color: colors('color-2');
-		}
-
-		.u-color-3 & {
-			background-color: colors('color-3');
-		}
-
-		.u-color-4 & {
-			background-color: colors('color-4');
-		}
 	}
 }

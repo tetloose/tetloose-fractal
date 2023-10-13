@@ -1,0 +1,74 @@
+{
+    "title": "Layout",
+    "name": "Layout",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview-fractal",
+    "collated": true,
+    "context": {
+        "title": "12 Column Layout",
+        "row-utilities": false,
+        "column-utilities": false,
+        "sml": false,
+        "med": false,
+        "lrg": false,
+        "xlrg": false,
+        "xxlrg": false,
+        "examples": false
+    },
+	"variants": [
+		{
+			"name": "Small",
+            "context": {
+                "sml": "Classname: u-sml-{column-size}"
+            }
+		},
+		{
+			"name": "Medium",
+            "context": {
+                "med": "Classname: u-med-{column-size}"
+            }
+		},
+		{
+			"name": "Large",
+            "context": {
+                "lrg": "Classname: u-lrg-{column-size}"
+            }
+		},
+		{
+			"name": "X-Large",
+            "context": {
+                "xlrg": "Classname: u-xlrg-{column-size}"
+            }
+		},
+		{
+			"name": "XX-Large",
+            "context": {
+                "xxlrg": "Classname: u-xxlrg-{column-size}"
+            }
+		},
+		{
+			"name": "Row Utilities",
+            "context": {
+                "row-utilities": "Classes added to l-row"
+            }
+		},
+		{
+			"name": "Column Utilities",
+            "context": {
+                "column-utilities": "Classes added to l-row__col"
+            }
+		},
+		{
+			"name": "Examples",
+            "context": {
+                "examples": "Example usage"
+            }
+		}
+	]
+}

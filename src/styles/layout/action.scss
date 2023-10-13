@@ -1,7 +1,7 @@
 .l-action {
-	padding-top: rem(spacing(.5));
+	margin-top: -(rem(spacing(1)));
 
-	@include mq(vars(breakpoint, sml)) {
+	@include mq(vars(breakpoint, med)) {
 		display: flex;
 		flex-wrap: nowrap;
 		margin-right: -(rem(spacing(.2)));
@@ -9,27 +9,39 @@
 		align-items: center;
 	}
 
+	&.is-align-container .u-btn {
+		@include mq(vars(breakpoint, med)) {
+			width: 100%;
+		}
+	}
+
+	&.is-align-left {
+		@include mq(vars(breakpoint, med)) {
+			justify-content: flex-start;
+		}
+	}
+
 	&.is-align-right {
-		@include mq(vars(breakpoint, sml)) {
+		@include mq(vars(breakpoint, med)) {
 			justify-content: flex-end;
 		}
 	}
 
 	&.is-align-center {
-		@include mq(vars(breakpoint, sml)) {
+		@include mq(vars(breakpoint, med)) {
 			justify-content: center;
 		}
 	}
 
-	&__btn {
-		margin-top: rem(spacing(.5));
+	.u-btn {
+		margin-top: rem(spacing(1));
 
-		@include mq(vars(breakpoint, sml), max-width) {
+		@include mq(vars(breakpoint, med), max-width) {
 			display: block;
 			width: 100%;
 		}
 
-		@include mq(vars(breakpoint, sml)) {
+		@include mq(vars(breakpoint, med)) {
 			margin-right: rem(spacing(.2));
 			margin-left: rem(spacing(.2));
 		}

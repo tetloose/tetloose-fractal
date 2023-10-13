@@ -1,8 +1,8 @@
 ---
-title: Tetloose-Fractal
+title: Sony
 ---
 
-Tetloose Fractal is a custom [fractal.build](https://fractal.build/) component library.
+Sony [fractal.build](https://fractal.build/) component library.
 
 ## Recommended VSCode Extensions
 

@@ -11,7 +11,14 @@
 	text-align: center;
 	text-decoration: none;
 
-	@include type-btn;
+	@extend %type-btn;
+
+	&__inside {
+		position: relative;
+		z-index: 1;
+
+		@include interaction(disable);
+	}
 
 	@include mq-hover {
 		@include transition-property(color, background-color, border, opacity);
@@ -37,36 +44,56 @@
 		@include interaction(disable);
 	}
 
-	&.is-primary {
-		background-color: #ff69b4;
-		color: #fff;
-
-		&:focus {
-			background-color: #00ffc3;
-			color: #000;
-		}
+	&.is-light {
+		background-color: colors(default, light);
+		border-color: colors(default, dark);
+		color: colors(default, dark);
 
 		@include mq-hover {
+			&:focus,
 			&:hover {
-				background-color: #00ffc3;
-				color: #000;
+				background-color: colors(default, dark);
+				color: colors(default, light);
+			}
+		}
+	}
+
+	&.is-dark {
+		background-color: colors(default, dark);
+		color: colors(default, light);
+
+		@include mq-hover {
+			&:focus,
+			&:hover {
+				background-color: colors(default, light);
+				border-color: colors(default, dark);
+				color: colors(default, dark);
+			}
+		}
+	}
+
+	&.is-primary {
+		background-color: colors(default, primary);
+		border-color: colors(default, dark);
+		color: colors(default, light);
+
+		@include mq-hover {
+			&:focus,
+			&:hover {
+				background-color: colors(default, secondary);
 			}
 		}
 	}
 
 	&.is-secondary {
-		background-color: #00ffc3;
-		color: #000;
-
-		&:focus {
-			background-color: #ff69b4;
-			color: #fff;
-		}
+		background-color: colors(default, secondary);
+		border-color: colors(default, dark);
+		color: colors(default, light);
 
 		@include mq-hover {
+			&:focus,
 			&:hover {
-				background-color: #ff69b4;
-				color: #fff;
+				background-color: colors(default, primary);
 			}
 		}
 	}

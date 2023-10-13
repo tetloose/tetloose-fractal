@@ -1,0 +1,106 @@
+@import '@styles/settings';
+
+@mixin accordion-active {
+	background-color: colors(default, dark);
+	color: colors(default, light);
+	outline: none;
+
+	&::before {
+		border-color: colors(default, light) transparent transparent transparent;
+	}
+}
+
+.accordion {
+	$accordion: &;
+
+	border-width: 0 0 rem(2px);
+	border-style: solid;
+	border-color: colors(default, dark);
+
+	&__item {
+		border-width: rem(2px) 0 0;
+		border-style: solid;
+		border-color: colors(default, dark);
+
+		&.is-visible {
+			#{$accordion}__trigger {
+				@include accordion-active;
+
+				&::before {
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+			}
+
+			#{$accordion}__reveal {
+				display: block;
+				height: auto;
+			}
+		}
+	}
+
+	&__trigger {
+		display: block;
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: rem(spacing(.5)) rem(spacing(1));
+		background-color: colors(default, light);
+		color: colors(default, dark);
+		outline: none;
+		text-align: left;
+		cursor: pointer;
+
+		[dir=rtl] & {
+			text-align: right;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: rem(spacing(1));
+			width: 0;
+			height: 0;
+			border-width: rem(5px) rem(5px) 0 rem(5px);
+			border-style: solid;
+			border-color: colors(default, dark) transparent transparent transparent;
+			transform: translate(-50%, -50%);
+
+			@include transition-property(border, transform);
+			@include transition-duration(vars(transition, xfast));
+			@include transition-timing(ease-in-out);
+
+			[dir=rtl] & {
+				right: auto;
+				left: rem(spacing(1));
+			}
+		}
+
+		@include mq-hover {
+			@include transition-property(background-color, color, outline, opacity);
+			@include transition-duration(vars(transition, xfast));
+			@include transition-timing(ease-in-out);
+
+			&:focus {
+				opacity: .8;
+			}
+
+			&:focus,
+			&:hover {
+				@include accordion-active;
+			}
+		}
+	}
+
+	&__reveal {
+		display: none;
+		height: 0;
+		overflow: hidden;
+
+		@include transition(height);
+
+		:global(.u-content) {
+			padding: rem(spacing(1));
+		}
+	}
+}

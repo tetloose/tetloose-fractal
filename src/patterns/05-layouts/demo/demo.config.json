@@ -1,0 +1,54 @@
+{
+    "title": "Demo",
+    "name": "Demo",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "content": {
+            "modifier": "text-align-center u-spacing-t-lrg",
+            "title": "Layout Demo",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perspiciatis numquam molestiae velit amet nulla et ducimus incidunt magni, est quam rerum ullam at a ipsa reprehenderit molestias eius totam!"
+        },
+        "action": {
+            "modifier": "is-align-container u-spacing-t-lrg"
+        },
+        "accordion": {
+            "component": {
+                "animation": "fade-in",
+                "duration": 400,
+                "modifier": "u-spacing-t-lrg",
+                "styles": ""
+            },
+            "accordionDuration": 200,
+            "ariaLabelledBy": "accordion",
+            "items": [
+                {
+                    "question": "Question 1",
+                    "answer": "<p>this is a paragraph answer</p>"
+                },
+                {
+                    "question": "Question 2",
+                    "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam labore quas ratione, repellendus quaerat dolorum deserunt consequuntur maxime quae omnis nisi ipsum rerum velit quidem. Non quia laborum quidem quod!</p>"
+                },
+                {
+                    "question": "Question 3",
+                    "answer": "<p>this is a paragraph answer</p>"
+                },
+                {
+                    "question": "Question 4",
+                    "answer": "<p>this is a paragraph answer</p>"
+                },
+                {
+                    "question": "Question 5",
+                    "answer": "<p>this is a paragraph answer</p>"
+                }
+            ]
+        }
+    }
+}

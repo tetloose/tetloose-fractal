@@ -1,16 +1,22 @@
 {{#if image}}
 <figure
-    style="opacity: 0"
-    data-module="{{component.module}}"
-    data-animation="{{component.animation}}"
-    data-duration="{{component.duration}}"
-    data-styles="{{component.styles}}"
-    class="u-animate-hide {{component.modifier}}"
-    data-image-class-name="{{#if image.modifier}} {{image.modifier}}{{/if}}"
+    data-module="Figure"
+    data-type="figure"
+    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
+    data-styles="figure{{#if component.styles}} {{component.styles}}{{/if}}"
+    data-image-class-name="{{#if image.modifier}}{{image.modifier}}{{/if}}"
     data-image-styles="figure__img{{#if image.styles}} {{image.styles}}{{/if}}"
-    data-image-alt="{{#if image.alt }} {{ image.alt }}{{/if}}"
-    data-image-mobile="{{#if image.mobile }} {{ image.mobile }}{{/if}}"
-    data-image-tablet="{{#if image.tablet }} {{ image.tablet }}{{/if}}"
-    data-image-desktop="{{#if image.desktop }} {{ image.desktop }}{{/if}}"
-></figure>
+    data-image-alt="{{#if image.alt }}{{ image.alt }}{{/if}}"
+    data-image-mobile="{{#if image.mobile }}{{ image.mobile }}{{/if}}"
+    data-image-tablet="{{#if image.tablet }}{{ image.tablet }}{{/if}}"
+    data-image-desktop="{{#if image.desktop }}{{ image.desktop }}{{/if}}"
+    class="{{#if component.animation}}u-animate-{{component.animation}}{{/if}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
+    {{ render '@loading--centered' }}
+    {{#if image.placeholder }}
+        <img
+            class="js-figurePlaceholder"
+            src="{{ image.placeholder }}"
+            alt="">
+    {{/if}}
+</figure>
 {{/if}}

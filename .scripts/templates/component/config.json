@@ -11,11 +11,10 @@
     "preview": "@preview",
     "context": {
         "component": {
-            "module": "ObjectName",
             "animation": "fade-in",
             "duration": 400,
-            "modifier": "u-spacing-t-lrg",
-            "styles": "moduleName"
+            "modifier": "",
+            "styles": ""
         }
     },
 	"variants": [

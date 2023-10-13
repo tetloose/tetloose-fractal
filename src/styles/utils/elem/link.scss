@@ -1,21 +1,33 @@
-[class*=u-link-] a:not(.u-btn) {
+.u-content a:not(.u-btn),
+.u-link:not(.u-btn) {
 	display: inline-block;
 	position: relative;
+	color: colors(default, dark);
+	text-decoration: none;
 	text-decoration-skip-ink: auto;
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		border-width: 0 0 2px;
+		border-style: dashed;
+		border-color: colors(default, dark);
+	}
 
 	&::after {
 		content: '';
 		position: absolute;
 		z-index: -1;
 		opacity: 0;
+		background-color: colors(default, dark);
 		inset: 0 (-(rem(4px))) 0 (-(rem(4px)));
 
 		@include transition(all);
 		@include hardware(true);
-	}
-
-	&:focus::after {
-		opacity: 1;
 	}
 
 	@include mq-hover {
@@ -23,128 +35,21 @@
 
 		@include transition;
 
-		&:hover::after {
-			opacity: 1;
+		&::before {
+			@include transition(border, vars(transition, xfast), ease-in-out);
 		}
-	}
-}
 
-.u-link-dark a:not(.u-btn) {
-	color: $dark;
-}
-
-.u-link-light a:not(.u-btn) {
-	color: $light;
-}
-
-.u-link-color-1 a:not(.u-btn) {
-	color: $color-1;
-}
-
-.u-link-color-2 a:not(.u-btn) {
-	color: $color-2;
-}
-
-.u-link-color-3 a:not(.u-btn) {
-	color: $color-3;
-}
-
-.u-link-color-4 a:not(.u-btn) {
-	color: $color-4;
-}
-
-.u-link-hover-dark a:not(.u-btn) {
-	&:focus {
-		color: $dark;
-	}
-
-	@include mq-hover {
+		&:focus,
 		&:hover {
-			color: $dark;
+			color: colors(default, light);
+
+			&::before {
+				border-color: colors(default, light);
+			}
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
-}
-
-.u-link-hover-light a:not(.u-btn) {
-	&:focus {
-		color: $light;
-	}
-
-	@include mq-hover {
-		&:hover {
-			color: $light;
-		}
-	}
-}
-
-.u-link-hover-color-1 a:not(.u-btn) {
-	&:focus {
-		color: $color-1;
-	}
-
-	@include mq-hover {
-		&:hover {
-			color: $color-1;
-		}
-	}
-}
-
-.u-link-hover-color-2 a:not(.u-btn) {
-	&:focus {
-		color: $color-2;
-	}
-
-	@include mq-hover {
-		&:hover {
-			color: $color-2;
-		}
-	}
-}
-
-.u-link-hover-color-3 a:not(.u-btn) {
-	&:focus {
-		color: $color-3;
-	}
-
-	@include mq-hover {
-		&:hover {
-			color: $color-3;
-		}
-	}
-}
-
-.u-link-hover-color-4 a:not(.u-btn) {
-	&:focus {
-		color: $color-4;
-	}
-
-	@include mq-hover {
-		&:hover {
-			color: $color-4;
-		}
-	}
-}
-
-.u-link-background-hover-dark a:not(.u-btn)::after {
-	background-color: $dark;
-}
-
-.u-link-background-hover-light a:not(.u-btn)::after {
-	background-color: $light;
-}
-
-.u-link-background-hover-color-1 a:not(.u-btn)::after {
-	background-color: $color-1;
-}
-
-.u-link-background-hover-color-2 a:not(.u-btn)::after {
-	background-color: $color-2;
-}
-
-.u-link-background-hover-color-3 a:not(.u-btn)::after {
-	background-color: $color-3;
-}
-
-.u-link-background-hover-color-4 a:not(.u-btn)::after {
-	background-color: $color-4;
 }

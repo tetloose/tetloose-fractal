@@ -4,12 +4,46 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	max-width: rem(vars(layout, maxwidth));
+	max-width: rem(vars(layout, max-width));
 	margin-right: auto;
 	margin-left: auto;
+	padding-right: calc(rem(vars(layout, gutter)) / 2);
+	padding-left: calc(rem(vars(layout, gutter)) / 2);
 
-	&.is-fullwidth {
-		max-width: 100%;
+	&.is-justify-left {
+		justify-content: flex-start;
+	}
+
+	&.is-justify-center {
+		justify-content: center;
+	}
+
+	&.is-justify-right {
+		justify-content: flex-end;
+	}
+
+	&.is-align-top {
+		align-items: flex-start;
+	}
+
+	&.is-align-middle {
+		align-items: center;
+	}
+
+	&.is-align-bottom {
+		align-items: flex-end;
+	}
+
+	&.is-reverse {
+		flex-direction: row-reverse;
+	}
+
+	&.is-relative {
+		position: relative;
+	}
+
+	&.no-overflow {
+		overflow: hidden;
 	}
 
 	&.no-gutter {
@@ -17,10 +51,94 @@
 		padding-left: 0;
 	}
 
+	@for $i from 1 through 5 {
+		$breakpoint: vars(breakpoint, xxlrg);
+		$selecter: 'xxlrg';
+
+		@if $i == 1 {
+			$breakpoint: vars(breakpoint, sml);
+			$selecter: 'sml';
+		} @else if $i == 2 {
+			$breakpoint: vars(breakpoint, med);
+			$selecter: 'med';
+		} @else if $i == 3 {
+			$breakpoint: vars(breakpoint, lrg);
+			$selecter: 'lrg';
+		} @else if $i == 4 {
+			$breakpoint: vars(breakpoint, xlrg);
+			$selecter: 'xlrg';
+		}
+
+		@include mq($breakpoint) {
+			&.is-#{$selecter}-justify-left {
+				justify-content: flex-start;
+			}
+
+			&.is-#{$selecter}-justify-center {
+				justify-content: center;
+			}
+
+			&.is-#{$selecter}-justify-right {
+				justify-content: flex-end;
+			}
+
+			&.is-#{$selecter}-align-top {
+				align-items: flex-start;
+			}
+
+			&.is-#{$selecter}-align-middle {
+				align-items: center;
+			}
+
+			&.is-#{$selecter}-align-bottom {
+				align-items: flex-end;
+			}
+
+			&.is-#{$selecter}-reverse {
+				flex-direction: row-reverse;
+			}
+
+			&.is-#{$selecter}-relative {
+				position: relative;
+			}
+
+			&.no-#{$selecter}-overflow {
+				overflow: hidden;
+			}
+
+			&.no-#{$selecter}-gutter {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
 	&__col {
 		width: 100%;
-		padding-right: rem(vars(layout, gutter));
-		padding-left: rem(vars(layout, gutter));
+		padding-right: calc(rem(vars(layout, gutter)) / 2);
+		padding-left: calc(rem(vars(layout, gutter)) / 2);
+
+		&[class*=align-],
+		&[class*=justify-] {
+			display: flex;
+			width: 100%;
+		}
+
+		&.is-justify-center {
+			justify-content: center;
+		}
+
+		&.is-justify-right {
+			justify-content: flex-end;
+		}
+
+		&.is-align-middle {
+			align-items: center;
+		}
+
+		&.is-align-bottom {
+			align-items: flex-end;
+		}
 
 		&.is-relative {
 			position: relative;
@@ -30,29 +148,105 @@
 			overflow: hidden;
 		}
 
-		&.is-half {
-			width: column-width(3, 1.5);
-		}
-
-		&.is-1-third {
-			width: column-width(3, 1);
-		}
-
-		&.is-2-third {
-			width: column-width(3, 2);
-		}
-
-		&.is-1-forth {
-			width: column-width(4, 1);
-		}
-
-		&.is-3-forth {
-			width: column-width(4, 3);
-		}
-
 		&.no-gutter {
 			padding-right: 0;
 			padding-left: 0;
+		}
+
+		&.is-1 {
+			width: column-width(12, 1);
+		}
+
+		&.is-2 {
+			width: column-width(12, 2);
+		}
+
+		&.is-3 {
+			width: column-width(12, 3);
+		}
+
+		&.is-4 {
+			width: column-width(12, 4);
+		}
+
+		&.is-5 {
+			width: column-width(12, 5);
+		}
+
+		&.is-6 {
+			width: column-width(12, 6);
+		}
+
+		&.is-7 {
+			width: column-width(12, 7);
+		}
+
+		&.is-8 {
+			width: column-width(12, 8);
+		}
+
+		&.is-9 {
+			width: column-width(12, 9);
+		}
+
+		&.is-10 {
+			width: column-width(12, 10);
+		}
+
+		&.is-11 {
+			width: column-width(12, 11);
+		}
+
+		&.is-12 {
+			width: column-width(12, 12);
+		}
+
+		&.order-1 {
+			order: 1;
+		}
+
+		&.order-2 {
+			order: 2;
+		}
+
+		&.order-3 {
+			order: 3;
+		}
+
+		&.order-4 {
+			order: 4;
+		}
+
+		&.order-5 {
+			order: 5;
+		}
+
+		&.order-6 {
+			order: 6;
+		}
+
+		&.order-7 {
+			order: 7;
+		}
+
+		&.order-8 {
+			order: 8;
+		}
+
+		&.order-9 {
+			order: 9;
+		}
+
+		&.order-10 {
+			order: 10;
+		}
+
+		&.order-11 {
+			order: 11;
+		}
+
+		&.order-12 {
+			order: 12;
 		}
 
 		@for $i from 1 through 5 {
@@ -74,24 +268,125 @@
 			}
 
 			@include mq($breakpoint) {
-				&.is-#{$selecter}-half {
-					width: column-width(3, 1.5);
+				&.is-#{$selecter}-1 {
+					width: column-width(12, 1);
 				}
 
-				&.is-#{$selecter}-1-third {
-					width: column-width(3, 1);
+				&.is-#{$selecter}-2 {
+					width: column-width(12, 2);
 				}
 
-				&.is-#{$selecter}-2-third {
-					width: column-width(3, 2);
+				&.is-#{$selecter}-3 {
+					width: column-width(12, 3);
 				}
 
-				&.is-#{$selecter}-1-forth {
-					width: column-width(4, 1);
+				&.is-#{$selecter}-4 {
+					width: column-width(12, 4);
 				}
 
-				&.is-#{$selecter}-3-forth {
-					width: column-width(4, 3);
+				&.is-#{$selecter}-5 {
+					width: column-width(12, 5);
+				}
+
+				&.is-#{$selecter}-6 {
+					width: column-width(12, 6);
+				}
+
+				&.is-#{$selecter}-7 {
+					width: column-width(12, 7);
+				}
+
+				&.is-#{$selecter}-8 {
+					width: column-width(12, 8);
+				}
+
+				&.is-#{$selecter}-9 {
+					width: column-width(12, 9);
+				}
+
+				&.is-#{$selecter}-10 {
+					width: column-width(12, 10);
+				}
+
+				&.is-#{$selecter}-11 {
+					width: column-width(12, 11);
+				}
+
+				&.is-#{$selecter}-justify-center {
+					justify-content: center;
+				}
+
+				&.is-#{$selecter}-justify-right {
+					justify-content: flex-end;
+				}
+
+				&.is-#{$selecter}-align-middle {
+					align-items: center;
+				}
+
+				&.is-#{$selecter}-align-bottom {
+					align-items: flex-end;
+				}
+
+				&.is-#{$selecter}-relative {
+					position: relative;
+				}
+
+				&.no-#{$selecter}-overflow {
+					overflow: hidden;
+				}
+
+				&.no-#{$selecter}-gutter {
+					padding-right: 0;
+					padding-left: 0;
+				}
+
+				&.#{$selecter}-order-1 {
+					order: 1;
+				}
+
+				&.#{$selecter}-order-2 {
+					order: 2;
+				}
+
+				&.#{$selecter}-order-3 {
+					order: 3;
+				}
+
+				&.#{$selecter}-order-4 {
+					order: 4;
+				}
+
+				&.#{$selecter}-order-5 {
+					order: 5;
+				}
+
+				&.#{$selecter}-order-6 {
+					order: 6;
+				}
+
+				&.#{$selecter}-order-7 {
+					order: 7;
+				}
+
+				&.#{$selecter}-order-8 {
+					order: 8;
+				}
+
+				&.#{$selecter}-order-9 {
+					order: 9;
+				}
+
+				&.#{$selecter}-order-10 {
+					order: 10;
+				}
+
+				&.#{$selecter}-order-11 {
+					order: 11;
+				}
+
+				&.#{$selecter}-order-12 {
+					order: 12;
 				}
 			}
 		}

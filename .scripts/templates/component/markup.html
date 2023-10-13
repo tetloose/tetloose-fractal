@@ -1,8 +1,8 @@
 <div
-    style="opacity: 0"
-    data-module="{{component.module}}"
-    data-animation="{{component.animation}}"
-    data-duration="{{component.duration}}"
-    data-styles="{{component.styles}}"
-    class="u-animate-hide {{component.modifier}}">
+    style="{{> initialStyle}}"
+    data-module="ObjectName"
+    data-animation="{{#if component.animation}}{{component.animation}}{{/if}}"
+    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
+    data-styles="moduleName{{#if component.styles}} {{component.styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
 </div>

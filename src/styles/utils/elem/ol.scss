@@ -3,5 +3,5 @@
 	margin-left: rem(18px);
 	list-style-type: decimal;
 
-	@include type-paragraph;
+	@extend %type-paragraph;
 }

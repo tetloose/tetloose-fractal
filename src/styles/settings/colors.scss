@@ -1,6 +1,28 @@
-$dark: #{var(--dark)};
-$light: #{var(--light)};
-$color-1: #{var(--color-1)};
-$color-2: #{var(--color-2)};
-$color-3: #{var(--color-3)};
-$color-4: #{var(--color-4)};
+@function colors($name, $variant) {
+	@if $variant {
+		@return map-get(map-get($colors, $name), $variant);
+	} @else {
+		@return map-get($colors, $name);
+	}
+}
+
+$dark: #000;
+$light: #fff;
+$hotpink: #ff69b4;
+$lavender: #7669ff;
+$lime: #69ffb4;
+$purple: #7d11f9;
+$colors: (
+	default: (
+		dark: $dark,
+		light: $light,
+		primary: $hotpink,
+		secondary: $lavender,
+		tertiary: $lime,
+		quaternary: $purple
+	),
+	skeleton: (
+		to: $dark,
+		from: $light
+	)
+);

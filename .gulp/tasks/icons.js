@@ -33,7 +33,10 @@ const iconGenerateFunc = () => {
 }
 
 export const iconMoveFont = (cb) => {
-    iconMoveFontFunc()
+    setTimeout(() => {
+        iconMoveFontFunc()
+    }, 200)
+
     cb()
 }
 

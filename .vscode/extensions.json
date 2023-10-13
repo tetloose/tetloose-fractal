@@ -6,8 +6,6 @@
         "esbenp.prettier-vscode",
         "dawhite.mustache",
         "Fooxly.workspace",
-        "andrejunges.Handlebars",
-        "ronnidc.nunjucks",
-        "okitavera.vscode-nunjucks-formatter"
+        "andrejunges.Handlebars"
     ]
 }

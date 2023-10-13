@@ -1,8 +1,8 @@
 .u-content h1,
 .u-h1 {
-	@include type-h1;
+	@extend %type-h1;
 
 	strong {
-		@include f-heading-bold;
+		@extend %f-heading-bold;
 	}
 }

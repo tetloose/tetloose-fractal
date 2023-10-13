@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import notification from './tasks/notification'
+import * as handlebarConfig from '../src/config/handlebars'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -11,11 +12,6 @@ module.exports = {
         mode: isDev,
         entry: `${base}/src/app.ts`,
         output: `${base}/public/assets`
-    },
-    fractal: {
-        port: process.env.PROXY,
-        skin: process.env.SKIN,
-        projectName: process.env.PROJECT_NAME
     },
     scripts: {
         files: `${base}/src/**/*.{ts,js}`,
@@ -49,7 +45,7 @@ module.exports = {
         output: `${base}/public/assets/fonts`
     },
     icons: {
-        json: `${base}/src/icons/*.json`,
+        json: `${base}/src/icons/selection.json`,
         template: `${base}/src/icons/template.mustache`,
         output: `${base}/src/styles/utils/icons.scss`,
         fonts: `${base}/src/icons/*.{svg,ttf,woff}`,
@@ -63,5 +59,13 @@ module.exports = {
         appColor: '#c2ad8d',
         jsonTemplate: `${base}/src/favicon/favicon-data.json`,
         success: () => notification('🦙 Favicon 🦙', 'Saved', 'src/patterns/head.html')
-    }
+    },
+    fractal: {
+        projectName: process.env.PROJECT_NAME,
+        port: process.env.PROXY,
+        skin: process.env.SKIN,
+        favicon: process.env.FAVICON,
+        styles: process.env.STYLES
+    },
+    hbs: handlebarConfig
 }

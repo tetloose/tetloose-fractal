@@ -1,9 +1,9 @@
 .u-content h5,
 .u-h5 {
-	@include type-h5;
+	@extend %type-h5;
 
 	b,
 	strong {
-		@include f-heading-bold;
+		@extend %f-heading-bold;
 	}
 }

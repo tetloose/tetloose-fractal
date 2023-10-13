@@ -1,0 +1,36 @@
+<div
+    style="{{> initialStyle}}"
+    data-module="Accordion"
+    data-animation="{{#if component.animation}}{{component.animation}}{{/if}}"
+    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
+    data-accordion-duration="{{#if accordionDuration}}{{accordionDuration}}{{else}}200{{/if}}"
+    data-styles="accordion{{#if component.styles}} {{component.styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
+    {{#each items}}
+    <div
+        data-styles="accordion__item"
+        class="js-item">
+        <button
+            type="button"
+            data-styles="accordion__trigger"
+            data-index="{{@index}}"
+            aria-label="{{this.question}}"
+            aria-expanded="false"
+            aria-controls="section{{#if ../ariaLabelledBy}}{{../ariaLabelledBy}}{{/if}}{{@index}}id"
+            class="js-trigger">
+            {{this.question}}
+        </button>
+        <div
+            id="section{{#if ../ariaLabelledBy}}{{../ariaLabelledBy}}{{/if}}{{@index}}id"
+            role="region"
+            aria-labelledby="{{#if ../ariaLabelledBy}}{{../ariaLabelledBy}}{{/if}}{{@index}}id"
+            data-styles="accordion__reveal"
+            tabindex="-1"
+            class="js-reveal">
+            {{#> @content }}
+                {{{this.answer}}}
+            {{/@content}}
+        </div>
+    </div>
+    {{/each}}
+</div>

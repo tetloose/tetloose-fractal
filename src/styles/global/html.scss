@@ -6,10 +6,10 @@ html {
 	line-height: 1.5;
 	text-rendering: optimizespeed;
 
-	@include f-body;
-	@include f-body-regular;
+	@extend %f-body;
+	@extend %f-body-regular;
 	@include font-smoothing;
-	@include fluid-type(vars(breakpoint, sml), vars(layout, maxwidth), vars(type, sml), vars(type, lrg));
+	@include fluid-type(vars(breakpoint, sml), vars(layout, max-width), vars(type, sml), vars(type, lrg));
 
 	&.no-scroll {
 		position: relative;

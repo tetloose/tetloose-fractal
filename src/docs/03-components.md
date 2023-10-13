@@ -1,5 +1,5 @@
 ---
-title: Components / Partials / Components
+title: Components / Partials
 ---
 
 # Partials / Components

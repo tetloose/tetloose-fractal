@@ -41,6 +41,7 @@
     "dependencies": {
         "@frctl/fractal": "^1.5.15",
         "@frctl/nunjucks": "^2.0.15",
+        "@frctl/handlebars": "^1.2.13",
         "gulp-shell": "^0.8.0"
     },
     "devDependencies": {

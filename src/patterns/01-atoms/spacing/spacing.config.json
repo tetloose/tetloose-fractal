@@ -1,0 +1,72 @@
+{
+    "title": "Spacing",
+    "name": "Spacing",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview-fractal",
+    "context": {
+        "title": "Spacing",
+        "spacing": [
+            {
+                "name": "Small Padding Top",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-t-sml"
+            },
+            {
+                "name": "Medium Padding Top",
+                "modifier": "",
+                "className": "u-spacing-t-med"
+            },
+            {
+                "name": "Large Padding Top",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-t-lrg"
+            },
+            {
+                "name": "X-Large Padding Top",
+                "modifier": "",
+                "className": "u-spacing-t-xlrg"
+            },
+            {
+                "name": "XX-Large Padding Top",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-t-xxlrg"
+            },
+            {
+                "name": "Small Padding Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-sml"
+            },
+            {
+                "name": "Medium Padding Bottom",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-b-med"
+            },
+            {
+                "name": "Large Padding Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-lrg"
+            },
+            {
+                "name": "X-Large Padding Bottom",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-b-xlrg"
+            },
+            {
+                "name": "XX-Large Padding Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-xxlrg"
+            },
+            {
+                "name": "Padding Top and Padding Bottom",
+                "modifier": "Fractal-bg-primary Fractal-secondary",
+                "className": "u-spacing-t-xxlrg u-spacing-b-med"
+            }
+        ]
+    }
+}

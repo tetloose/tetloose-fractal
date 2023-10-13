@@ -21,7 +21,7 @@
 
 @mixin rem($properties) {
 	@each $property, $value in $properties {
-		@if  type-of($value) == number and $value != 0 {
+		@if type-of($value) == number and $value != 0 {
 			$value: if(math.is-unitless($value), $value * 1px, $value);
 		}
 

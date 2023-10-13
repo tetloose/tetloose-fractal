@@ -1,17 +1,20 @@
 import fractal from '@frctl/fractal'
+import handlebars from '@frctl/handlebars'
 import mandelbrot from '@frctl/mandelbrot'
-import { fractal as config } from '../config'
+import { fractal as config, hbs } from '../config'
 
 export const fractalDev = fractal.create()
 export const logger = fractalDev.cli.console
-export const tetlooseTheme = mandelbrot({
+export const fractalTheme = mandelbrot({
     skin: config.skin,
-    favicon: '/favicon/favicon.ico',
+    favicon: config.favicon,
     styles: [
         'default',
-        '/css/fractal.css'
-    ]
+        config.styles
+    ],
+    nav: ['docs', 'components']
 })
+export const fractalHbs = handlebars({...hbs})
 
 const fractalServeFunc = () => {
     const server = fractalDev.web.server({

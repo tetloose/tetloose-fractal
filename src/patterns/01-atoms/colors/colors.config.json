@@ -1,0 +1,53 @@
+{
+    "title": "Colors",
+    "name": "Colors",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview-fractal",
+    "context": {
+        "title": "Colors",
+        "colors": [
+            {
+                "name": "Light",
+                "hex": "#fff",
+                "scss": "$light",
+                "modifier": ""
+            },
+            {
+                "name": "Dark",
+                "hex": "#000",
+                "scss": "$dark",
+                "modifier": "Fractal-secondary"
+            },
+            {
+                "name": "Primary",
+                "hex": "#ff69b4",
+                "scss": "colors(default, primary)",
+                "modifier": ""
+            },
+            {
+                "name": "Secondary",
+                "hex": "#7669ff",
+                "scss": "colors(default, secondary)",
+                "modifier": ""
+            },
+            {
+                "name": "Tertiary",
+                "hex": "#69ffb4",
+                "scss": "colors(default, tertiary)",
+                "modifier": ""
+            },
+            {
+                "name": "Quaternary",
+                "hex": "#7d11f9",
+                "scss": "colors(default, quaternary)",
+                "modifier": "Fractal-secondary"
+            }
+        ]
+    }
+}

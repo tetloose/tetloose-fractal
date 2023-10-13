@@ -1,0 +1,76 @@
+{
+    "title": "Button",
+    "name": "Button",
+    "tags": [
+        "sprint-1",
+        "author:tetloose"
+    ],
+    "meta": {
+      "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "collated": true,
+    "context": {
+        "modifier": "is-inline is-light",
+        "styles": "",
+        "text": "Light Inline Button"
+    },
+	"variants": [
+		{
+			"name": "Dark",
+            "context": {
+                "modifier": "is-inline is-dark",
+                "styles": "",
+                "text": "Dark Inline Button"
+            }
+		},
+		{
+			"name": "Primary",
+            "context": {
+                "modifier": "is-inline is-primary",
+                "styles": "",
+                "text": "Primary Inline Button"
+            }
+		},
+		{
+			"name": "Secondary",
+            "context": {
+                "modifier": "is-inline is-secondary",
+                "styles": "",
+                "text": "Secondary Inline Button"
+            }
+		},
+		{
+			"name": "Primary Full Width",
+            "context": {
+                "modifier": "is-block is-primary",
+                "styles": "",
+                "text": "Primary Full Width Button"
+            }
+		},
+		{
+			"name": "Secondary Full Width",
+            "context": {
+                "modifier": "is-block is-secondary",
+                "styles": "",
+                "text": "Secondary Full Width Button"
+            }
+		},
+		{
+			"name": "Light Full Width",
+            "context": {
+                "modifier": "is-block is-light",
+                "styles": "",
+                "text": "Light Full Width Button"
+            }
+		},
+		{
+			"name": "Dark Full Width",
+            "context": {
+                "modifier": "is-block is-dark",
+                "styles": "",
+                "text": "Dark Full Width Button"
+            }
+		}
+	]
+}

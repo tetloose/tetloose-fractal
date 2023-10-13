@@ -1,4 +1,3 @@
-export { objectToString } from './object-to-string.utilities'
 export { AppendNode } from './append-node.utilities'
 export { observer } from './observer.utilities'
 export { request } from './request.utilities'

@@ -7,7 +7,7 @@
 	border-color: transparent;
 	appearance: none;
 
-	@include type-paragraph;
+	@extend %type-paragraph;
 
 	&::placeholder {
 		opacity: .8;

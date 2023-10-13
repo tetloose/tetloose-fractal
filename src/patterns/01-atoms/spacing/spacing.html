@@ -1,0 +1,25 @@
+<main class="u-spacing-t-lrg">
+    <section class="u-spacing-b-lrg">
+        <div class="l-row">
+            <div class="l-row__col">
+                <div class="u-content">
+                    <h1>{{title}}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{#each spacing}}
+        <section class="{{this.modifier}} {{this.className}}">
+            <div class="l-row">
+                <div class="l-row__col">
+                    <div class="u-content">
+                        <ul>
+                            <li>{{this.name}}</li>
+                            <li>ClassName: {{this.className}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/each}}
+</main>
