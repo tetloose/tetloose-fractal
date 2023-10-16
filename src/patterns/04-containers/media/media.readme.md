@@ -13,7 +13,7 @@ Media is a [Container Component](https://fractal.build/guide/components/includin
 
 When passing a new context to the container you must prefix the data with `this` e.g. `this.data`.
 
-## Config
+## Context
 
 ```
 "data": {
@@ -29,7 +29,3 @@ This is a class name or a utility class, generated via `src/styles/layout/media.
 ### data.styles
 
 This allows you to pass SCSS Module styles to the container.
-
-### data.button
-
-This is the context for a **button** component passed into the container.

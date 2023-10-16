@@ -41,7 +41,8 @@ type: (
     lrg: 20px,
     med: 16px,
     sml: 14px
-)```
+)
+```
 
 Usage: `vars(type, med)`.
 

@@ -13,7 +13,7 @@ Action is a [Container Component](https://fractal.build/guide/components/includi
 
 When passing a new context to the container you must prefix the data with `this` e.g. `this.data`.
 
-## Config
+## Context
 
 ```
 "data": {

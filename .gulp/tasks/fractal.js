@@ -14,7 +14,7 @@ export const fractalTheme = mandelbrot({
         'default',
         config.styles
     ],
-    nav: ['docs', 'components']
+    nav: ['components', 'docs']
 })
 export const fractalHbs = handlebars({...hbs})
 

@@ -1,0 +1,13 @@
+{{#if videoId}}
+<div
+    data-styles="{{#if styles}}{{styles}}{{/if}}"
+    class="u-media ratio-{{#if ratio}}{{ratio}}{{else}}16x9{{/if}}{{#if modifier}} {{modifier}}{{/if}}">
+    <iframe
+        class="u-media__iframe"
+        src="https://player.vimeo.com/video/{{videoId}}?title=0&byline=0&portrait=0{{#if autoPlay}}&autoplay=1{{/if}}"
+        title="{{#if title}}{{title}}{{/if}}"
+        frameborder="0"
+        allow="{{#if autoPlay}}autoplay;{{/if}} fullscreen; picture-in-picture">
+    </iframe>
+</div>
+{{/if}}

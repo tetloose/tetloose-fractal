@@ -6,7 +6,7 @@ Usage:
     &lbrace;&lbrace;&gt; @logo logo&rbrace;&rbrace;
 </pre>
 
-## Context Partial
+## Context
 
 ```
     "logo": {
@@ -21,7 +21,7 @@ Usage:
 
 location of image.
 
-### logo.src
+### logo.alt
 
 Alt text.
 

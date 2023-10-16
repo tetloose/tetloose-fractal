@@ -1,6 +1,6 @@
 {
-    "title": "Media",
-    "name": "Media",
+    "title": "Youtube",
+    "name": "Youtube",
     "tags": [
         "sprint-1",
         "author:tetloose"
@@ -10,7 +10,12 @@
     },
     "preview": "@preview",
     "context": {
+        "styles": "",
         "modifier": "",
-        "styles": ""
+        "videoId": "WuHSBSLK3_A",
+        "ratio": "16x9",
+        "autoPlay": false,
+        "title": "Video title"
     }
 }
+

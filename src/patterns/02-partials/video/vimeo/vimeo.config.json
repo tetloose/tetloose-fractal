@@ -1,6 +1,6 @@
 {
-    "title": "Media",
-    "name": "Media",
+    "title": "Vimeo",
+    "name": "Vimeo",
     "tags": [
         "sprint-1",
         "author:tetloose"
@@ -10,7 +10,11 @@
     },
     "preview": "@preview",
     "context": {
+        "styles": "",
         "modifier": "",
-        "styles": ""
+        "videoId": "103364828",
+        "ratio": "16x9",
+        "autoPlay": false,
+        "title": "Video title"
     }
 }

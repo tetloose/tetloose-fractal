@@ -14,7 +14,7 @@ Content is a [Container Component](https://fractal.build/guide/components/includ
 
 When passing a new context to the container you must prefix the data with `this` e.g. `this.data`. You can pass any Object / Component into this Container. The above is an example showing a figure, basic content and a button.
 
-## Config
+## Context
 
 ```
 "data": {

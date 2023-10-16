@@ -2,7 +2,7 @@
 title: Scripts
 ---
 
-# Entry
+## Entry
 
 `./src/app.ts`: project entry and handles the module loading.
 

@@ -29,6 +29,7 @@ layout: (
     gutter: 20px,
     browser-context: 16px,
     spacing: 16px
-)```
+)
+```
 
 Updating this **variable** will alter all the spacing throughout the project.

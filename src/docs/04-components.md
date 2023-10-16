@@ -2,8 +2,6 @@
 title: Components / Partials
 ---
 
-# Markup
-
 `moduleName.html`
 
 ```
@@ -33,13 +31,13 @@ This is the animation when the Component / Partial is loaded. Refer to `src/styl
 
 This is the animation duration default is 400.
 
-### data-modifier
-
-This is a class name or a utility class, generated via `src/styles/app.scss` and loaded globally, usually prefixed with `u-`.
-
 ### data-styles
 
 This relates to the scss module `*.module.scss` within the Component / Partial. Types are auto generated `*.module.scss.d.ts`, refer to this file for extra style attributes.
+
+### data-modifier
+
+This is a class name or a utility class, generated via `src/styles/app.scss` and loaded globally, usually prefixed with `u-`.
 
 ## Context
 
@@ -49,8 +47,8 @@ This relates to the scss module `*.module.scss` within the Component / Partial. 
 "component": {
     "animation": "fade-in",
     "duration": 400,
-    "modifier": "",
-    "styles": ""
+    "styles": "",
+    "modifier": ""
 }
 ```
 

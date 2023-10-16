@@ -1,17 +1,28 @@
 # Figure
 
-This partial can be shared to any component &lbrace;&lbrace;> @figure image &rbrace;&rbrace;
+This partial can be shared to any component &lbrace;&lbrace;> @figure figure &rbrace;&rbrace;
 
 The partial initially loads a placeholder image, a super low rez blurred version of the image, with a loading animation over the top. When this partial is visible in the viewport it will load the images in, replacing the blurred version.
 
-## Context Partial
+## Context
 
 ```
-    "component": {
-        "duration": 400,
-        "animation": "skeleton",
-        "styles": "",
-        "modifier": ""
+    "figure" {
+        "component": {
+            "duration": 400,
+            "animation": "skeleton",
+            "styles": "",
+            "modifier": ""
+        },
+        "image": {
+            "modifier": "",
+            "styles": "",
+            "alt": "Image from unsplash.it",
+            "placeholder": "/images/placeholder.png",
+            "desktop": "/images/desktop.jpg",
+            "tablet": "/images/tablet.jpg",
+            "mobile": "/images/mobile.jpg"
+        }
     }
 ```
 
@@ -30,20 +41,6 @@ This relates to the scss module `figure.module.scss` within the Partial. The def
 ### component.modifier
 
 This is a class name or a utility class thats loaded globally.
-
-## Context Image
-
-```
-    "image": {
-        "modifier": "",
-        "styles": "",
-        "alt": "Image from unsplash.it",
-        "placeholder": "/images/placeholder.png",
-        "desktop": "/images/desktop.jpg",
-        "tablet": "/images/tablet.jpg",
-        "mobile": "/images/mobile.jpg"
-    }
-```
 
 ### image.modifier
 

@@ -4,7 +4,7 @@ This principle can be shared to any component &lbrace;&lbrace;> @button button &
 
 Styles for buttons are loaded globally and can be found `src/styles/utils/btn.scss`.
 
-## Context Partial
+## Context
 
 ```
     "button": {

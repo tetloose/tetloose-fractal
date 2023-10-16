@@ -3,7 +3,7 @@
     "name": "Demo",
     "tags": [
         "sprint-1",
-        "author:James Tetley"
+        "author:tetloose"
     ],
     "meta": {
         "addedIn": "1.0"
@@ -17,6 +17,9 @@
         },
         "action": {
             "modifier": "is-align-container u-spacing-t-lrg"
+        },
+        "media": {
+            "modifier": "u-spacing-t-lrg"
         },
         "accordion": {
             "component": {

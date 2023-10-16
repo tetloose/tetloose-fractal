@@ -2,7 +2,7 @@
 title: Styles
 ---
 
-# Entry
+## Entry
 
 - `./src/app.scss`: Global styles (required)
 - `./src/print.scss`: Global print styles (optional)
@@ -46,4 +46,4 @@ These styles handle layout.
 
 When working with `*.module.scss` you can import **settings** and **mixins** with `@import '@styles/settings';`.
 
-- [HOME >>](/docs)
+- [PRODUCTION >>](/docs/production)

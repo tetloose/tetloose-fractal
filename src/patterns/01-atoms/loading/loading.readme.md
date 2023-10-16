@@ -8,7 +8,7 @@ Usage:
     &lbrace;&lbrace;&gt; @loading loading&rbrace;&rbrace;
 </pre>
 
-## Context Partial
+## Context
 
 ```
     "loading": {
@@ -17,6 +17,10 @@ Usage:
         "styles": ""
     }
 ```
+
+### loading.src
+
+Location of image.
 
 ### loading.modifier
 

@@ -22,6 +22,16 @@
                     <h1>{{title}}</h1>
                     <p>{{body}}</p>
                 {{/@content}}
+                {{#> '@media' this.media }}
+                    <div class="l-row">
+                        <div class="l-row__col is-sml-6">
+                             {{ render '@youtube' }}
+                        </div>
+                        <div class="l-row__col is-sml-6">
+                             {{ render '@vimeo' }}
+                        </div>
+                    </div>
+                {{/@media}}
                 {{> '@accordion' accordion }}
                 {{#> '@action' this.action }}
                     {{ render '@button' }}

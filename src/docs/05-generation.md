@@ -24,7 +24,7 @@ After generating these modules, you need to update `ObjectName`, `moduleName` an
 2. `*.component.ts`
 3. `*.test.ts`
 4. `*.module.scss`
-5. `*.test.ts`
+5. `*.types.ts`
 
 You will then need to pass the `ObjectName` into the module loader `src/config/modules.config.ts`.
 

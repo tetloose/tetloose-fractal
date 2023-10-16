@@ -1,0 +1,13 @@
+{{#if videoId}}
+<div
+    data-styles="{{#if styles}}{{styles}}{{/if}}"
+    class="u-media ratio-{{#if ratio}}{{ratio}}{{else}}16x9{{/if}}{{#if modifier}} {{modifier}}{{/if}}">
+    <iframe
+        class="u-media__iframe"
+        src="https://www.youtube.com/embed/{{videoId}}{{#if autoPlay}}?autoplay=1&mute=1{{/if}}"
+        title="{{#if title}}{{title}}{{/if}}"
+        frameborder="0"
+        allow="accelerometer; {{#if autoPlay}}autoplay; {{/if}}clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+    </iframe>
+</div>
+{{/if}}
