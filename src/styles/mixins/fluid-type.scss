@@ -1,15 +1,22 @@
 @use 'sass:math';
 
-@mixin fluid-type($minVw, $maxVw, $minFontSize, $maxFontSize) {
-	@include mq($minVw, max-width) {
-		font-size: rem($minFontSize);
+@function fluid-type-calc($val, $breakpoint) {
+	$vw-context: $breakpoint * .01 * 1;
+
+	@return #{math.div($val, $vw-context) * 1}vw;
+}
+
+@mixin fluid-type($sml, $med, $lrg, $browser-context, $type-smallest) {
+	font-size: 100%;
+
+	@include mq-between($sml, $med) {
+		font-size: fluid-type-calc($browser-context, $sml);
 	}
 
-	@include mq($minVw) {
-		font-size: rem(calc(#{$minFontSize} + #{strip-unit($maxFontSize - $minFontSize)} * ((100vw - #{$minVw}) / #{strip-unit($maxVw - $minVw)})));
-	}
-
-	@include mq($maxVw) {
-		font-size: rem($maxFontSize);
+	@include mq-between($med, $lrg) {
+		font-size: fluid-type-calc($type-smallest, $med);
 	}
 }
+
+// usage
+// @include fluid-type(320px, 768px, 1024px, 16px, 12px);

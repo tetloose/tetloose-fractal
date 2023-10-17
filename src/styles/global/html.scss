@@ -9,7 +9,8 @@ html {
 	@extend %f-body;
 	@extend %f-body-regular;
 	@include font-smoothing;
-	@include fluid-type(vars(breakpoint, sml), vars(layout, max-width), vars(type, sml), vars(type, lrg));
+
+	// @include fluid-type(vars(breakpoint, sml), vars(breakpoint, med), vars(breakpoint, lrg), vars(layout, browser-context), vars(type, sml));
 
 	&.no-scroll {
 		position: relative;
