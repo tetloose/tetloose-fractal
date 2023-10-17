@@ -1,4 +1,4 @@
-# Typology
+# Typography
 
 ## Import fonts globally
 

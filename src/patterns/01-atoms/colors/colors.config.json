@@ -15,13 +15,13 @@
             {
                 "name": "Light",
                 "hex": "#fff",
-                "scss": "$light",
+                "scss": "colors(default, light)",
                 "modifier": ""
             },
             {
                 "name": "Dark",
                 "hex": "#000",
-                "scss": "$dark",
+                "scss": "colors(default, dark)",
                 "modifier": "Fractal-secondary"
             },
             {

@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import notification from './tasks/notification'
 import * as handlebarConfig from '../src/config/handlebars'
+import * as fractalConfig from '../src/config/fractal'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -8,6 +9,8 @@ const isDev = process.env.ENV === 'dev'
 const base = resolve(__dirname, '../')
 
 module.exports = {
+    fractal: fractalConfig,
+    hbs: handlebarConfig,
     webpack: {
         mode: isDev,
         entry: `${base}/src/app.ts`,
@@ -71,7 +74,6 @@ module.exports = {
         entry: `${base}/build/**/*.html`,
         output: `${base}/build`
     },
-    hbs: handlebarConfig,
     accessibility: {
         entry: `${base}/src/patterns/**/*.html`,
         output: `${base}/accessibility-report`

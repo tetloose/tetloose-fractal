@@ -1,6 +1,5 @@
 #!/bin/bash
 #setup
 
-cp .env.example .env
 eval "yarn && yarn prepare && yarn create-hook"
 eval "yarn dev"
