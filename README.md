@@ -40,7 +40,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 ## Setup
 
 1. `git clone git@github.com:tetloose/tetloose-fractal.git`
-2. Update `PROJECT_NAME` in `src/config/fractal.js`
+2. Update `projectName` in `src/config/fractal.js`
 3. `cmd shift p recommended` install recommended plugins
 4. `yarn setup`
 5. Web browser will open `http://localhost:3000/`

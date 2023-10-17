@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import notification from './tasks/notification'
-import * as handlebarConfig from '../src/config/handlebars'
 import * as fractalConfig from '../src/config/fractal'
+import * as handlebarConfig from '../src/config/handlebars'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -62,13 +62,6 @@ module.exports = {
         appColor: '#c2ad8d',
         jsonTemplate: `${base}/src/favicon/favicon-data.json`,
         success: () => notification('🦙 Favicon 🦙', 'Saved', 'src/patterns/head.html')
-    },
-    fractal: {
-        projectName: process.env.PROJECT_NAME,
-        port: process.env.PROXY,
-        skin: process.env.SKIN,
-        favicon: process.env.FAVICON,
-        styles: process.env.STYLES
     },
     beautify: {
         entry: `${base}/build/**/*.html`,
