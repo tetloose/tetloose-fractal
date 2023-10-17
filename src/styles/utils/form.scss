@@ -76,7 +76,7 @@
 			right: 0;
 			transform: translateY(-50%) scale(1.1);
 
-			@include transition(all);
+			@include transition('all');
 
 			&:focus {
 				transform: translateY(-50%) scale(1.3);

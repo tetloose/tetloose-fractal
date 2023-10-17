@@ -66,9 +66,7 @@
 			border-color: colors(default, dark) transparent transparent transparent;
 			transform: translate(-50%, -50%);
 
-			@include transition-property(border, transform);
-			@include transition-duration(vars(transition, xfast));
-			@include transition-timing(ease-in-out);
+			@include transition('border, transform');
 
 			[dir=rtl] & {
 				right: auto;
@@ -77,9 +75,7 @@
 		}
 
 		@include mq-hover {
-			@include transition-property(background-color, color, outline, opacity);
-			@include transition-duration(vars(transition, xfast));
-			@include transition-timing(ease-in-out);
+			@include transition('background-color, color, outline, opacity');
 
 			&:focus {
 				opacity: .8;
@@ -97,7 +93,7 @@
 		height: 0;
 		overflow: hidden;
 
-		@include transition(height);
+		@include transition('height');
 
 		:global(.u-content) {
 			padding: rem(spacing(1));

@@ -1,29 +1,22 @@
-// @include transition(background-color, 2s, true);
-@mixin transition($property: color, $speed: vars(transition, xfast), $easing: ease-in-out) {
-	transition: $property $speed $easing;
+@use 'sass:string';
+
+@mixin transition($property: 'color', $duration: vars(transition, xfast), $timing: ease-in-out, $delay: null) {
+	@if $property {
+		transition-property: string.unquote($property);
+	}
+
+	@if $duration {
+		transition-duration: $duration;
+	}
+
+	@if $timing {
+		transition-timing-function: $timing;
+	}
+
+	@if $delay {
+		transition-delay: $delay;
+	}
 }
 
-// @include transition-property(color, background-color);
-@mixin transition-property($propery...) {
-	transition-property: $propery;
-}
-
-// @include transition-duration(200ms);
-@mixin transition-duration($duration) {
-	transition-duration: $duration;
-}
-
-// @include transition-timing(ease-in-out);
-@mixin transition-timing($timing) {
-	transition-timing-function: $timing;
-}
-
-// @include transition-delay(1ms);
-@mixin transition-delay($delay) {
-	transition-delay: $delay;
-}
-
-// @include animation-delay(1ms);
-@mixin animation-delay($delay) {
-	animation-delay: $delay;
-}
+// Usage
+// @include transition('background, color, border', 2s, ease-in-out, 1s);

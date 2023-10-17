@@ -21,9 +21,7 @@
 	}
 
 	@include mq-hover {
-		@include transition-property(color, background-color, border, opacity);
-		@include transition-duration(vars(transition, xfast));
-		@include transition-timing(ease-in-out);
+		@include transition('color, background-color, border, opacity');
 
 		cursor: pointer;
 	}

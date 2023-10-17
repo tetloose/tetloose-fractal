@@ -26,7 +26,7 @@
 		background-color: colors(default, dark);
 		inset: 0 (-(rem(4px))) 0 (-(rem(4px)));
 
-		@include transition(all);
+		@include transition('all');
 		@include hardware(true);
 	}
 
@@ -36,7 +36,7 @@
 		@include transition;
 
 		&::before {
-			@include transition(border, vars(transition, xfast), ease-in-out);
+			@include transition('border');
 		}
 
 		&:focus,
