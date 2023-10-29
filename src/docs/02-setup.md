@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-1. `git clone git@ssh.dev.azure.com:v3/HugoAndCat/SonyCorporate/tv-sound-bar-pdp`
+1. `git clone git@github.com:tetloose/tetloose-fractal.git`
 2. Update `projectName` in `src/config/fractal.js`
 3. `cmd shift p recommended` install recommended plugins
 4. `yarn setup`

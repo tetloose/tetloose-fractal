@@ -39,7 +39,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 
 ## Setup
 
-1. `git clone git@ssh.dev.azure.com:v3/HugoAndCat/SonyCorporate/tv-sound-bar-pdp`
+1. `git clone git@github.com:tetloose/tetloose-fractal.git`
 2. Update `projectName` in `src/config/fractal.js`
 3. `cmd shift p recommended` install recommended plugins
 4. `yarn setup`
@@ -48,6 +48,3 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 ## Docs
 
 Once the project is running you can view the docs here: `http://localhost:3000/`.
-
-<!-- TODO -->
-<!-- Add animation as style: animation-duration: 200ms; -->
