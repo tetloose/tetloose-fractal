@@ -3,77 +3,72 @@
     "name": "Icons",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
     },
-    "preview": "@preview-fractal",
+    "preview": "@preview",
     "context": {
-        "title": "Icons",
-        "applicationTitle": "Application Icons",
         "applicationIcons": [
             {
                 "name": "News",
                 "className": "u-icon-news"
             },
             {
-                "name": "Prev",
+                "name": "prev",
                 "className": "u-icon-prev"
             },
             {
-                "name": "Next",
+                "name": "next",
                 "className": "u-icon-next"
             },
             {
-                "name": "First",
+                "name": "first",
                 "className": "u-icon-first"
             },
             {
-                "name": "Last",
+                "name": "last",
                 "className": "u-icon-last"
-            }
-        ],
-        "socialTitle": "Social Icons",
-        "socialIcons": [
+            },
             {
-                "name": "Songkick",
+                "name": "songkick",
                 "className": "u-icon-songkick"
             },
             {
-                "name": "Youtube",
+                "name": "youtube",
                 "className": "u-icon-youtube"
             },
             {
-                "name": "Tiktok",
+                "name": "tiktok",
                 "className": "u-icon-tiktok"
             },
             {
-                "name": "Bandcamp",
+                "name": "bandcamp",
                 "className": "u-icon-bandcamp"
             },
             {
-                "name": "Spotify",
+                "name": "spotify",
                 "className": "u-icon-spotify"
             },
             {
-                "name": "Linkedin",
+                "name": "linkedin",
                 "className": "u-icon-linkedin"
             },
             {
-                "name": "Twitter",
+                "name": "twitter",
                 "className": "u-icon-twitter"
             },
             {
-                "name": "Vimeo",
+                "name": "vimeo",
                 "className": "u-icon-vimeo"
             },
             {
-                "name": "Instagram",
+                "name": "instagram",
                 "className": "u-icon-instagram"
             },
             {
-                "name": "Facebook",
+                "name": "facebook",
                 "className": "u-icon-facebook"
             }
         ]

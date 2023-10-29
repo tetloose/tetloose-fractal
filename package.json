@@ -1,7 +1,7 @@
 {
-    "name": "tetloose-fractal",
+    "name": "tv-sound-bar-pdp",
     "version": "1.0.0",
-    "description": "Tetloose Fractal is a custom fractal.build component library",
+    "description": "TV Sound Bar PDP Fractal is a custom fractal.build component library",
     "main": "./gulpfile.babel.js",
     "keywords": [
         "Fractal",
@@ -14,8 +14,8 @@
         "WCAG AAA",
         "Speed Performance"
     ],
-    "repository": "git@github.com:tetloose/tetloose-fractal.git",
-    "author": "James Tetley <tetloose@gmail.com>",
+    "repository": "git@ssh.dev.azure.com:v3/HugoAndCat/SonyCorporate/tv-sound-bar-pdp",
+    "author": "James Tetley <jtetley@hugoandcat.com>",
     "license": "MIT",
     "babel": {
         "presets": [
@@ -24,10 +24,12 @@
     },
     "private": true,
     "scripts": {
+        "clean": "gulp clean",
         "setup": "./toolkit setup",
         "serve": "ENV=dev gulp fractalServe",
         "dev": "gulp clean; ENV=dev gulp; yarn serve",
         "build": "gulp clean; gulp build; gulp fractalBuild; yarn beautify",
+        "deploy": "gulp build; gulp fractalBuild; yarn beautify",
         "beautify": "gulp beautify",
         "favicon": "gulp cleanFavicon; gulp favicon",
         "git:commit": "./toolkit git-commit",
@@ -42,9 +44,7 @@
     },
     "dependencies": {
         "@frctl/fractal": "^1.5.15",
-        "@frctl/handlebars": "^1.2.13",
-        "@frctl/nunjucks": "^2.0.15",
-        "gulp-shell": "^0.8.0"
+        "@frctl/handlebars": "^1.2.13"
     },
     "devDependencies": {
         "@babel/core": "^7.20.7",
@@ -66,14 +66,15 @@
         "gulp": "^4.0.2",
         "gulp-accessibility": "^3.1.1",
         "gulp-autoprefixer": "^8.0.0",
+        "gulp-clean": "^0.4.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-dart-sass": "^1.0.2",
         "gulp-eslint-new": "^1.7.1",
         "gulp-filter": "^7.0.0",
+        "gulp-hash": "^4.2.2",
         "gulp-icomoon-builder": "^1.0.0",
         "gulp-if": "^3.0.0",
         "gulp-jsbeautifier": "^3.0.1",
-        "gulp-plumber": "^1.2.1",
         "gulp-real-favicon": "^0.3.2",
         "gulp-rename": "^2.0.0",
         "gulp-sourcemaps": "^3.0.0",
@@ -81,7 +82,8 @@
         "husky": "^8.0.3",
         "jsdom": "^22.1.0",
         "mini-css-extract-plugin": "^2.7.2",
-        "node-notifier": "^10.0.1",
+        "mkdirp": "^3.0.1",
+        "msw": "^1.3.2",
         "pinst": "^3.0.0",
         "postcss": "^8.4.21",
         "postcss-loader": "^7.0.2",

@@ -15,8 +15,8 @@ test('Accordion should exist and be a function', (): void => {
     expectTypeOf(modules.Accordion).toBeFunction()
 })
 
-test('Component config exists and returns correct attributes', (): void => {
-    const { animation, duration, modifier, styles } = config.context.component
+test('Config exists and returns correct attributes', (): void => {
+    const { animation, duration, modifier, styles } = config.context
 
     expect(animation).toBeTypeOf('string')
     expect(duration).toBeTypeOf('number')

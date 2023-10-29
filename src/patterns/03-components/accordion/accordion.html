@@ -1,11 +1,11 @@
 <div
     style="{{> initialStyle}}"
     data-module="Accordion"
-    data-animation="{{#if component.animation}}{{component.animation}}{{/if}}"
-    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
+    data-animation="{{#if animation}}{{animation}}{{/if}}"
+    data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
     data-accordion-duration="{{#if accordionDuration}}{{accordionDuration}}{{else}}200{{/if}}"
-    data-styles="accordion{{#if component.styles}} {{component.styles}}{{/if}}"
-    class="{{> initialAnimation}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
+    data-styles="accordion{{#if styles}} {{styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if modifier}} {{modifier}}{{/if}}">
     {{#each items}}
     <div
         data-styles="accordion__item"

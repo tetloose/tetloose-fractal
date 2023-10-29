@@ -4,9 +4,9 @@ title: Generation
 
 In the terminal run `yarn gen:component`, follow the prompts.
 
-Enter 0 - 4 for component type
-
 ```
+Enter component location:
+
 [0] Atom
 [1] Partial
 [2] Component
@@ -14,18 +14,46 @@ Enter 0 - 4 for component type
 [4] Layout
 ```
 
-**0, 3 and 4** are global components, their styles relate to `src/styles/app.scss` and don't contain any dynamic loading. These are intended to be shared globally. After generating these components, you only need to update `ObjectName` and `{UPDATE-ME}` within the `*.config.json`.
+This will create the component files in one of the 5 locations.
 
-**1 and 2** are dynamic modules, they will be passed to the intersection observer.
+```
+Does this component require a Module:
 
-After generating these modules, you need to update `ObjectName`, `moduleName` and `{UPDATE-ME}` within:
+[0] Yes
+[1] No
+```
 
-1. `*.config.json`
-2. `*.component.ts`
-3. `*.test.ts`
-4. `*.module.scss`
-5. `*.types.ts`
+**Yes**, will generate a component with a dynamic module, passed to the intersection observer. This generates these file types:
 
-You will then need to pass the `ObjectName` into the module loader `src/config/modules.config.ts`.
+1. `*.html`
+2. `*.config.json`
+3. `*.component.ts`
+4. `*.test.ts`
+5. `*.module.scss`
+6. `*.types.ts`
 
-- [TESTING >>](/docs/testing)
+After the templates are generated, vs code will open `src/config/modules.config.ts` and the terminal will echo some code e.g.
+
+`Header: () => import(/* webpackChunkName: 'header' */ '@/patterns/01-atoms/header/header.component')`
+
+Add this to the bottom of the Modules Object.
+
+```
+export const modules = {
+    Action: () => import(/* webpackChunkName: 'action' */ '@/patterns/04-containers/action/action.component'),
+    Accordion: () => import(/* webpackChunkName: 'accordion' */ '@/patterns/03-components/accordion/accordion.component'),
+    Button: () => import(/* webpackChunkName: 'button' */ '@/patterns/01-atoms/button/button.component'),
+    Content: () => import(/* webpackChunkName: 'content' */ '@/patterns/04-containers/content/content.component'),
+    Figure: () => import(/* webpackChunkName: 'figure' */ '@/patterns/02-partials/figure/figure.component'),
+    Media: () => import(/* webpackChunkName: 'media' */ '@/patterns/04-containers/media/media.component'),
+    Header: () => import(/* webpackChunkName: 'header' */ '@/patterns/01-atoms/header/header.component')
+}
+
+```
+
+**No**, this will generate a static page that has global elements on it. This generates these file types:
+
+1. `*.html`
+2. `*.config.json`
+
+[TESTING >>](/docs/testing)

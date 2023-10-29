@@ -15,7 +15,7 @@ export class Accordion extends ComponentClass {
         this.triggers = this.module.querySelectorAll('.js-trigger')
         this.prevent = false
         this.accordionDuration = this.module.dataset.accordionDuration ? parseInt(`${this.module.dataset.accordionDuration}`) : 200
-        this.cssModule(this.module, styles)
+        this.css(this.module, styles)
         this.loadEventListeners()
     }
 

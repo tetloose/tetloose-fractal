@@ -3,36 +3,36 @@
     "name": "Logo",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
     },
-    "preview": "@preview",
+    "preview": "@preview-elements",
     "collated": true,
     "context": {
+        "styles": "is-logo-1",
+        "modifier": "",
         "src": "/images/logos/logo-1.svg",
-        "alt": "Logo 1",
-        "modifier": "is-primary",
-        "styles": ""
+        "alt": "Logo 1"
     },
 	"variants": [
 		{
 			"name": "Logo 2",
             "context": {
+                "styles": "is-logo-2",
+                "modifier": "",
                 "src": "/images/logos/logo-2.svg",
-                "alt": "Logo 2",
-                "modifier": "is-secondary",
-                "styles": ""
+                "alt": "Logo 2"
             }
 		},
 		{
 			"name": "Logo 3",
             "context": {
+                "styles": "is-logo-3",
+                "modifier": "",
                 "src": "/images/logos/logo-3.svg",
-                "alt": "Logo 3",
-                "modifier": "is-tertiary",
-                "styles": ""
+                "alt": "Logo 3"
             }
 		}
     ]

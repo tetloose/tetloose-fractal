@@ -3,7 +3,7 @@
     "name": "Loading",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
@@ -11,25 +11,17 @@
     "preview": "@preview",
     "collated": true,
     "context": {
-        "src": "/images/loading/spinner.svg",
+        "styles": "",
         "modifier": "",
-        "styles": ""
+        "src": "/images/loading/spinner.svg"
     },
     "variants": [
 		{
 			"name": "Centered",
             "context": {
-                "src": "/images/loading/spinner.svg",
+                "styles": "",
                 "modifier": "is-align-middle",
-                "styles": ""
-            }
-		},
-		{
-			"name": "Zelda",
-            "context": {
-                "src": "/images/loading/zelda.svg",
-                "modifier": "",
-                "styles": ""
+                "src": "/images/loading/zelda.svg"
             }
 		}
     ]

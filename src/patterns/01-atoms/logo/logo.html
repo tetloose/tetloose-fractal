@@ -1,8 +1,8 @@
 {{#if src}}
     <img
-        data-style="{{#if styles}}{{styles}}{{/if}}"
-        class="u-logo {{#if modifier}}{{modifier}}{{/if}}"
-        alt="{{#if alt}}{{alt}}{{/if}}"
+        data-module="Logo"
+        data-styles="logo{{#if styles}} {{styles}}{{/if}}"
+        class="{{#if modifier}}{{modifier}}{{/if}}"
         src="{{src}}"
-        alt="">
+        alt="{{#if alt}}{{alt}}{{/if}}">
 {{/if}}

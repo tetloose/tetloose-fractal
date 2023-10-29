@@ -6,8 +6,12 @@ export default defineConfig({
         alias: {
             '@': resolve(__dirname, 'src'),
             '@styles': resolve(__dirname, 'src/styles'),
-            '@components': resolve(__dirname, 'src/components'),
             '@patterns': resolve(__dirname, 'src/patterns'),
+            '@atoms': resolve(__dirname, 'src/patterns/01-atoms'),
+            '@partials': resolve(__dirname, 'src/patterns/02-partials'),
+            '@components': resolve(__dirname, 'src/patterns/03-components'),
+            '@containers': resolve(__dirname, 'src/patterns/04-containers'),
+            '@layouts': resolve(__dirname, 'src/patterns/05-layouts'),
             '@elements': resolve(__dirname, 'src/elements'),
             '@utilities': resolve(__dirname, 'src/utilities'),
             '@config': resolve(__dirname, 'src/config')

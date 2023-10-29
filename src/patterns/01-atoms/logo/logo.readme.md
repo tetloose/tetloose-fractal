@@ -1,34 +1,30 @@
-# Logo
+# Usage
 
-Usage:
-
-<pre>
-    &lbrace;&lbrace;&gt; @logo logo&rbrace;&rbrace;
-</pre>
+<pre>&lbrace;&lbrace;&gt; @logo logo&rbrace;&rbrace;</pre>
 
 ## Context
 
 ```
-    "logo": {
-        "src": "/images/logos/logo-1.svg",
-        "alt": "Logo 1",
-        "modifier": "is-primary",
-        "styles": ""
-    }
+"logo": {
+    "styles": "",
+    "modifier": "is-primary",
+    "src": "/images/logos/logo-1.svg",
+    "alt": "Logo 1"
+}
 ```
-
-### logo.src
-
-location of image.
-
-### logo.alt
-
-Alt text.
-
-### logo.modifier
-
-This is a class name or a utility class, generated via `src/styles/utils/logo.scss` and loaded globally.
 
 ### logo.styles
 
-This relates to scss module styles. When this is shared to a partial / component you can attach SCSS module styles to it then style it within the partial / component.
+SCSS Modules styles `./logo.module.scss`. You can pass extra SCSS Modules styles when this is added to a component.
+
+### logo.modifier
+
+This is a class name or a utility class, generated via `src/styles/app.scss` and loaded globally.
+
+### logo.src
+
+Image url.
+
+### logo.alt
+
+Image Alt text.

@@ -25,7 +25,7 @@ export class Figure extends ComponentClass {
         image.onload = () => {
             module.appendChild(image)
 
-            this.cssModule(module, styles)
+            this.css(module, styles)
         }
     }
 }

@@ -3,24 +3,23 @@
     "name": "Figure",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
         "addedIn": "1.0"
     },
     "preview": "@preview",
     "context": {
-        "component": {
-            "duration": 400,
-            "animation": "skeleton",
-            "styles": "",
-            "modifier": ""
-        },
+        "duration": 400,
+        "animation": "skeleton",
+        "styles": "",
+        "modifier": "",
+        "ratio": "",
         "image": {
-            "modifier": "",
             "styles": "",
-            "alt": "Image from unsplash.it",
-            "placeholder": "/images/placeholder.png",
+            "modifier": "",
+            "alt": "Image alt",
+            "placeholder": "/images/placeholder.jpg",
             "desktop": "/images/desktop.jpg",
             "tablet": "/images/tablet.jpg",
             "mobile": "/images/mobile.jpg"
@@ -28,75 +27,27 @@
     },
 	"variants": [
 		{
-			"name": "Contain",
+			"name": "1x1",
             "context": {
-                "image": {
-                    "styles": "is-contain"
-                }
+                "ratio": "1x1"
             }
 		},
 		{
-			"name": "Image Center Bottom",
+			"name": "3x2",
             "context": {
-                "image": {
-                    "styles": "is-center-bottom"
-                }
+                "ratio": "3x2"
             }
 		},
 		{
-			"name": "Image Center Top",
+			"name": "16x9",
             "context": {
-                "image": {
-                    "styles": "is-center-top"
-                }
+                "ratio": "16x9"
             }
 		},
 		{
-			"name": "Image Left Bottom",
+			"name": "21x9",
             "context": {
-                "image": {
-                    "styles": "is-left-bottom"
-                }
-            }
-		},
-		{
-			"name": "Image Left Center",
-            "context": {
-                "image": {
-                    "styles": "is-left-center"
-                }
-            }
-		},
-		{
-			"name": "Image Left Top",
-            "context": {
-                "image": {
-                    "styles": "is-left-top"
-                }
-            }
-		},
-		{
-			"name": "Image Right Bottom",
-            "context": {
-                "image": {
-                    "styles": "is-right-bottom"
-                }
-            }
-		},
-		{
-			"name": "Image Right Center",
-            "context": {
-                "image": {
-                    "styles": "is-right-center"
-                }
-            }
-		},
-		{
-			"name": "Image Right Top",
-            "context": {
-                "image": {
-                    "styles": "is-right-top"
-                }
+                "ratio": "21x9"
             }
 		}
 	]

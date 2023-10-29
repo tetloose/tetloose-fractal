@@ -48,11 +48,13 @@ Usage: `vars(type, med)`.
 
 ## Utilities
 
-When typography elements are added to a container, `u-content` they will be automatically styled depending on element type, they will also be given margins and padding.
+When typography elements are added to the Content container, `src/patterns/04-containers/content` they will be automatically styled depending on element type, they will also be given margins and padding.
 
-For content styles see: `src/styles/utils/content.scss`.
+For content styles see:
 
-Each element has it's own utility, `u-{element-name}`, this way we can style a paragraph as a heading 1 e.g. `<p class="u-h1">I'm a paragraph with h1 styles</p>`. These will only use the font style they won't have any padding or margin. To apply margins either style them within the component or wrap them in the content container.
+- `src/patterns/04-containers/content/content.module.scss`
+
+Each element has it's own utility, `u-{element-name}`, this way we can style a paragraph as a heading 1 e.g. `<p class="u-h1">I'm a paragraph with h1 styles</p>`. These will only use the font style they won't have any padding or margin. The will
 
 <pre>
 &lbrace;&lbrace;#> @content &rbrace;&rbrace;
@@ -61,23 +63,4 @@ Each element has it's own utility, `u-{element-name}`, this way we can style a p
 &lbrace;&lbrace;/@content&rbrace;&rbrace;
 </pre>
 
-- `src/styles/utils/elem/blockquote`
-- `src/styles/utils/elem/em`
-- `src/styles/utils/elem/embed`
-- `src/styles/utils/elem/h1`
-- `src/styles/utils/elem/h2`
-- `src/styles/utils/elem/h3`
-- `src/styles/utils/elem/h4`
-- `src/styles/utils/elem/h5`
-- `src/styles/utils/elem/h6`
-- `src/styles/utils/elem/hr`
-- `src/styles/utils/elem/link`
-- `src/styles/utils/elem/ol`
-- `src/styles/utils/elem/p`
-- `src/styles/utils/elem/pre`
-- `src/styles/utils/elem/small`
-- `src/styles/utils/elem/strong`
-- `src/styles/utils/elem/sub`
-- `src/styles/utils/elem/sup`
-- `src/styles/utils/elem/table`
-- `src/styles/utils/elem/ul`
+For element styles see: `src/styles/utils/elements`

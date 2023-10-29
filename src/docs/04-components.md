@@ -1,50 +1,50 @@
 ---
-title: Components / Partials
+title: Components
 ---
 
-`moduleName.html`
+# *.html
 
-```
-<div
-    style="{{> initialStyle}}"
+<pre>
+&lt;div
+    style="&lbrace;&lbrace;> initialStyle&rbrace;&rbrace;"
     data-module="ObjectName"
-    data-animation="{{#if component.animation}}{{component.animation}}{{/if}}"
-    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
-    data-styles="moduleName{{#if component.styles}} {{component.styles}}{{/if}}"
-    class="{{> initialAnimation}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
-</div>
-```
+    data-animation="&lbrace;&lbrace;#if animation&rbrace;&rbrace;&lbrace;&lbrace;animation&rbrace;&rbrace;&lbrace;&lbrace;/if&rbrace;&rbrace;"
+    data-duration="&lbrace;&lbrace;#if duration&rbrace;&rbrace;&lbrace;&lbrace;duration&rbrace;&rbrace;&lbrace;&lbrace;else&rbrace;&rbrace;400&lbrace;&lbrace;/if&rbrace;&rbrace;"
+    data-styles="moduleName&lbrace;&lbrace;#if styles&rbrace;&rbrace; &lbrace;&lbrace;styles&rbrace;&rbrace;&lbrace;&lbrace;/if&rbrace;&rbrace;"
+    class="&lbrace;&lbrace;> initialAnimation&rbrace;&rbrace;&lbrace;&lbrace;#if modifier&rbrace;&rbrace; &lbrace;&lbrace;modifier&rbrace;&rbrace;&lbrace;&lbrace;/if&rbrace;&rbrace;">
+&lt;/div&gt;
+</pre>
 
-## {{> initialStyle}}
+## &lbrace;&lbrace;> initialStyle&rbrace;&rbrace;
 
 The initial style of the component is `opacity: 0`, this is handlebar Partial. See `src/config/handlebars.js` for more info, if you add Helpers / Partials, you will need to restart the application.
 
 ## data-module="ObjectName"
 
-This is the Module name for the Component / Partial. this is passed to `src/config/modules.config.ts`. The intersection observer will dynamically import scripts and styles once a Component / Partial hits the intersection.
+This is the Module name for the Component. this is passed to `src/config/modules.config.ts`. The intersection observer will dynamically import scripts and styles once a Component hits the intersection.
 
-### data-animation
+## data-animation
 
-This is the animation when the Component / Partial is loaded. Refer to `src/styles/utils/animate.scss` for animation values or to add new ones.
+This is the animation when the Component is loaded. Refer to `src/styles/utils/animate.scss` for animation values or to add new ones.
 
-### data-duration
+## data-duration
 
 This is the animation duration default is 400.
 
-### data-styles
+## data-styles
 
-This relates to the scss module `*.module.scss` within the Component / Partial. Types are auto generated `*.module.scss.d.ts`, refer to this file for extra style attributes.
+This relates to the scss module `*.module.scss` within the Component. Types are auto generated `*.module.scss.d.ts`, refer to this file for extra style attributes.
 
-### data-modifier
+## class="&lbrace;&lbrace;> initialAnimation&rbrace;&rbrace;
 
-This is a class name or a utility class, generated via `src/styles/app.scss` and loaded globally, usually prefixed with `u-`.
+The initial animation of the component `u-animate-hide`, this is handlebar Partial. See `src/config/handlebars.js` for more info.
 
 ## Context
 
-`moduleName.config.json`
+`*.config.json`
 
 ```
-"component": {
+"context": {
     "animation": "fade-in",
     "duration": 400,
     "styles": "",
@@ -56,9 +56,11 @@ This is the default settings for a component, these will be made available to as
 
 ## Functionality
 
-`moduleName.component.ts`
+`*.component.ts`
 
-You can write either js or ts, it's up to you. Basic Component / Partial setup:
+You can write either js or ts, it's up to you. Basic Component setup:
+
+### TS
 
 ```
 import styles from './moduleName.module.scss'
@@ -68,11 +70,28 @@ export class ObjectName extends ComponentClass {
     constructor(module: HTMLElement) {
         super(module)
 
-        this.cssModule(this.module, styles)
+        this.css(this.module, styles)
     }
 }
 
 export default (module: HTMLElement) => new ObjectName(module)
+```
+
+### JS
+
+```
+import styles from './moduleName.module.scss'
+import { ComponentClass } from '@/utilities'
+
+export class ObjectName extends ComponentClass {
+    constructor(module) {
+        super(module)
+
+        this.css(this.module, styles)
+    }
+}
+
+export default (module) => new ObjectName(module)
 
 ```
 
@@ -90,30 +109,26 @@ Write styles in `src/styles/app.scss`, these are loaded globally and attach them
 
 ### SCSS Modules
 
-To add SCSS module styles to a Component / Partial you need to add the data attribute `data-styles="style-name"`, the function `cssModule` will run and add the Module classes. e.g.
+To add SCSS module styles to a Component you need to add the data attribute `data-styles="style-name"`, the function `css` will run and add the Module classes. e.g.
 
-`moduleName.html`
+`*.html`
 
-```
-<div
-    style="{{> initialStyle}}"
-    data-module="ObjectName"
-    data-animation="{{#if component.animation}}{{component.animation}}{{/if}}"
-    data-duration="{{#if component.duration}}{{component.duration}}{{else}}400{{/if}}"
-    data-styles="moduleName{{#if component.styles}} {{component.styles}}{{/if}}"
-    class="{{> initialAnimation}}{{#if component.modifier}} {{component.modifier}}{{/if}}">
-    <div
-        data-styles="moduleName__classname"
-        class="u-utility-class">
+<pre>
+&lt;div
+    data-styles=&quot;moduleName&quot;
+    class=&quot;&quot;&gt;
+    &lt;div
+        data-styles=&quot;moduleName__classname&quot;
+        class=&quot;&quot;&gt;
         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    </div>
-</div>
-```
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-`moduleName.module.scss`
+`*.module.scss`
 
 ```
-.ObjectName {
+.moduleName {
     background-color: hotpink;
 
     &__classname {
@@ -122,6 +137,6 @@ To add SCSS module styles to a Component / Partial you need to add the data attr
 }
 ```
 
-Once you save, Webpack will auto generate a `moduleName.module.scss.d.ts` with the css types.
+Once you save, Webpack will auto generate a `*.module.scss.d.ts` with the css types.
 
-- [GENERATION >>](/docs/generation)
+[GENERATION >>](/docs/generation)

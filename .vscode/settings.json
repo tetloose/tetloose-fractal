@@ -58,7 +58,8 @@
         "node_modules": true,
         ".vscode": true,
         "README.md": true,
-        "package": true
+        "package": true,
+        "azure-static-web-apps-proud-meadow-04c652503.yml": true
     },
     "workspace.isHidden": false
 }

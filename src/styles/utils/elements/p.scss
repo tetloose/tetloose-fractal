@@ -1,0 +1,6 @@
+[data-module=Content] p,
+[data-module=Content] .u-p,
+.u-p {
+	@extend %type-body;
+	@extend %color-body;
+}

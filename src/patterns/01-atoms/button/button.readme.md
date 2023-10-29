@@ -1,27 +1,40 @@
-# Button
+# Usage
 
-This principle can be shared to any component &lbrace;&lbrace;> @button button &rbrace;&rbrace;
-
-Styles for buttons are loaded globally and can be found `src/styles/utils/btn.scss`.
+<pre>&lbrace;&lbrace;> @button button &rbrace;&rbrace;</pre>
 
 ## Context
 
 ```
-    "button": {
-        "modifier": "is-inline is-light",
-        "styles": "",
-        "text": "Light Inline Button"
-    }
+"button": {
+    "styles": "is-primary is-inline",
+    "modifier": "",
+    "disabled": false,
+    "label": false,
+    "text": "View Image Gallery",
+    "icon": "gallery"
+}
 ```
-
-### button.modifier
-
-This is a class name or a utility class, generated via `src/styles/utils/btn.scss` and loaded globally.
 
 ### button.styles
 
-This relates to scss module styles. When this is shared to a partial / component you can attach SCSS module styles to it then style it within the partial / component.
+SCSS Modules styles `./button.module.scss`. You can pass extra SCSS Modules styles when this is added to a component.
+
+### button.modifier
+
+This is a class name or a utility class, generated via `src/styles/app.scss` and loaded globally.
+
+### button.disabled
+
+Disables the button if set to `true`.
+
+### button.label
+
+Aria label text for buttons without a text field.
 
 ### button.text
 
-The button text.
+Button text.
+
+### button.icon
+
+Pass an icon to the button, set to false for no icon. See `src/styles/utils/icons.scss` for full list of icon. Only pass the name, `u-icon-` is auto prefixed.

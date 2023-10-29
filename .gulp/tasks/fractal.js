@@ -3,7 +3,7 @@ import beautify from 'gulp-jsbeautifier';
 import fractal from '@frctl/fractal'
 import handlebars from '@frctl/handlebars'
 import mandelbrot from '@frctl/mandelbrot'
-import { fractal as config, beautify as bf, hbs } from '../config'
+import { fractal as config, beautify as bf, hbs } from '../config.js'
 
 export const fractalDev = fractal.create()
 export const logger = fractalDev.cli.console
@@ -51,8 +51,8 @@ const beautifyBuildFunc = () => {
     return src(bf.entry)
         .pipe(beautify({
             html: {
-            indent_size: 2,
-            max_preserve_newlines: 1
+                indent_size: 2,
+                max_preserve_newlines: 1
             }
         }))
         .pipe(dest(bf.output));

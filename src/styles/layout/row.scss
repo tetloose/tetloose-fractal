@@ -118,18 +118,22 @@
 		padding-right: calc(rem(vars(layout, gutter)) / 2);
 		padding-left: calc(rem(vars(layout, gutter)) / 2);
 
-		&[class*=align-],
-		&[class*=justify-] {
+		&[class*=align-] {
 			display: flex;
 			width: 100%;
 		}
 
+		&.is-justify-left {
+			margin-right: auto;
+		}
+
 		&.is-justify-center {
-			justify-content: center;
+			margin-right: auto;
+			margin-left: auto;
 		}
 
 		&.is-justify-right {
-			justify-content: flex-end;
+			margin-left: auto;
 		}
 
 		&.is-align-middle {
@@ -312,11 +316,19 @@
 					width: column-width(12, 11);
 				}
 
+				&.is-#{$selecter}-justify-left {
+					margin-right: auto;
+					justify-content: flex-start;
+				}
+
 				&.is-#{$selecter}-justify-center {
+					margin-right: auto;
+					margin-left: auto;
 					justify-content: center;
 				}
 
 				&.is-#{$selecter}-justify-right {
+					margin-left: auto;
 					justify-content: flex-end;
 				}
 

@@ -41,15 +41,13 @@ const monitor = (cb) => {
             iconMoveFont,
             iconGenerate,
             stylesLint,
-            styles,
-            config.icons.success
+            styles
         )
     )
     watch(
         [config.favicon.entry],
         series(
-            favicon,
-            config.favicon.success
+            favicon
         )
     )
     cb()

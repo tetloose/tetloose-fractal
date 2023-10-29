@@ -1,6 +1,6 @@
 import { series } from 'gulp'
 import { fractalDev, fractalHbs, fractalTheme, fractalServe, fractalBuild, beautifyBuild } from './.gulp/tasks/fractal.js'
-import { clean, cleanFavicon } from './.gulp/tasks/clean'
+import { cleanAssets, cleanFavicon } from './.gulp/tasks/clean.js'
 import { favicon } from './.gulp/tasks/favicon.js'
 import { iconMoveFont, iconGenerate } from './.gulp/tasks/icons.js'
 import { scriptsLint, scriptsBundle } from './.gulp/tasks/scripts.js'
@@ -9,7 +9,7 @@ import { images } from './.gulp/tasks/images.js'
 import { fonts } from './.gulp/tasks/fonts.js'
 import monitor from './.gulp/tasks/monitor.js'
 import { accessibility } from './.gulp/tasks/accessibility.js'
-import config from './.gulp/config'
+import config from './.gulp/config.js'
 
 fractalDev.set('project.title', config.fractal.projectName)
 fractalDev.components.engine(fractalHbs)
@@ -21,7 +21,7 @@ fractalDev.web.set('static.path', `${__dirname}/public/assets`)
 fractalDev.web.set('builder.dest', `${__dirname}/build`)
 fractalDev.web.theme(fractalTheme)
 
-exports.clean = clean
+exports.clean = cleanAssets
 exports.cleanFavicon = cleanFavicon
 exports.fractalServe = series(
     fractalServe,

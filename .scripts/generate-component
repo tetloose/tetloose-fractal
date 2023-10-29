@@ -3,7 +3,7 @@
 
 clear
 
-read -p "Enter the number of the component type:
+read -p "Enter component location:
 
 [0] Atom
 [1] Partial
@@ -11,60 +11,73 @@ read -p "Enter the number of the component type:
 [3] Container
 [4] Layout
 
-[0/1/2/3/4]: " DB_PULL_SWITCH
-if [ "$DB_PULL_SWITCH" = "0" ]; then
-    DIR="src/patterns/01-atoms"
-    TYPE="atom"
-elif [ "$DB_PULL_SWITCH" = "1" ]; then
-    DIR="src/patterns/02-partials"
-    TYPE="component"
-elif [ "$DB_PULL_SWITCH" = "2" ]; then
-    DIR="src/patterns/03-components"
-    TYPE="component"
-elif [ "$DB_PULL_SWITCH" = "3" ]; then
-    DIR="src/patterns/04-containers"
-    TYPE="container"
-elif [ "$DB_PULL_SWITCH" = "4" ]; then
-    DIR="src/patterns/05-layouts"
-    TYPE="layout"
+[0/1/2/3/4]: " COMPONENT_SWITCH
+
+read -p "Does this component require a Module:
+
+[0] Yes
+[1] No
+
+[0/1]: " MODULE_SWITCH
+
+if [ "$COMPONENT_SWITCH" = "0" ]; then
+    DIR="./src/patterns/01-atoms"
+    MODULE_URL="@atoms"
+elif [ "$COMPONENT_SWITCH" = "1" ]; then
+    DIR="./src/patterns/02-partials"
+    MODULE_URL="@partials"
+elif [ "$COMPONENT_SWITCH" = "2" ]; then
+    DIR="./src/patterns/03-components"
+    MODULE_URL="@components"
+elif [ "$COMPONENT_SWITCH" = "3" ]; then
+    DIR="./src/patterns/04-containers"
+    MODULE_URL="@containers"
+elif [ "$COMPONENT_SWITCH" = "4" ]; then
+    DIR="./src/patterns/05-layouts"
+    MODULE_URL="@layouts"
 fi
 
-if [ "$DB_PULL_SWITCH" ]; then
-    read -p "Enter $TYPE Name i.e navigation-bar press [ENTER]: " COMPONENT
-    echo ""
-    echo ""
+if [ "$COMPONENT_SWITCH" ]; then
+    read -p "Enter component name i.e navigation-bar press [ENTER]: " COMPONENT
+
+    COMPONENT=$(echo $COMPONENT | perl -pe 's/ /-/g')
+    COMPONENT=$(echo $COMPONENT | perl -ne 'print lc')
+    OBJECT_NAME=$(echo $COMPONENT | perl -pe 's/(^|-)(\w)/\U$2/g')
+    MODULE_NAME=$(echo $COMPONENT)
+
     mkdir -p $DIR/"$COMPONENT"
+    cp .scripts/templates/default/readme.md $DIR/$COMPONENT/$COMPONENT.readme.md
 
-    cp .scripts/templates/default/readme.md $DIR/"$COMPONENT"/"$COMPONENT".readme.md
-
-    if [ "$TYPE" = "component" ]; then
-        cp .scripts/templates/component/markup.html $DIR/"$COMPONENT"/"$COMPONENT".html
-        cp .scripts/templates/component/config.json $DIR/"$COMPONENT"/"$COMPONENT".config.json
-        cp .scripts/templates/component/script.ts $DIR/"$COMPONENT"/"$COMPONENT".$TYPE.ts
-        cp .scripts/templates/component/style.scss $DIR/"$COMPONENT"/"$COMPONENT".module.scss
-        touch $DIR/"$COMPONENT"/"$COMPONENT".types.ts
-        cp .scripts/templates/component/test.ts $DIR/"$COMPONENT"/"$COMPONENT".test.ts
-    else
-        touch $DIR/"$COMPONENT"/"$COMPONENT".html
-        cp .scripts/templates/default/config.json $DIR/"$COMPONENT"/"$COMPONENT".config.json
+    if [ "$MODULE_SWITCH" = "0" ]; then
+        cp .scripts/templates/component/markup.html $DIR/$COMPONENT/$COMPONENT.html
+        cp .scripts/templates/component/config.json $DIR/$COMPONENT/$COMPONENT.config.json
+        cp .scripts/templates/component/script.ts $DIR/$COMPONENT/$COMPONENT.component.ts
+        cp .scripts/templates/component/style.scss $DIR/$COMPONENT/$COMPONENT.module.scss
+        touch $DIR/$COMPONENT/$COMPONENT.types.ts
+        cp .scripts/templates/component/test.ts $DIR/$COMPONENT/$COMPONENT.test.ts
+    elif [ "$MODULE_SWITCH" = "1" ]; then
+        cp .scripts/templates/default/markup.html $DIR/$COMPONENT/$COMPONENT.html
+        cp .scripts/templates/default/config.json $DIR/$COMPONENT/$COMPONENT.config.json
     fi
 
-    echo ""
-    echo ""
-    echo "$COMPONENT created"
-    echo ""
-    echo ""
-
-    if [ "$TYPE" = "component" ]; then
-        echo "Replace {ObjectName} / {moduleName} with $TYPE name"
+    if [ "$MODULE_SWITCH" = "0" ]; then
         echo ""
-        echo "Add {ObjectName} to src/config/modules.config.ts"
-    else
-        echo "Replace {ObjectName} with $TYPE name"
+        echo ""
+        eval "code ./src/config/modules.config.ts"
+        echo "$OBJECT_NAME: () => import(/* webpackChunkName: '$MODULE_NAME' */ '$MODULE_URL/$COMPONENT/$COMPONENT.component')"
+        echo ""
+        echo ""
     fi
 
-    echo ""
-    echo ""
+    find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.readme.md" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
+    find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.html" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
+    find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.html" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.config.json" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.component.ts" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.component.ts" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.module.scss" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.test.ts" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
+    find "$DIR/$COMPONENT/"  -type f -name "$COMPONENT.test.ts" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
 else
-  echo "Enter 0 - 4, Toolkit Stopping"
+  echo "Please check your input, and try again"
 fi

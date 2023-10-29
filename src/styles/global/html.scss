@@ -1,16 +1,15 @@
 html {
+	width: 100%;
 	min-height: vars(vh, fullscreen);
 	visibility: visible;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	font-size: 100%;
 	line-height: 1.5;
-	text-rendering: optimizespeed;
 
 	@extend %f-body;
-	@extend %f-body-regular;
+	@extend %f-regular;
 	@include font-smoothing;
-
-	// @include fluid-type(vars(breakpoint, sml), vars(breakpoint, med), vars(breakpoint, lrg), vars(layout, browser-context), vars(type, sml));
 
 	&.no-scroll {
 		position: relative;

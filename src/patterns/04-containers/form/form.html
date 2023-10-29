@@ -1,0 +1,9 @@
+<div
+    style="{{> initialStyle}}"
+    data-module="Form"
+    data-animation="{{#if animation}}{{animation}}{{else}}fade-in{{/if}}"
+    data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
+    data-styles="form{{#if styles}} {{styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if modifier}} {{modifier}}{{/if}}">
+    {{#>@partial-block}}{{/@partial-block }}
+</div>

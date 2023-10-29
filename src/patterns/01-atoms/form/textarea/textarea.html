@@ -1,0 +1,17 @@
+<div
+    data-styles="form__field{{#if styles}} {{styles}}{{/if}}"
+    class="{{#if modifier}}{{modifier}}{{/if}}">
+    {{#if label}}
+        <label
+            data-styles="form__label"
+            for="{{id}}">{{label}}</label>
+    {{/if}}
+    <textarea
+        data-styles="form__textarea"
+        name="{{name}}"
+        id="{{id}}"
+        placeholder="{{placeholder}}"></textarea>
+    {{#if validation.active}}
+        <span data-styles="form__validation">{{validation.text}}</span>
+    {{/if}}
+</div>

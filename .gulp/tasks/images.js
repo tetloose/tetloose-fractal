@@ -1,5 +1,5 @@
 import { src, dest } from 'gulp'
-import { images as config } from '../config'
+import { images as config } from '../config.js'
 
 const imagesFunc = () => {
     return src([config.files])
@@ -9,7 +9,8 @@ const imagesFunc = () => {
 export const images = (cb) => {
     setTimeout(() => {
         imagesFunc()
-    }, 200)
+        cb()
+    }, 400)
 
     cb()
 }

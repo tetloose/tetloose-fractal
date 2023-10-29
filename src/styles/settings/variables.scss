@@ -8,18 +8,17 @@
 
 $vars: (
 	type: (
-		xxxxxlrg: 52px,
-		xxxxlrg: 40px,
-		xxxlrg: 32px,
-		xxlrg: 28px,
-		xlrg: 24px,
-		lrg: 20px,
-		med: 16px,
-		sml: 14px
+		h1: 60px,
+		h2: 55px,
+		h3: 50px,
+		h4: 45px,
+		h5: 35px,
+		h6: 30px,
+		body: 16px
 	),
 	layout: (
-		max-width: 1024px,
-		gutter: 20px,
+		max-width: 1440px,
+		gutter: 32px,
 		browser-context: 16px,
 		spacing: 16px
 	),
@@ -29,7 +28,7 @@ $vars: (
 		med: 768px,
 		lrg: 1024px,
 		xlrg: 1280px,
-		xxlrg: 1520px
+		xxlrg: 1440px
 	),
 	radius: (
 		sml: 2px,

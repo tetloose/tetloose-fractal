@@ -1,0 +1,39 @@
+[data-module=Content] a:not([data-module=Button]),
+.u-link:not([data-module=Button]) {
+	display: inline-block;
+	position: relative;
+	color: colors(default, dark);
+	text-decoration: none;
+	text-decoration-skip-ink: auto;
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		border-width: 0 0 2px;
+		border-style: dashed;
+		border-color: colors(default, dark);
+	}
+
+	@include mq-hover {
+		cursor: pointer;
+
+		@include transition('opacity');
+
+		&:focus,
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	.u-bg-dark & {
+		color: colors(default, light);
+
+		&::before {
+			border-color: colors(default, light);
+		}
+	}
+}

@@ -1,0 +1,64 @@
+{
+    "title": "Video",
+    "name": "Video",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "styles": "",
+        "modifier": "",
+        "ratio": "16x9",
+        "ariaLabels": {
+            "play": "Play",
+            "pause": "Pause"
+        },
+        "video": {
+            "styles": "",
+            "modifier": "",
+            "youtube": false,
+            "vimeo": false,
+            "autoPlay": true,
+            "muted": true,
+            "controls": true,
+            "loop": true,
+            "poster": "/images/placeholder.png",
+            "title": "Video title",
+            "url": "https://v3.cdnpk.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4"
+        },
+        "button": {
+            "modifier": "js-videoTrigger",
+            "styles": "is-dark is-inline",
+            "text": "Toggle Video",
+            "label": "Toggle Video",
+            "icon": false,
+            "disabled": false
+        }
+    },
+	"variants": [
+		{
+			"name": "Youtube",
+            "context": {
+                "video": {
+                    "modifier": false,
+                    "youtube": true,
+                    "url": "WuHSBSLK3_A"
+                }
+            }
+		},
+		{
+			"name": "Vimeo",
+            "context": {
+                "video": {
+                    "modifier": false,
+                    "vimeo": true,
+                    "url": "103364828"
+                }
+            }
+		}
+	]
+}

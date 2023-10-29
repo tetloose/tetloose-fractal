@@ -1,0 +1,22 @@
+@import '@styles/settings';
+
+.media {
+	@include mq(vars(breakpoint, sml), max-width) {
+		margin-top: -(rem(spacing(1)));
+	}
+
+	@include mq(vars(breakpoint, sml)) {
+		margin-top: -(rem(vars(layout, gutter)));
+	}
+
+	:global([data-module=Video]),
+	:global([data-module=Figure]) {
+		@include mq(vars(breakpoint, sml), max-width) {
+			margin-top: rem(spacing(1));
+		}
+
+		@include mq(vars(breakpoint, sml)) {
+			margin-top: rem(vars(layout, gutter));
+		}
+	}
+}

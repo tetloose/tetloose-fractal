@@ -1,0 +1,5 @@
+[data-module=Content] strong,
+[data-module=Content] b,
+.u-bold {
+	@extend %f-bold;
+}

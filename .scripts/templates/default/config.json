@@ -10,7 +10,8 @@
     },
     "preview": "@preview",
     "context": {
-
+        "styles": "",
+        "modifier": ""
     },
 	"variants": [
 		{

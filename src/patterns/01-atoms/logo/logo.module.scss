@@ -1,0 +1,19 @@
+@import '@styles/settings';
+
+.logo {
+	width: 100%;
+
+	@include object-fit(contain);
+
+	&.is-logo-1 {
+		max-width: rem(100px);
+	}
+
+	&.is-logo-2 {
+		max-width: rem(172px);
+	}
+
+	&.is-logo-3 {
+		max-width: rem(200px);
+	}
+}

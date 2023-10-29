@@ -2,40 +2,20 @@
 	font-family: Body, serif;
 }
 
-%f-heading {
-	font-family: Heading, serif;
-}
-
-%f-body-light {
+%f-light {
 	font-weight: 300;
 }
 
-%f-heading-light {
-	font-weight: 300;
-}
-
-%f-body-regular {
+%f-regular {
 	font-weight: 400;
 }
 
-%f-heading-regular {
-	font-weight: 400;
-}
-
-%f-body-medium {
+%f-medium {
 	font-weight: 500;
 }
 
-%f-heading-medium {
-	font-weight: 500;
-}
-
-%f-body-bold {
+%f-bold {
 	font-weight: 700;
-}
-
-%f-heading-bold {
-	font-weight: 600;
 }
 
 %f-italic {
@@ -55,65 +35,61 @@
 }
 
 %type-h1 {
-	font-size: rem(vars(type, xxxxlrg));
-	line-height: 1.2;
+	font-size: rem(vars(type, h1));
+	line-height: 1;
 
-	@extend %f-heading;
+	@extend %f-bold;
 }
 
 %type-h2 {
-	font-size: rem(vars(type, xxxxlrg));
-	line-height: 1.2;
+	font-size: rem(vars(type, h2));
+	line-height: 1.1;
 
-	@extend %f-heading;
+	@extend %f-bold;
 }
 
 %type-h3 {
-	font-size: rem(vars(type, xxxlrg));
-	line-height: 1.2;
+	font-size: rem(vars(type, h3));
+	line-height: 1.1;
 
-	@extend %f-heading;
+	@extend %f-medium;
 }
 
 %type-h4 {
-	font-size: rem(vars(type, xxlrg));
-	line-height: 1.2;
+	font-size: rem(vars(type, h4));
+	line-height: 1.1;
 
-	@extend %f-heading;
+	@extend %f-medium;
 }
 
 %type-h5 {
-	font-size: rem(vars(type, xlrg));
-	line-height: 1.3;
+	font-size: rem(vars(type, h5));
+	line-height: 1.1;
 
-	@extend %f-heading;
+	@extend %f-light;
 }
 
 %type-h6 {
-	font-size: rem(vars(type, lrg));
-	line-height: 1.3;
+	font-size: rem(vars(type, h6));
+	line-height: 1.2;
 
-	@extend %f-heading;
+	@extend %f-light;
 }
 
-%type-small {
-	font-size: rem(vars(type, sml));
-}
+%type-body {
+	font-size: rem(vars(type, body));
 
-%type-paragraph {
-	font-size: rem(vars(type, med));
-}
-
-%type-btn {
-	font-size: rem(vars(type, sml));
-
-	@extend %f-heading;
+	@extend %f-regular;
 }
 
 %type-label {
-	font-size: rem(vars(type, med));
+	font-size: rem(vars(type, body));
+
+	@extend %f-bold;
 }
 
-%type-icon {
-	font-size: rem(vars(type, lrg));
+%type-btn {
+	font-size: rem(vars(type, body));
+
+	@extend %f-medium;
 }

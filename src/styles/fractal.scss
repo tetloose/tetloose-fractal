@@ -1,62 +1,118 @@
+/* stylelint-disable selector-class-pattern */
 @import 'settings';
 @import 'fractal/default-theme';
 
 .Header {
-    background-color: $fractal-primary;
-    box-shadow: none;
-    overflow: hidden;
+	overflow: hidden;
+	background-color: $fractal-primary;
+	box-shadow: none;
 
-    .Header-title {
-        text-indent: -1000vw;
-        display: block;
-        width: rem(170px);
-        height: rem(40px);
-        padding: 0;
-        margin: 0 0 0 rem(17px);
+	.Header-title {
+		display: block;
+		width: 100%;
+		width: $fractal-logo-width;
+		height: $fractal-logo-height;
+		margin: 0 0 0 rem(17px);
+		padding: 0;
+		text-indent: -1000vw;
 
-        @include background-image(
-            contain,
-            left center,
-            false,
-            false,
-            $fractal-logo
-        );
-    }
+		@include background-image(contain, left center, false, false, $fractal-logo);
+	}
 }
 
 .Fractal-bg-primary {
-    background-color: $fractal-primary;
+	background-color: $fractal-primary;
 }
 
 .Fractal-bg-secondary {
-    background-color: $fractal-secondary;
+	background-color: $fractal-secondary;
 }
 
 .Fractal-primary {
-    color: $fractal-primary;
+	color: $fractal-primary;
 }
 
 .Fractal-secondary {
-    color: $fractal-secondary;
+	color: $fractal-secondary;
 }
 
 [class*=Fractal-border-] {
-    border-width: 2px;
-    border-style: solid;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .Fractal-border-primary {
-    border-color: $fractal-primary;
+	border-color: $fractal-primary;
 }
 
 .Fractal-border-secondary {
-    border-color: $fractal-secondary;
+	border-color: $fractal-secondary;
+}
+
+.Fractal-chip {
+	display: block;
+	width: 100%;
+
+	@include mq(vars(breakpoint, sml), max-width) {
+		height: rem(50px);
+		margin-top: rem(spacing(1));
+	}
+
+	@include mq(vars(breakpoint, sml)) {
+		height: 100%;
+	}
+}
+
+.Fractal-btn {
+	display: block;
+	padding: 0;
+	text-align: left;
+	cursor: default;
+}
+
+.Fractal-elements {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: (-(rem(spacing(1))));
+	align-items: center;
+	justify-content: center;
+	column-gap: rem(spacing(2));
+
+	[data-module=Button],
+	[data-module=Logo] {
+		margin-top: rem(spacing(1));
+	}
 }
 
 .Fractal-spacing-t {
-    padding-top: rem(spacing(1.5));
+	padding-top: rem(spacing(2));
 }
 
 .Fractal-spacing-b {
-    padding-bottom: rem(spacing(1.5));
+	padding-bottom: rem(spacing(2));
+}
+
+.Document-content,
+.Browser-notes {
+	.hljs {
+		padding: 0;
+		background-color: transparent;
+		color: $fractal-primary;
+	}
+
+	code {
+		padding: rem(spacing(.2));
+	}
+
+	code,
+	pre {
+		background-color: #{rgba($fractal-primary, .1)};
+		color: $fractal-primary;
+	}
+
+	.Prose pre {
+		margin-right: 0;
+		margin-left: 0;
+		padding: rem(spacing(1));
+	}
 }

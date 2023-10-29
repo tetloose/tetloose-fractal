@@ -1,4 +1,4 @@
-## 12 Column Layout
+# 12 Column Layout
 
 Flexible 12 column layout thats loaded globally. Styles can be found here: `src/styles/layout/row.scss`.
 
@@ -13,11 +13,11 @@ layout: (
 )
 ```
 
-## Max-width
+## max-width
 
 This is the rows max width before it's centered.
 
-## Gutter
+## gutter
 
 This is the padding left and right of the column.
 
@@ -29,9 +29,9 @@ This is the padding left and right of the column.
 - `xlrg`
 - `xxlrg`
 
-## Row Utility Classes
+## Row Classes
 
-For breakpoints prefix the size before the utility i.e. `is-{size}-utility-name`.
+For breakpoints prefix the size before the utility i.e. `is-{breakpoint-size}-utility-name`.
 
 - `is-justify-left`
 - `is-justify-center`
@@ -43,10 +43,11 @@ For breakpoints prefix the size before the utility i.e. `is-{size}-utility-name`
 - `is-relative`
 - `no-overflow`
 
-## Column Utility Classes
+## Column Classes
 
-For breakpoints prefix the size before the utility i.e. `is-{size}-utility-name`.
+For breakpoints prefix the size before the utility i.e. `is-{breakpoint-size}-utility-name`.
 
+- `is-justify-left`
 - `is-justify-center`
 - `is-justify-right`
 - `is-align-middle`
@@ -57,7 +58,7 @@ For breakpoints prefix the size before the utility i.e. `is-{size}-utility-name`
 
 ## Column Ordering
 
-For breakpoints prefix the size before the column order i.e. `{size}-order-3`.
+For breakpoints prefix the size before the column order i.e. `{breakpoint-size}-order-3`.
 
 - `order-1`
 - `order-2`
@@ -74,7 +75,7 @@ For breakpoints prefix the size before the column order i.e. `{size}-order-3`.
 
 ## Column Sizes
 
-For breakpoints prefix the size before the column size i.e. `is-{size}-8`.
+For breakpoints prefix the size before the column size e.g. `is-{breakpoint-size}-8`.
 
 - `is-1`
 - `is-2`

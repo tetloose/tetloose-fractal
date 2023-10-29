@@ -1,25 +1,32 @@
-import { StateProps } from './utilities.types'
+import { LoadingProps, MotionOptionsProps, StateProps } from './utilities.types'
 
 export class ComponentClass {
     module: HTMLElement
-    animation?: string
-    duration?: number
-    type?: string
-    state?: {
-        [key: string]: StateProps
+    state: {
+        motionOptions: MotionOptionsProps;
+        loading: LoadingProps
+        [key: string]: StateProps;
     }
 
     constructor(module: HTMLElement) {
         this.module = module
-        this.animation = module.dataset.animation && module.dataset.animation
-        this.duration = module.dataset.duration ? parseInt(module.dataset.duration) : 0
-        this.type = module.dataset.type ? module.dataset.type : ''
-
-        this.state = {}
+        this.state = {
+            motionOptions: {
+                observed: false,
+                scrollListener: () => this.handleMotion(),
+                property: 'scroll'
+            },
+            loading: {
+                animation: module.dataset.animation ?? undefined,
+                duration: parseInt(module.dataset.duration ?? '0', 10),
+                type: module.dataset.type ?? ''
+            }
+        }
     }
 
-    animate() {
-        const { module, animation, duration, type } = this
+    load() {
+        const { module, state } = this
+        const { animation, duration, type } = state.loading
 
         module.removeAttribute('style')
 
@@ -50,7 +57,7 @@ export class ComponentClass {
         }
     }
 
-    cssModule(element: HTMLElement, styles: unknown) {
+    css<T>(element: HTMLElement, styles: T) {
         if (styles && element && typeof styles === 'object') {
             const { dataset, classList } = element
 
@@ -74,6 +81,50 @@ export class ComponentClass {
                 })
         }
 
-        this.animate()
+        this.load()
+    }
+
+    motion(property = 'scroll') {
+        const { module, state } = this
+        const { motionOptions } = state
+
+        this.updateState('motionOptions', { ...motionOptions, property: property })
+        this.handleMotion()
+
+        const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+            entries.forEach(entry => {
+                const { isIntersecting } = entry
+                const { motionOptions } = this.state
+                const { scrollListener, observed } = motionOptions
+
+                if (isIntersecting && !observed) {
+                    window.addEventListener('scroll', scrollListener)
+                    this.updateState('motionOptions', { ...motionOptions, observed: true })
+
+                } else if (observed) {
+                    window.removeEventListener('scroll', scrollListener)
+                    this.updateState('motionOptions', { ...motionOptions, observed: false })
+                }
+            })
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0
+        })
+
+        observer.observe(module)
+    }
+
+    handleMotion() {
+        const { module, state } = this
+        const { property } = state.motionOptions
+        const top = module.getBoundingClientRect().top
+        const height = module.getBoundingClientRect().height
+        const viewportHeight = window.innerHeight
+
+        let scrollValue = Math.max(0, 1 - (top + height) / (viewportHeight + height))
+        scrollValue = Math.min(1, scrollValue)
+
+        module.style.setProperty(`--${property}`, `${scrollValue}`)
     }
 }

@@ -5,7 +5,7 @@ export class ObjectName extends ComponentClass {
     constructor(module: HTMLElement) {
         super(module)
 
-        this.cssModule(this.module, styles)
+        this.css(this.module, styles)
     }
 }
 

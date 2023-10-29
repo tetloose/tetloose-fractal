@@ -1,0 +1,6 @@
+[data-module=Content] h1,
+[data-module=Content] .u-h1,
+.u-h1 {
+	@extend %type-h1;
+	@extend %color-heading;
+}

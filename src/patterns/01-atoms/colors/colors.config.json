@@ -3,50 +3,49 @@
     "name": "Colors",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
     },
-    "preview": "@preview-fractal",
+    "preview": "@preview",
     "context": {
-        "title": "Colors",
         "colors": [
             {
-                "name": "Light",
-                "hex": "#fff",
-                "scss": "colors(default, light)",
-                "modifier": ""
+                "name": "Dark",
+                "description": "Dark Color",
+                "hex": "#000",
+                "scss": "colors(default, dark)"
             },
             {
-                "name": "Dark",
-                "hex": "#000",
-                "scss": "colors(default, dark)",
-                "modifier": "Fractal-secondary"
+                "name": "Light",
+                "description": "Light Color",
+                "hex": "#fff",
+                "scss": "colors(default, light)"
             },
             {
                 "name": "Primary",
+                "description": "Primary Color",
                 "hex": "#ff69b4",
-                "scss": "colors(default, primary)",
-                "modifier": ""
+                "scss": "colors(default, primary)"
             },
             {
                 "name": "Secondary",
+                "description": "Secondary Color",
                 "hex": "#7669ff",
-                "scss": "colors(default, secondary)",
-                "modifier": ""
+                "scss": "colors(default, secondary)"
             },
             {
                 "name": "Tertiary",
+                "description": "tertiary Color",
                 "hex": "#69ffb4",
-                "scss": "colors(default, tertiary)",
-                "modifier": ""
+                "scss": "colors(default, tertiary)"
             },
             {
                 "name": "Quaternary",
+                "description": "quaternary Color",
                 "hex": "#7d11f9",
-                "scss": "colors(default, quaternary)",
-                "modifier": "Fractal-secondary"
+                "scss": "colors(default, quaternary)"
             }
         ]
     }

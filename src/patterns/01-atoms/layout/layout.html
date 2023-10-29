@@ -1,17 +1,11 @@
 {{#if row-utilities}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
-            <h1>{{row-utilities}}</h1>
-        </div>
-    </div>
-</div>
-<div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
+            <h1 class="u-h2">{{row-utilities}}</h1>
             <h2>Align Row</h2>
             <p>Align row top middle and bottom on any breakpoint.</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row is-align-top u-vh-half Fractal-border-primary">
@@ -45,11 +39,11 @@
     </div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Justify Row</h3>
             <p>Justify row left center right on any breakpoint.</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row is-justify-left Fractal-border-primary">
@@ -83,11 +77,11 @@
     </div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Reverse Row</h3>
             <p>Reverse row on any breakpoint.</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row is-reverse u-vh-half Fractal-border-primary">
@@ -105,11 +99,11 @@
     </div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Relative / overflow / gutter</h3>
             <p>Make row position relative, overflow hidden or no gutter on any breakpoint</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row is-relative">
@@ -144,18 +138,12 @@
 </div>
 {{else if column-utilities}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
-            <h3>{{column-utilities}}</h3>
-        </div>
-    </div>
-</div>
-<div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
+            <h2>{{column-utilities}}</h2>
             <h3>Align columns</h3>
             <p>Align columns top middle and bottom on any breakpoint.</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row">
@@ -198,11 +186,11 @@
     </div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Justify Columns</h3>
             <p>Justify Columns left center right on any breakpoint.</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row">
@@ -232,11 +220,11 @@
     </div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Relative / overflow / no gutter</h3>
             <p>Make columns position relative, overflow hidden or no gutter on any breakpoint</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row">
@@ -267,11 +255,11 @@
 </div>
 
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Order</h3>
             <p>Reorder columns based on location, 1-12 on any breakpoint</p>
-        </div>
+        {{/@content}}
     </div>
 </div>
 <div class="l-row">
@@ -315,10 +303,10 @@
 
 {{else if sml}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{sml}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-sml-1 Fractal-border-primary">1</div>
     <div class="l-row__col is-sml-2 Fractal-border-primary">2</div>
@@ -335,10 +323,10 @@
 </div>
 {{else if med}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{med}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-med-1 Fractal-border-primary">1</div>
     <div class="l-row__col is-med-2 Fractal-border-primary">2</div>
@@ -355,10 +343,10 @@
 </div>
 {{else if lrg}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{lrg}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-lrg-1 Fractal-border-primary">1</div>
     <div class="l-row__col is-lrg-2 Fractal-border-primary">2</div>
@@ -375,10 +363,10 @@
 </div>
 {{else if xlrg}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{xlrg}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-xlrg-1 Fractal-border-primary">1</div>
     <div class="l-row__col is-xlrg-2 Fractal-border-primary">2</div>
@@ -395,10 +383,10 @@
 </div>
 {{else if xxlrg}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{xxlrg}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-xxlrg-1 Fractal-border-primary">1</div>
     <div class="l-row__col is-xxlrg-2 Fractal-border-primary">2</div>
@@ -414,11 +402,11 @@
     <div class="l-row__col is-xxlrg-12 Fractal-border-primary">12</div>
 </div>
 {{else if examples}}
-<div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+<div class="l-row Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{examples}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-sml-6 is-lrg-8 is-xlrg-4 lrg-order-2 is-xxlrg-5 Fractal-border-primary">
         is-sml-6 <br>
@@ -438,10 +426,10 @@
 </div>
 {{else}}
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>{{title}}</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-1 Fractal-border-primary">is-1</div>
     <div class="l-row__col is-2 Fractal-border-primary">is-2</div>
@@ -457,10 +445,10 @@
     <div class="l-row__col is-12 Fractal-border-primary">is-12</div>
 </div>
 <div class="l-row">
-    <div class="l-row__col">
-        <div class="u-content text-align-center Fractal-spacing-t Fractal-spacing-b">
+    <div class="l-row__col Fractal-spacing-t Fractal-spacing-b">
+        {{#> '@content' }}
             <h3>Row inside a Row</h3>
-        </div>
+        {{/@content}}
     </div>
     <div class="l-row__col is-med-6 Fractal-border-primary">
         is-med-6

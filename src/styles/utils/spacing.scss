@@ -1,115 +1,84 @@
-.u-spacing-t-sml {
+.u-spacing-t-1 {
+	padding-top: rem(spacing(1));
+}
+
+.u-spacing-t-2 {
 	padding-top: rem(spacing(2));
 }
 
-.u-spacing-t-med {
-	padding-top: rem(spacing(2));
-
-	@include mq(vars(breakpoint, sml)) {
-		padding-top: rem(spacing(2.5));
-	}
+.u-spacing-t-3 {
+	padding-top: rem(spacing(3));
 }
 
-.u-spacing-t-lrg {
-	padding-top: rem(spacing(2));
-
-	@include mq(vars(breakpoint, sml)) {
-		padding-top: rem(spacing(2.5));
-	}
-
-	@include mq(vars(breakpoint, med)) {
-		padding-top: rem(spacing(3));
-	}
+.u-spacing-t-4 {
+	padding-top: rem(spacing(4));
 }
 
-.u-spacing-t-xlrg {
-	@include mq(vars(breakpoint, sml)) {
-		padding-top: rem(spacing(2.5));
-	}
-
-	@include mq(vars(breakpoint, med)) {
-		padding-top: rem(spacing(3));
-	}
-
-	@include mq(vars(breakpoint, lrg)) {
-		padding-top: rem(spacing(3.5));
-	}
+.u-spacing-b-1 {
+	padding-bottom: rem(spacing(1));
 }
 
-.u-spacing-t-xxlrg {
-	padding-top: rem(spacing(2));
-
-	@include mq(vars(breakpoint, sml)) {
-		padding-top: rem(spacing(2.5));
-	}
-
-	@include mq(vars(breakpoint, med)) {
-		padding-top: rem(spacing(3));
-	}
-
-	@include mq(vars(breakpoint, lrg)) {
-		padding-top: rem(spacing(3.5));
-	}
-
-	@include mq(vars(breakpoint, xlrg)) {
-		padding-top: rem(spacing(4));
-	}
-}
-
-.u-spacing-b-sml {
+.u-spacing-b-2 {
 	padding-bottom: rem(spacing(2));
 }
 
-.u-spacing-b-med {
-	padding-bottom: rem(spacing(2));
-
-	@include mq(vars(breakpoint, sml)) {
-		padding-bottom: rem(spacing(2.5));
-	}
+.u-spacing-b-3 {
+	padding-bottom: rem(spacing(3));
 }
 
-.u-spacing-b-lrg {
-	padding-bottom: rem(spacing(2));
-
-	@include mq(vars(breakpoint, sml)) {
-		padding-bottom: rem(spacing(2.5));
-	}
-
-	@include mq(vars(breakpoint, med)) {
-		padding-bottom: rem(spacing(3));
-	}
+.u-spacing-b-4 {
+	padding-bottom: rem(spacing(4));
 }
 
-.u-spacing-b-xlrg {
-	@include mq(vars(breakpoint, sml)) {
-		padding-bottom: rem(spacing(2.5));
+@for $i from 1 through 5 {
+	$breakpoint: vars(breakpoint, xxlrg);
+	$selecter: 'xxlrg';
+
+	@if $i == 1 {
+		$breakpoint: vars(breakpoint, sml);
+		$selecter: 'sml';
+	} @else if $i == 2 {
+		$breakpoint: vars(breakpoint, med);
+		$selecter: 'med';
+	} @else if $i == 3 {
+		$breakpoint: vars(breakpoint, lrg);
+		$selecter: 'lrg';
+	} @else if $i == 4 {
+		$breakpoint: vars(breakpoint, xlrg);
+		$selecter: 'xlrg';
 	}
 
-	@include mq(vars(breakpoint, med)) {
-		padding-bottom: rem(spacing(3));
-	}
+	@include mq($breakpoint) {
+		.u-spacing-#{$selecter}-t-1 {
+			padding-top: rem(spacing(1));
+		}
 
-	@include mq(vars(breakpoint, lrg)) {
-		padding-bottom: rem(spacing(3.5));
-	}
-}
+		.u-spacing-#{$selecter}-t-2 {
+			padding-top: rem(spacing(2));
+		}
 
-.u-spacing-b-xxlrg {
-	padding-bottom: rem(spacing(2));
+		.u-spacing-#{$selecter}-t-3 {
+			padding-top: rem(spacing(3));
+		}
 
-	@include mq(vars(breakpoint, sml)) {
-		padding-bottom: rem(spacing(2.5));
-	}
+		.u-spacing-#{$selecter}-t-4 {
+			padding-top: rem(spacing(4));
+		}
 
-	@include mq(vars(breakpoint, med)) {
-		padding-bottom: rem(spacing(3));
-	}
+		.u-spacing-#{$selecter}-b-1 {
+			padding-bottom: rem(spacing(1));
+		}
 
-	@include mq(vars(breakpoint, lrg)) {
-		padding-bottom: rem(spacing(3.5));
-	}
+		.u-spacing-#{$selecter}-b-2 {
+			padding-bottom: rem(spacing(2));
+		}
 
-	@include mq(vars(breakpoint, xlrg)) {
-		padding-bottom: rem(spacing(4));
+		.u-spacing-#{$selecter}-b-3 {
+			padding-bottom: rem(spacing(3));
+		}
+
+		.u-spacing-#{$selecter}-b-4 {
+			padding-bottom: rem(spacing(4));
+		}
 	}
 }

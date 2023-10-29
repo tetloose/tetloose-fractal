@@ -1,5 +1,5 @@
 import { src, dest } from 'gulp'
-import { fonts as config } from '../config'
+import { fonts as config } from '../config.js'
 
 const fontsFunc = () => {
     return src([config.files])
@@ -9,7 +9,8 @@ const fontsFunc = () => {
 export const fonts = (cb) => {
     setTimeout(() => {
         fontsFunc()
-    }, 200)
+        cb()
+    }, 400)
 
     cb()
 }

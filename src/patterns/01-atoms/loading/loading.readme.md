@@ -1,31 +1,29 @@
-# Loading
+# Usage
 
-SVG loading animation utility, taken from [loading.io](https://loading.io/asset/693763).
-
-Usage:
-
-<pre>
-    &lbrace;&lbrace;&gt; @loading loading&rbrace;&rbrace;
-</pre>
+<pre>&lbrace;&lbrace;&gt; @loading loading&rbrace;&rbrace;</pre>
 
 ## Context
 
 ```
-    "loading": {
-        "src": "/images/loading/spinner.svg",
-        "modifier": "",
-        "styles": ""
-    }
+"loading": {
+    "styles": "",
+    "modifier": "",
+    "src": "/images/loading/spinner.svg"
+}
 ```
 
-### loading.src
+### loading.styles
 
-Location of image.
+This relates to SCSS Module styles. You can pass extra SCSS Modules styles when this is added to a component.
 
 ### loading.modifier
 
 This is a class name or a utility class, generated via `src/styles/utils/loading.scss` and loaded globally.
 
-### loading.styles
+### loading.src
 
-This relates to scss module styles. When this is shared to a partial / component you can attach SCSS module styles to it then style it within the partial / component.
+Image url.
+
+## Animation
+
+SVG loading animation utility, taken from [loading.io](https://loading.io/asset/693763).

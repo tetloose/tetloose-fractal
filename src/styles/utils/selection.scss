@@ -1,4 +1,9 @@
 ::selection {
 	background-color: colors(default, dark);
 	color: colors(default, light);
+
+	.u-bg-dark & {
+		background-color: colors(default, light);
+		color: colors(default, dark);
+	}
 }

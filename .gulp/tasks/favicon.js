@@ -1,5 +1,5 @@
 import { generateFavicon } from 'gulp-real-favicon'
-import { favicon as config } from '../config'
+import { favicon as config } from '../config.js'
 
 const generateFavIconFunc = () => {
     return generateFavicon({

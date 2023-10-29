@@ -31,6 +31,4 @@ You can then access these color variables in scss `colors(default, primary)`.
 
 ## Color utilities
 
-- Color: `src/styles/utils/color.scss`
 - Background: `src/styles/utils/bg.scss`
-- Border: `src/styles/utils/border.scss`

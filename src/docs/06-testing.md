@@ -6,4 +6,4 @@ title: Testing
 
 It's recommended to run **Vitest** along side the dev environment `yarn test`. This will monitor tests and error if tests fail. Tests will fail on `yarn gen:component` but it will help you fix the issues mainly paths etc.
 
-- [Accessibility >>](/docs/accessibility)
+[Accessibility >>](/docs/accessibility)

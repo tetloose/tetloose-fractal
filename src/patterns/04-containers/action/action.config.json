@@ -3,14 +3,16 @@
     "name": "Action",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
         "addedIn": "1.0"
     },
     "preview": "@preview",
     "context": {
-        "modifier": "",
-        "styles": ""
+        "animation": "fade-in",
+        "duration": 400,
+        "styles": "",
+        "modifier": ""
     }
 }

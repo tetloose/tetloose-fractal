@@ -3,12 +3,12 @@
     "name": "Layout",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
     },
-    "preview": "@preview-fractal",
+    "preview": "@preview",
     "collated": true,
     "context": {
         "title": "12 Column Layout",

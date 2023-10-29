@@ -3,69 +3,58 @@
     "name": "Spacing",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
       "addedIn": "1.0"
     },
-    "preview": "@preview-fractal",
+    "preview": "@preview",
     "context": {
-        "title": "Spacing",
         "spacing": [
             {
-                "name": "Small Padding Top",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-t-sml"
-            },
-            {
-                "name": "Medium Padding Top",
+                "name": "16px Top",
                 "modifier": "",
-                "className": "u-spacing-t-med"
+                "className": "u-spacing-t-1"
             },
             {
-                "name": "Large Padding Top",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-t-lrg"
-            },
-            {
-                "name": "X-Large Padding Top",
+                "name": "32px Top",
                 "modifier": "",
-                "className": "u-spacing-t-xlrg"
+                "className": "u-spacing-t-2"
             },
             {
-                "name": "XX-Large Padding Top",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-t-xxlrg"
-            },
-            {
-                "name": "Small Padding Bottom",
+                "name": "48px Top",
                 "modifier": "",
-                "className": "u-spacing-b-sml"
+                "className": "u-spacing-t-3"
             },
             {
-                "name": "Medium Padding Bottom",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-b-med"
-            },
-            {
-                "name": "Large Padding Bottom",
+                "name": "64px Top",
                 "modifier": "",
-                "className": "u-spacing-b-lrg"
+                "className": "u-spacing-t-4"
             },
             {
-                "name": "X-Large Padding Bottom",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-b-xlrg"
-            },
-            {
-                "name": "XX-Large Padding Bottom",
+                "name": "16px Bottom",
                 "modifier": "",
-                "className": "u-spacing-b-xxlrg"
+                "className": "u-spacing-b-1"
             },
             {
-                "name": "Padding Top and Padding Bottom",
-                "modifier": "Fractal-bg-primary Fractal-secondary",
-                "className": "u-spacing-t-xxlrg u-spacing-b-med"
+                "name": "32px Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-2"
+            },
+            {
+                "name": "48px Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-3"
+            },
+            {
+                "name": "64px Bottom",
+                "modifier": "",
+                "className": "u-spacing-b-4"
+            },
+            {
+                "name": "Combined",
+                "modifier": "",
+                "className": "u-spacing-t-1 u-spacing-med-t-3 u-spacing-b-1 u-spacing-med-b-3"
             }
         ]
     }

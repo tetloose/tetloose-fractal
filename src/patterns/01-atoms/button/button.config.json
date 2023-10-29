@@ -3,73 +3,90 @@
     "name": "Button",
     "tags": [
         "sprint-1",
-        "author:tetloose"
+        "author:James Tetley"
     ],
     "meta": {
-      "addedIn": "1.0"
+        "addedIn": "1.0"
     },
-    "preview": "@preview",
+    "preview": "@preview-elements",
     "collated": true,
     "context": {
-        "modifier": "is-inline is-light",
-        "styles": "",
-        "text": "Light Inline Button"
+        "modifier": "",
+        "styles": "is-dark is-inline",
+        "text": "Dark",
+        "label": false,
+        "icon": false,
+        "disabled": false
     },
 	"variants": [
 		{
-			"name": "Dark",
+			"name": "Dark Disabled",
             "context": {
-                "modifier": "is-inline is-dark",
-                "styles": "",
-                "text": "Dark Inline Button"
+                "modifier": "",
+                "styles": "is-dark is-inline",
+                "text": "Dark",
+                "icon": false,
+                "disabled": true
+            }
+		},
+		{
+			"name": "Light",
+            "context": {
+                "modifier": "",
+                "styles": "is-light is-inline",
+                "text": "Light",
+                "icon": false,
+                "disabled": false
+            }
+		},
+		{
+			"name": "Light Disabled",
+            "context": {
+                "modifier": "",
+                "styles": "is-light is-inline",
+                "text": "Light",
+                "icon": false,
+                "disabled": true
             }
 		},
 		{
 			"name": "Primary",
             "context": {
-                "modifier": "is-inline is-primary",
-                "styles": "",
-                "text": "Primary Inline Button"
+                "modifier": "",
+                "styles": "is-primary is-inline",
+                "text": "Primary",
+                "icon": false,
+                "disabled": false
+            }
+		},
+		{
+			"name": "Primary Disabled",
+            "context": {
+                "modifier": "",
+                "styles": "is-primary is-inline",
+                "text": "Primary",
+                "icon": false,
+                "disabled": true
             }
 		},
 		{
 			"name": "Secondary",
             "context": {
-                "modifier": "is-inline is-secondary",
-                "styles": "",
-                "text": "Secondary Inline Button"
+                "modifier": "",
+                "styles": "is-secondary is-inline",
+                "text": "Secondary",
+                "icon": false,
+                "disabled": false
             }
 		},
 		{
-			"name": "Primary Full Width",
+			"name": "Secondary Disabled",
             "context": {
-                "modifier": "is-block is-primary",
-                "styles": "",
-                "text": "Primary Full Width Button"
-            }
-		},
-		{
-			"name": "Secondary Full Width",
-            "context": {
-                "modifier": "is-block is-secondary",
-                "styles": "",
-                "text": "Secondary Full Width Button"
-            }
-		},
-		{
-			"name": "Light Full Width",
-            "context": {
-                "modifier": "is-block is-light",
-                "styles": "",
-                "text": "Light Full Width Button"
-            }
-		},
-		{
-			"name": "Dark Full Width",
-            "context": {
-                "modifier": "is-block is-dark",
-                "styles": "",
-                "text": "Dark Full Width Button"
+                "modifier": "",
+                "styles": "is-secondary is-inline",
+                "text": "Secondary",
+                "icon": false,
+                "disabled": true
             }
 		}
 	]

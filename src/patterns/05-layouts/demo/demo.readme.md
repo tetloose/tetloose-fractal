@@ -10,21 +10,25 @@ Media container to add margins to images / embeds.
 
 Rendered figure partial.
 
+## @video
+
+Rendered MP4 video.
+
 ## @content
 
 Content container to add padding and margins to typology elements. This also contains the title and body context.
 
-## @youtube
+## @text
 
-Rendered YouTube video.
+Text input.
 
-## @vimeo
+## @textarea
 
-Rendered Vimeo video.
+Textarea.
 
-## @accordion
+## @form
 
-Accordion component with it's own data, provided by the context.
+Form container to add padding and margins to form elements.
 
 ## @action
 
@@ -33,3 +37,7 @@ Content container to add padding and margins to button elements.
 ## @button
 
 Rendered Button atom within an Action container.
+
+## @accordion
+
+Accordion component with it's own data, provided by the context.

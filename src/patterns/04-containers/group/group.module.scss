@@ -1,0 +1,13 @@
+@import '@styles/settings';
+
+.group {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -(rem(spacing(1)));
+	align-items: center;
+
+	:global([data-module=Logo]) {
+		margin-top: rem(spacing(1));
+		margin-right: rem(spacing(1));
+	}
+}

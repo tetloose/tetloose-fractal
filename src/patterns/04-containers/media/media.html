@@ -1,5 +1,9 @@
 <div
-    data-styles="{{#if styles}}{{styles}}{{/if}}"
-    class="l-media{{#if modifier}} {{modifier}}{{/if}}">
+    style="{{> initialStyle}}"
+    data-module="Media"
+    data-animation="{{#if animation}}{{animation}}{{else}}fade-in{{/if}}"
+    data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
+    data-styles="media{{#if styles}} {{styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if modifier}} {{modifier}}{{/if}}">
     {{#>@partial-block}}{{/@partial-block }}
 </div>

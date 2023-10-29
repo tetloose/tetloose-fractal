@@ -332,9 +332,9 @@ module.exports = {
         ]
     },
     ignoreFiles: [
-        'src/styles/fractal.scss',
         'src/styles/print.scss',
-        'dist',
+        'public',
+        'build',
         'src/styles/utils/icons.scss'
     ]
 }

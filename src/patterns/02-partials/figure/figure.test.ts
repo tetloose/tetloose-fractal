@@ -26,8 +26,8 @@ test('Figure should exist and be a function', (): void => {
     expectTypeOf(modules.Figure).toBeFunction()
 })
 
-test('Component config exists and returns correct attributes', (): void => {
-    const { duration, animation, modifier, styles } = config.context.component
+test('Config exists and returns correct attributes', (): void => {
+    const { duration, animation, modifier, styles } = config.context
 
     expect(duration).toBeTypeOf('number')
     expect(animation).toBeTypeOf('string')

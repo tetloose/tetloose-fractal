@@ -1,40 +1,15 @@
-<main class="Fractal-spacing-t">
-    <section class="Fractal-spacing-b">
+<main class="u-spacing-b-1">
+    <section class="u-spacing-t-1">
         <div class="l-row">
             <div class="l-row__col">
-                <div class="u-content text-align-center">
-                    <h1>{{title}}</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="Fractal-spacing-t Fractal-spacing-b Fractal-bg-primary Fractal-secondary">
-        <div class="l-row">
-            <div class="l-row__col">
-                <div class="u-content">
-                    <h2>{{applicationTitle}}</h2>
+                {{#> '@content' }}
                     {{#each applicationIcons}}
                         <ul>
-                            <li>{{this.name}}: <i class="{{this.className}}"></i></li>
-                            <li>ClassName: {{this.className}}</li>
+                            <li><span class="u-h3">{{this.name}}: <i class="{{this.className}}"></i></span></li>
+                            <li>ClassName: <strong>{{this.className}}</strong></li>
                         </ul>
                     {{/each}}
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="Fractal-spacing-t Fractal-spacing-b">
-        <div class="l-row">
-            <div class="l-row__col">
-                <div class="u-content">
-                    <h3>{{socialTitle}}</h3>
-                    {{#each socialIcons}}
-                        <ul>
-                            <li>{{this.name}}: <i class="{{this.className}}"></i></li>
-                            <li>ClassName: {{this.className}}</li>
-                        </ul>
-                    {{/each}}
-                </div>
+                {{/@content}}
             </div>
         </div>
     </section>

@@ -1,7 +1,13 @@
 <button
-    data-style="{{#if styles}} {{styles}}{{/if}}"
-    class="u-btn{{#if modifier}} {{modifier}}{{/if}}">
-    <span class="u-btn__inside">
+    data-module="Button"
+    data-styles="button{{#if styles}} {{styles}}{{/if}}"
+    {{#if label}}aria-label="{{label}}"{{/if}}
+    class="{{#if modifier}} {{modifier}}{{/if}}"
+    {{#if disabled}}disabled{{/if}}>
+    {{#if text}}
+    <span data-styles="button__inside">
         {{text}}
+        {{#if icon}}<i class="u-icon-{{icon}}"></i>{{/if}}
     </span>
+    {{/if}}
 </button>

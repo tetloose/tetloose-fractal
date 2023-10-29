@@ -1,5 +1,5 @@
 module.exports = {
-    projectName: 'Sony',
+    projectName: 'Default',
     port: 3000,
     skin: 'black',
     favicon: '/favicon/favicon.ico',

@@ -28,4 +28,4 @@ These are full layouts consisting of Atoms, Partials and Components.
 
 These are for displaying the above.
 
-- [COMPONENTS >>](/docs/components)
+[COMPONENTS >>](/docs/components)

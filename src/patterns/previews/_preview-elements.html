@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ path '/css/app.css' }}" rel="stylesheet">
+        <link href="{{ path '/css/fractal.css' }}" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section class="Fractal-spacing-t">
+                <div class="l-row">
+                    <div class="l-row__col">
+                        <div class="Fractal-elements">
+                            {{{ yield }}}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="{{ path '/js/runtime.js' }}"></script>
+        <script src="{{ path '/js/main.js' }}"></script>
+    </body>
+</html>

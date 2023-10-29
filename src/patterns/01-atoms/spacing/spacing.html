@@ -1,23 +1,14 @@
-<main class="u-spacing-t-lrg">
-    <section class="u-spacing-b-lrg">
-        <div class="l-row">
-            <div class="l-row__col">
-                <div class="u-content">
-                    <h1>{{title}}</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+<main class="u-spacing-b-1">
     {{#each spacing}}
-        <section class="{{this.modifier}} {{this.className}}">
+        <section class="{{this.modifier}} {{this.className}} Fractal-border-primary">
             <div class="l-row">
                 <div class="l-row__col">
-                    <div class="u-content">
+                    {{#> '@content' }}
                         <ul>
                             <li>{{this.name}}</li>
                             <li>ClassName: {{this.className}}</li>
                         </ul>
-                    </div>
+                    {{/@content}}
                 </div>
             </div>
         </section>

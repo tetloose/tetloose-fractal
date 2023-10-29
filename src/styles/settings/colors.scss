@@ -26,3 +26,23 @@ $colors: (
 		from: $light
 	)
 );
+
+%color-heading {
+	&:not([data-module=Button]) {
+		color: colors(default, dark);
+	}
+
+	.u-bg-dark &:not([data-module=Button]) {
+		color: colors(default, light);
+	}
+}
+
+%color-body {
+	&:not([data-module=Button]) {
+		color: colors(default, dark);
+	}
+
+	.u-bg-dark &:not([data-module=Button]) {
+		color: colors(default, light);
+	}
+}

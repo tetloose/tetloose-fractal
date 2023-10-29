@@ -1,5 +1,4 @@
 import { resolve } from 'path'
-import notification from './tasks/notification'
 import * as fractalConfig from '../src/config/fractal'
 import * as handlebarConfig from '../src/config/handlebars'
 import * as dotenv from 'dotenv'
@@ -18,8 +17,7 @@ module.exports = {
     },
     scripts: {
         files: `${base}/src/**/*.{ts,js}`,
-        modules: `${base}/src/**/*.scss`,
-        error: () => notification('❌ SCRIPTS ❌', 'Error', 'Check Terminal')
+        modules: `${base}/src/**/*.scss`
     },
     clean: {
         assets: `${base}/public/assets`,
@@ -36,8 +34,7 @@ module.exports = {
         appEntry: `${base}/src/styles/app.scss`,
         printEntry: `${base}/src/styles/print.scss`,
         fractal: `${base}/src/styles/fractal.scss`,
-        output: `${base}/public/assets/css`,
-        error: () => notification('❌ STYLES ❌', 'Error', 'Check Terminal')
+        output: `${base}/public/assets/css`
     },
     images: {
         files: `${base}/src/images/**/*`,
@@ -52,16 +49,13 @@ module.exports = {
         template: `${base}/src/icons/template.mustache`,
         output: `${base}/src/styles/utils/icons.scss`,
         fonts: `${base}/src/icons/*.{svg,ttf,woff}`,
-        fontOutput: `${base}/public/assets/icons`,
-        error: () => notification('❌ ICONS ❌', 'Error', 'Check Terminal'),
-        success: () => notification('💃 Icons 💃', 'Saved', 'scss/utils/icons.scss')
+        fontOutput: `${base}/public/assets/icons`
     },
     favicon: {
         entry: `${base}/src/favicon/favicon.png`,
         output: `${base}/public/assets/favicon/`,
         appColor: '#c2ad8d',
-        jsonTemplate: `${base}/src/favicon/favicon-data.json`,
-        success: () => notification('🦙 Favicon 🦙', 'Saved', 'src/patterns/head.html')
+        jsonTemplate: `${base}/src/favicon/favicon-data.json`
     },
     beautify: {
         entry: `${base}/build/**/*.html`,

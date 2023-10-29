@@ -95,7 +95,7 @@
 
 		@include transition('height');
 
-		:global(.u-content) {
+		:global([data-module=Content]) {
 			padding: rem(spacing(1));
 		}
 	}

@@ -1,24 +1,20 @@
-<main class="Fractal-spacing-t">
-    <section class="l-row">
-        <div class="l-row__col">
-            <div class="u-content Fractal-spacing-b">
-                <h1>{{title}}</h1>
-            </div>
-        </div>
-    </section>
+<main class="u-spacing-b-1">
     {{#each colors}}
-        <section
-            style="background-color: {{this.hex}}"
-            class="Fractal-spacing-t Fractal-spacing-t Fractal-spacing-b {{this.modifier}}">
+        <section class="u-spacing-t-1">
             <div class="l-row">
-                <div class="l-row__col">
-                    <div class="u-content">
-                        <h2>Name: {{this.name}}</h2>
+                <div class="l-row__col is-sml-7">
+                    {{#> '@content' }}
+                        <h1 class="u-h3">{{this.name}}</h1>
+                        <p>{{this.description}}</p>
+                        <hr>
                         <ul>
                             <li>Hex: {{this.hex}}</li>
-                            <li>SCSS: {{this.scss}}</li>
+                            <li>SCSS: <strong>{{this.scss}}</strong></li>
                         </ul>
-                    </div>
+                    {{/@content}}
+                </div>
+                <div class="l-row__col is-sml-3 is-justify-right">
+                    <span class="Fractal-chip Fractal-border-primary" style="background-color: {{this.hex}};"></span>
                 </div>
             </div>
         </section>

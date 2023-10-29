@@ -1,4 +1,16 @@
-export type StateProps = string | boolean | number | HTMLElement | null
+export type LoadingProps = {
+    animation?: string
+    duration: number
+    type: string
+}
+
+export type MotionOptionsProps = {
+    observed: boolean,
+    scrollListener: () => void,
+    property: string
+}
+
+export type StateProps = string | boolean | number | HTMLElement | HTMLVideoElement | HTMLButtonElement | MotionOptionsProps | LoadingProps | null
 
 export type ObjectToStringProps = {
     [key: string]: string

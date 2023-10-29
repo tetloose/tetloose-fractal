@@ -1,0 +1,11 @@
+[data-module=Content] hr,
+.u-hr {
+	width: 100%;
+	height: 2px;
+	background-color: colors(default, dark);
+
+	.u-bg-primary &,
+	.u-bg-secondary & {
+		background-color: colors(default, light);
+	}
+}

@@ -1,8 +1,15 @@
 # Spacing
 
-Utility classes: `src/styles/utils/spacing.scss`.
+Utility classes: `src/styles/utils/spacing.scss`. (Optional)
 
-When applying padding or margin use the scss mixin `spacing(NUMBER)` e.g. `padding-top: rem(spacing(2));`.
+Adding spacing on breakpoints prefix breakpoint in class name i.e
+
+1. `u-spacing-sml-t-1`
+2. `u-spacing-med-t-2`
+3. `u-spacing-lrg-t-3`
+4. `u-spacing-xlrg-t-4`
+
+When applying padding or margin use the scss mixin `spacing(NUMBER)` e.g. `padding-top: spacing(2);`.
 
 Spacing mixin: `src/styles/mixins/spacing.scss`.
 
@@ -33,3 +40,17 @@ layout: (
 ```
 
 Updating this **variable** will alter all the spacing throughout the project.
+
+## REM Spacing
+
+Rem function is located `src/styles/mixins/rem.scss`.
+
+### Usage
+
+- `font-size: rem(16px);`
+- `padding: rem(16px 32px);`
+
+### Spacing with REM
+
+- `font-size: rem(spacing(1))`;
+- `padding: rem(spacing(1) spacing(2));`

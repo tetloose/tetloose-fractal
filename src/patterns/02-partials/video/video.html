@@ -1,0 +1,47 @@
+{{#if video.url}}
+<div
+    data-module="Video"
+    data-auto-play="{{video.autoPlay}}"
+    data-muted="{{video.muted}}"
+    data-loop="{{video.loop}}"
+    data-aria-play="{{ariaLabels.play}}"
+    data-aria-pause="{{ariaLabels.pause}}"
+    data-styles="video{{#if styles}} {{styles}}{{/if}}"
+    class="u-ratio-{{#if ratio}}{{ratio}}{{else}}16x9{{/if}}{{#if modifier}} {{modifier}}{{/if}}">
+    {{#if video.youtube}}
+        <iframe
+            data-styles="video__media{{#if video.styles}} {{video.styles}}{{/if}}"
+            class="{{#if video.modifier}}{{video.modifier}}{{/if}}"
+            src="https://www.youtube.com/embed/{{video.url}}?{{#if video.autoPlay}}&autoplay=1{{#if video.muted}}&mute=1{{/if}}{{/if}}{{#if video.loop}}&loop=1&playlist={{video.url}}{{/if}}"
+            title="{{#if video.title}}{{video.title}}{{/if}}"
+            frameborder="0"
+            allow="accelerometer; {{#if video.autoPlay}}autoplay; {{/if}}clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+    {{else if video.vimeo}}
+        <iframe
+            data-styles="video__media{{#if video.styles}} {{video.styles}}{{/if}}"
+            class="{{#if video.modifier}}{{video.modifier}}{{/if}}"
+            src="https://player.vimeo.com/video/{{video.url}}?title=0&byline=0&portrait=0{{#if video.autoPlay}}&autoplay=1{{/if}}{{#if video.loop}}&loop=1{{/if}}"
+            title="{{#if video.title}}{{video.title}}{{/if}}"
+            frameborder="0"
+            allow="{{#if video.autoPlay}}autoplay;{{/if}} fullscreen; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    {{else}}
+        <video
+            data-styles="video__media{{#if video.styles}} {{video.styles}}{{/if}}"
+            class="{{#if video.modifier}}{{video.modifier}}{{/if}} js-video"
+            playsinline
+            {{#if video.poster}}poster="{{video.poster}}"{{/if}}
+            {{#if video.autoPlay}}autoplay muted{{/if}}
+            {{#if video.muted}}muted{{/if}}
+            {{#if video.loop}}loop{{/if}}
+            preload="auto">
+            <source src="{{video.url}}" type="video/mp4">
+        </video>
+        {{#if video.controls}}
+            {{> @button button}}
+        {{/if}}
+    {{/if}}
+</div>
+{{/if}}

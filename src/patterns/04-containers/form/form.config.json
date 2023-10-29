@@ -1,0 +1,18 @@
+{
+    "title": "Form",
+    "name": "Form",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "animation": "fade-in",
+        "duration": 400,
+        "styles": "",
+        "modifier": ""
+    }
+}

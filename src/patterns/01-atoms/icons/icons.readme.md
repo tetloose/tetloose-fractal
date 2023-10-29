@@ -1,4 +1,4 @@
-## Icons
+# Icons
 
 Icons are handled via [Icomoon](https://icomoon.io/). Upload `src/icons/selection.json` to **Icomoon**, edit the font pack and **Generate** a new font pack.
 

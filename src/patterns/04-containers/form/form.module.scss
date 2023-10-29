@@ -1,0 +1,69 @@
+@import '@styles/settings';
+
+%reset {
+	display: block;
+	width: 100%;
+	padding: rem(spacing(.5));
+	border-width: rem(2px);
+	border-style: solid;
+	border-color: colors(default, dark);
+	appearance: none;
+
+	@extend %type-body;
+
+	&::placeholder {
+		opacity: .8;
+
+		@include transition('all');
+	}
+
+	&[disabled] {
+		opacity: .3;
+
+		@include interaction(disable);
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+
+	@include mq-hover {
+		@include transition('all');
+	}
+}
+
+.form {
+	width: 100%;
+	margin-top: (-(rem(spacing(1))));
+
+	&__field {
+		padding-top: rem(spacing(1));
+	}
+
+	&__label {
+		display: block;
+		padding-bottom: rem(spacing(.5));
+
+		@extend %type-label;
+	}
+
+	&__input {
+		@extend %reset;
+	}
+
+	&__textarea {
+		@extend %reset;
+
+		min-height: rem(228px);
+		overflow: auto;
+		resize: vertical;
+	}
+
+	&__validation {
+		display: block;
+		padding-top: rem(spacing(.5));
+		color: colors(default, primary);
+
+		@extend %type-label;
+	}
+}

@@ -35,17 +35,41 @@
             "@styles/*": [
                 "./src/scss/*"
             ],
-            "@components": [
-                "./src/components"
-            ],
-            "@components/*": [
-                "./src/components/*"
-            ],
             "@patterns": [
                 "./src/patterns"
             ],
             "@patterns/*": [
                 "./src/patterns/*"
+            ],
+            "@atoms": [
+                "./src/patterns/01-atoms"
+            ],
+            "@atoms/*": [
+                "./src/patterns/01-atoms/*"
+            ],
+            "@partials": [
+                "./src/patterns/02-partials"
+            ],
+            "@partials/*": [
+                "./src/patterns/02-partials/*"
+            ],
+            "@components": [
+                "./src/patterns/03-components"
+            ],
+            "@components/*": [
+                "./src/patterns/03-components/*"
+            ],
+            "@containers": [
+                "./src/patterns/04-containers"
+            ],
+            "@containers/*": [
+                "./src/patterns/04-containers/*"
+            ],
+            "@layouts": [
+                "./src/patterns/05-layouts"
+            ],
+            "@layouts/*": [
+                "./src/patterns/05-layouts/*"
             ],
             "@elements": [
                 "src/elements"

@@ -1,43 +1,60 @@
-<main class="u-spacing-b-lrg">
-    <section class="u-spacing-t-lrg">
+<main>
+    <section class="u-spacing-t-4 u-spacing-b-4 u-bg-dark">
+        {{#> @media }}
+            <div class="l-row">
+                <div class="l-row__col">
+                    {{ render '@video' video }}
+                </div>
+            </div>
+        {{/@media}}
+    </section>
+    <section class="u-spacing-t-4 u-spacing-b-4 u-bg-secondary">
+        {{#> @media }}
+            <div class="l-row">
+                <div class="l-row__col is-6">
+                    {{ render '@figure' figure }}
+                </div>
+                <div class="l-row__col is-6">
+                    {{ render '@figure' figure }}
+                </div>
+            </div>
+        {{/@media}}
+    </section>
+    <section class="u-spacing-t-4 u-spacing-b-4 u-bg-dark">
         <div class="l-row">
-            <div class="l-row__col">
-                {{#> '@media' }}
-                    <div class="l-row">
-                        <div class="l-row__col is-6 is-lrg-3">
-                            {{ render '@figure' }}
-                        </div>
-                        <div class="l-row__col is-6 is-lrg-3">
-                            {{ render '@figure' }}
-                        </div>
-                        <div class="l-row__col is-6 is-lrg-3">
-                            {{ render '@figure' }}
-                        </div>
-                        <div class="l-row__col is-6 is-lrg-3">
-                            {{ render '@figure' }}
-                        </div>
-                    </div>
-                {{/@media}}
-                {{#> '@content' this.content }}
-                    <h1>{{title}}</h1>
-                    <p>{{body}}</p>
+            <div class="l-row__col is-med-10 is-med-justify-center">
+                {{#> @content this.content }}
+                    {{{text}}}
                 {{/@content}}
-                {{#> '@media' this.media }}
-                    <div class="l-row">
-                        <div class="l-row__col is-sml-6">
-                             {{ render '@youtube' }}
-                        </div>
-                        <div class="l-row__col is-sml-6">
-                             {{ render '@vimeo' }}
-                        </div>
-                    </div>
-                {{/@media}}
-                {{> '@accordion' accordion }}
-                {{#> '@action' this.action }}
-                    {{ render '@button' }}
-                    {{ render '@button--secondary' }}
-                {{/@action}}
             </div>
         </div>
     </section>
-</section>
+    <section class="u-spacing-t-4 u-spacing-b-4">
+        {{#> @form }}
+            <div class="l-row">
+                <div class="l-row__col is-med-10 is-med-justify-center">
+                    <div class="l-row">
+                        <div class="l-row__col is-med-6 ">
+                            {{render '@text'}}
+                            {{render '@text'}}
+                            {{render '@text'}}
+                        </div>
+                        <div class="l-row__col is-med-6 ">
+                            {{render '@textarea'}}
+                            {{#> @action this.action }}
+                                {{render "@button"}}
+                            {{/@action}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/@form}}
+    </section>
+    <section class="u-spacing-t-4 u-spacing-b-4 u-bg-primary">
+        <div class="l-row">
+            <div class="l-row__col is-med-10 is-med-justify-center">
+                {{render '@accordion' accordion }}
+            </div>
+        </div>
+    </section>
+</main>

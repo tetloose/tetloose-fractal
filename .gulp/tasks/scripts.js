@@ -1,15 +1,11 @@
-import { src, lastRun } from 'gulp'
+import { src } from 'gulp'
 import webpack from 'webpack'
 import webpackConfig from '../../webpack.config'
-import plumber from 'gulp-plumber'
 import gulpESLintNew, { fix, format, failAfterError } from 'gulp-eslint-new'
-import { scripts as config } from '../config'
+import { scripts as config } from '../config.js'
 
 const scriptsLintFunc = () => {
-    return src([config.files], {
-            since: lastRun(scriptsLintFunc)
-        })
-        .pipe(plumber({ errorHandler: config.error }))
+    return src([config.files])
         .pipe(gulpESLintNew({ fix: true }))
         .pipe(fix())
         .pipe(format())

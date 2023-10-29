@@ -30,4 +30,4 @@ This will pull in:
 - `public/assets/css/accordion.css`
 - `public/assets/js/accordion.js`
 
-- [HOME >>](/docs)
+[HOME >>](/docs)

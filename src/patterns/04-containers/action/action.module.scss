@@ -1,0 +1,32 @@
+@import '@styles/settings';
+
+.action {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: -(rem(spacing(2)));
+	margin-right: -(rem(calc(rem(vars(layout, gutter)) / 2)));
+	margin-left: -(rem(calc(rem(vars(layout, gutter)) / 2)));
+	align-items: center;
+
+	&.is-align-container :global([data-module=Button]) {
+		width: 100%;
+	}
+
+	&.is-align-left {
+		justify-content: flex-start;
+	}
+
+	&.is-align-right {
+		justify-content: flex-end;
+	}
+
+	&.is-align-center {
+		justify-content: center;
+	}
+
+	:global([data-module=Button]) {
+		margin-top: rem(spacing(2));
+		margin-right: calc(rem(vars(layout, gutter)) / 2);
+		margin-left: calc(rem(vars(layout, gutter)) / 2);
+	}
+}

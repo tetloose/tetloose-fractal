@@ -1,0 +1,24 @@
+{
+    "title": "Text",
+    "name": "Text",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview-form",
+    "context": {
+        "styles": "",
+        "modifier": "",
+        "label": "Label",
+        "id": "textarea-id",
+        "name": "textarea-name",
+        "placeholder": "Placeholder text",
+        "validation": {
+            "active": false,
+            "text": "Error message!"
+        }
+    }
+}

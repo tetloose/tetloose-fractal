@@ -1,0 +1,111 @@
+@import '@styles/settings';
+
+.content {
+	&.text-align-left {
+		text-align: left;
+	}
+
+	&.text-align-right {
+		text-align: right;
+	}
+
+	&.text-align-center {
+		text-align: center;
+	}
+
+	@for $i from 1 through 5 {
+		$breakpoint: vars(breakpoint, xxlrg);
+		$selecter: 'xxlrg';
+
+		@if $i == 1 {
+			$breakpoint: vars(breakpoint, sml);
+			$selecter: 'sml';
+		} @else if $i == 2 {
+			$breakpoint: vars(breakpoint, med);
+			$selecter: 'med';
+		} @else if $i == 3 {
+			$breakpoint: vars(breakpoint, lrg);
+			$selecter: 'lrg';
+		} @else if $i == 4 {
+			$breakpoint: vars(breakpoint, xlrg);
+			$selecter: 'xlrg';
+		}
+
+		@include mq($breakpoint) {
+			&.text-#{$selecter}-align-left {
+				text-align: left;
+			}
+
+			&.text-#{$selecter}-align-right {
+				text-align: right;
+			}
+
+			&.text-#{$selecter}-align-center {
+				text-align: center;
+			}
+		}
+	}
+
+	:global([data-module=Button]),
+	:global(hr) {
+		margin: rem(spacing(2)) 0 0 0;
+	}
+
+	:global(p) {
+		@include mq(vars(breakpoint, sml), max-width) {
+			padding: rem(spacing(1.25)) 0 0 0;
+		}
+
+		@include mq(vars(breakpoint, sml)) {
+			padding: rem(spacing(1.5)) 0 0 0;
+		}
+	}
+
+	:global(h1),
+	:global(h2),
+	:global(h3),
+	:global(h4),
+	:global(h5),
+	:global(h6) {
+		@include mq(vars(breakpoint, sml), max-width) {
+			padding: rem(spacing(1.333)) 0 0 0;
+		}
+
+		@include mq(vars(breakpoint, sml)) {
+			padding: rem(spacing(1)) 0 0 0;
+		}
+	}
+
+	:global(ul),
+	:global(ol) {
+		padding: rem(spacing(1)) 0 0 0;
+
+		li {
+			@include mq(vars(breakpoint, sml), max-width) {
+				padding: rem(spacing(.25)) 0 0 0;
+			}
+
+			@include mq(vars(breakpoint, sml)) {
+				padding: rem(spacing(.5)) 0 0 0;
+			}
+		}
+
+		ul,
+		ol {
+			padding: 0;
+		}
+	}
+
+	> :global(*:first-child) {
+		margin-top: 0;
+
+		&:not([data-module=Button]) {
+			padding-top: 0;
+		}
+
+		> li:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+}

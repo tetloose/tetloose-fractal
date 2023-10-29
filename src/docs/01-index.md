@@ -1,8 +1,8 @@
 ---
-title: Tetloose Fractal
+title: Default
 ---
 
-Tetloose Fractal is a custom [fractal.build](https://fractal.build/) component library.
+This is a custom [fractal.build](https://fractal.build/) component library.
 
 ## Recommended VSCode Extensions
 
@@ -41,5 +41,5 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 
 ## Docs
 
-- [SETUP >>](/docs/setup)
+[SETUP >>](/docs/setup)
 

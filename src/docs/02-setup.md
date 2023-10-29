@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-1. `git clone git@github.com:tetloose/tetloose-fractal.git`
+1. `git clone git@ssh.dev.azure.com:v3/HugoAndCat/SonyCorporate/tv-sound-bar-pdp`
 2. Update `projectName` in `src/config/fractal.js`
 3. `cmd shift p recommended` install recommended plugins
 4. `yarn setup`
@@ -20,4 +20,4 @@ This runs the dev server.
 
 If you have already run `yarn dev` and want to spin up the dev server without generating all the assets use `yarn serve`.
 
-- [STRUCTURE >>](/docs/structure)
+[STRUCTURE >>](/docs/structure)

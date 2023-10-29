@@ -1,26 +1,95 @@
-<main>
-    <section class="Fractal-spacing-t Fractal-spacing-b Fractal-bg-primary Fractal-secondary">
-        <div class="l-row">
-            <div class="l-row__col">
-                {{#> @content}}
-                    <h1>{{title}}</h1>
-                {{/@content}}
+<main class="u-spacing-b-1">
+    <section class="l-row">
+        <div class="l-row__col">
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h1 class="u-h1">
+                    {{{h1}}}
+                </h1>
+                <ul>
+                    <li>Tag: h1</li>
+                    <li>SCSS: u-h1</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h2 class="u-h2">
+                    {{{h2}}}
+                </h2>
+                <ul>
+                    <li>Tag: h2</li>
+                    <li>SCSS: u-h2</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h3 class="u-h3">
+                    {{{h3}}}
+                </h3>
+                <ul>
+                    <li>Tag: h3</li>
+                    <li>SCSS: u-h3</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h4 class="u-h4">
+                    {{{h4}}}
+                </h4>
+                <ul>
+                    <li>Tag: h4</li>
+                    <li>SCSS: u-h4</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h5 class="u-h5">
+                    {{{h5}}}
+                </h5>
+                <ul>
+                    <li>Tag: h5</li>
+                    <li>SCSS: u-h5</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <h6 class="u-h6">
+                    {{{h6}}}
+                </h6>
+                <ul>
+                    <li>Tag: h6</li>
+                    <li>SCSS: u-h6</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                <p class="u-p">
+                    {{{body}}}
+                </p>
+                <ul>
+                    <li>Tag: p</li>
+                    <li>SCSS: u-p</li>
+                </ul>
+                <span class="Fractal-hr"></span>
+            {{/@content}}
+            </div>
+            <div class="Fractal-spacing-t">
+            {{#> '@content' }}
+                {{{content}}}
+            {{/@content}}
             </div>
         </div>
     </section>
-    {{#if content}}
-    <section class="Fractal-spacing-t Fractal-spacing-b">
-        <div class="l-row">
-            <div class="l-row__col">
-                {{#if component}}
-                    {{#> @content}}
-                        {{{content}}}
-                    {{/@content}}
-                {{else}}
-                    {{{content}}}
-                {{/if}}
-            </div>
-        </div>
-    </section>
-    {{/if}}
 </main>

@@ -46,4 +46,4 @@ These styles handle layout.
 
 When working with `*.module.scss` you can import **settings** and **mixins** with `@import '@styles/settings';`.
 
-- [PRODUCTION >>](/docs/production)
+[PRODUCTION >>](/docs/production)

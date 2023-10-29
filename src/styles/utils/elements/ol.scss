@@ -1,0 +1,8 @@
+[data-module=Content] ol,
+.u-ol {
+	margin-left: rem(18px);
+	list-style-type: decimal;
+
+	@extend %type-body;
+	@extend %color-body;
+}
