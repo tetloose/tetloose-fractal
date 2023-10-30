@@ -1,7 +1,7 @@
 {
-    "name": "tv-sound-bar-pdp",
+    "name": "tetloose-fractal",
     "version": "1.0.0",
-    "description": "TV Sound Bar PDP Fractal is a custom fractal.build component library",
+    "description": "Custom fractal.build component library",
     "main": "./gulpfile.babel.js",
     "keywords": [
         "Fractal",
@@ -14,8 +14,8 @@
         "WCAG AAA",
         "Speed Performance"
     ],
-    "repository": "git@ssh.dev.azure.com:v3/HugoAndCat/SonyCorporate/tv-sound-bar-pdp",
-    "author": "James Tetley <jtetley@hugoandcat.com>",
+    "repository": "git@github.com:tetloose/tetloose-fractal.git",
+    "author": "James Tetley <tetloose@gmail.com>",
     "license": "MIT",
     "babel": {
         "presets": [
@@ -25,21 +25,21 @@
     "private": true,
     "scripts": {
         "clean": "gulp clean",
-        "setup": "./toolkit setup",
+        "setup": "bash toolkit setup",
         "serve": "ENV=dev gulp fractalServe",
-        "dev": "gulp clean; ENV=dev gulp; yarn serve",
-        "build": "gulp clean; gulp build; gulp fractalBuild; yarn beautify",
-        "deploy": "gulp build; gulp fractalBuild; yarn beautify",
+        "dev": "gulp clean && ENV=dev gulp && yarn serve",
+        "build": "gulp clean && gulp build && gulp fractalBuild && yarn beautify",
+        "deploy": "gulp build && gulp fractalBuild && yarn beautify",
         "beautify": "gulp beautify",
-        "favicon": "gulp cleanFavicon; gulp favicon",
-        "git:commit": "./toolkit git-commit",
+        "favicon": "gulp cleanFavicon && gulp favicon",
+        "git:commit": "bash toolkit git-commit",
         "test": "vitest",
         "coverage": "vitest run --coverage",
         "lint": "eslint --ext .js,.ts .",
         "pre-commit": "yarn lint && vitest --watch false",
         "create-hook": "husky add .husky/pre-commit \"yarn pre-commit\"",
         "prepare": "husky install",
-        "gen:component": "./toolkit generate-component",
+        "gen:component": "bash toolkit generate-component",
         "accessibility": "gulp accessibility"
     },
     "dependencies": {
