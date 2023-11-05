@@ -1,6 +1,6 @@
 import styles from './video.module.scss'
-import { ComponentClass } from '@/utilities'
-import { AriaLabelsProps, ControlButtonProps } from './video.types'
+import { ComponentClass, ButtonProps, HTMLVideoProps } from '@utilities'
+import { AriaLabelsProps } from './video.types'
 
 export class Video extends ComponentClass {
     autoPlay: boolean
@@ -9,8 +9,8 @@ export class Video extends ComponentClass {
     ariaLabels: AriaLabelsProps
     paused: boolean
     playing: boolean
-    video: HTMLVideoElement | null
-    controls: ControlButtonProps
+    video: HTMLVideoProps
+    controls: ButtonProps
 
     constructor(module: HTMLElement) {
         super(module)

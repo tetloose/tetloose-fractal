@@ -1,9 +1,8 @@
 import { expect, test } from 'vitest'
-import { imageElement } from '@elements'
-import { ImageProps } from '@/elements/element.types'
+import { imageElement, ImageProps } from '@elements'
 
 const imageData: ImageProps = {
-    className: 'class-name',
+    modifier: 'class-name',
     styles: 'style-name',
     alt: 'This is alt text',
     mobile: 'https://picsum.photos/200/200',

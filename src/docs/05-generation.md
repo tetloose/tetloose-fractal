@@ -40,13 +40,16 @@ Add this to the bottom of the Modules Object.
 
 ```
 export const modules = {
-    Action: () => import(/* webpackChunkName: 'action' */ '@/patterns/04-containers/action/action.component'),
-    Accordion: () => import(/* webpackChunkName: 'accordion' */ '@/patterns/03-components/accordion/accordion.component'),
-    Button: () => import(/* webpackChunkName: 'button' */ '@/patterns/01-atoms/button/button.component'),
-    Content: () => import(/* webpackChunkName: 'content' */ '@/patterns/04-containers/content/content.component'),
-    Figure: () => import(/* webpackChunkName: 'figure' */ '@/patterns/02-partials/figure/figure.component'),
-    Media: () => import(/* webpackChunkName: 'media' */ '@/patterns/04-containers/media/media.component'),
-    Header: () => import(/* webpackChunkName: 'header' */ '@/patterns/01-atoms/header/header.component')
+    Button: () => import(/* webpackChunkName: 'button' */ '@atoms/button/button.component'),
+    Logo: () => import(/* webpackChunkName: 'logo' */ '@atoms/logo/logo.component'),
+    Figure: () => import(/* webpackChunkName: 'figure' */ '@partials/figure/figure.component'),
+    Video: () => import(/* webpackChunkName: 'video' */ '@partials/video/video.component'),
+    Accordion: () => import(/* webpackChunkName: 'accordion' */ '@components/accordion/accordion.component'),
+    Action: () => import(/* webpackChunkName: 'action' */ '@containers/action/action.component'),
+    Content: () => import(/* webpackChunkName: 'content' */ '@containers/content/content.component'),
+    Media: () => import(/* webpackChunkName: 'media' */ '@containers/media/media.component'),
+    Group: () => import(/* webpackChunkName: 'group' */ '@containers/group/group.component'),
+    Form: () => import(/* webpackChunkName: 'form' */ '@containers/form/form.component')
 }
 
 ```

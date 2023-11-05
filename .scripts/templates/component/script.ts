@@ -1,5 +1,5 @@
 import styles from './moduleName.module.scss'
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class ObjectName extends ComponentClass {
     constructor(module: HTMLElement) {

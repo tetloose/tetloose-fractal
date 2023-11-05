@@ -1,6 +1,6 @@
 import styles from './figure.module.scss'
-import { ComponentClass } from '@/utilities'
-import { imageElement } from '@/elements'
+import { ComponentClass } from '@utilities'
+import { imageElement } from '@elements'
 
 export class Figure extends ComponentClass {
     constructor(module: HTMLElement) {

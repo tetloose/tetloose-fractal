@@ -1,0 +1,62 @@
+<div
+    style="{{> initialStyle}}"
+    data-module="Gallery"
+    data-animation="{{#if animation}}{{animation}}{{/if}}"
+    data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
+    data-styles="gallery{{#if styles}} {{styles}}{{/if}}"
+    class="{{> initialAnimation}}{{#if modifier}} {{modifier}}{{/if}}">
+    <div data-styles="gallery__inside">
+        <button
+            aria-label="{{leftLabel}}"
+            data-direction="left"
+            data-styles="gallery__trigger is-left"
+            class="js-galleryTrigger">
+            <i class="u-icon-prev"></i>
+        </button>
+        <figure
+            data-styles="gallery__figure is-loading"
+            class="u-ratio-21x9 js-galleryFigure">
+            {{ render '@loading--centered' }}
+        </figure>
+        <button
+            aria-label="{{rightLabel}}"
+            data-direction="right"
+            data-styles="gallery__trigger is-right"
+            class="js-galleryTrigger">
+            <i class="u-icon-next"></i>
+        </button>
+    </div>
+    <div class="l-row">
+        <div class="l-row__col">
+            <div data-styles="carousel">
+                <div data-styles="carousel__header">
+                    <span class="u-p js-carouselAlt"></span>
+                    <span class="u-p">
+                        <span class="js-carouselNumber"></span> / <span class="js-carouselTotal"></span>
+                    </span>
+                </div>
+                <div data-styles="carousel__inside">
+                    <div
+                        class="js-carouselRail"
+                        data-styles="carousel__rail">
+                        {{#each items as |item|}}
+                            <button
+                                data-alt="{{item.thumbnail.image.alt}}"
+                                data-placeholder="{{item.figure.placeholder}}"
+                                data-desktop="{{item.figure.desktop}}"
+                                data-tablet="{{item.figure.tablet}}"
+                                data-mobile="{{item.figure.mobile}}"
+                                data-styles="carousel__rail-trigger"
+                                aria-label="{{item.thumbnail.image.alt}}"
+                                data-index="{{@index}}"
+                                class="js-carouselTrigger">
+                                {{> @figure item.thumbnail}}
+                                <i class="u-icon-focus"></i>
+                            </button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

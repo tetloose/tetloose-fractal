@@ -1,0 +1,34 @@
+{
+    "title": "Modal",
+    "name": "Modal",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "animation": "fade-in",
+        "duration": 400,
+        "modifier": "u-bg-dark",
+        "styles": "",
+        "open": {
+            "modifier": "js-modalOpen",
+            "styles": "modal__open is-dark is-inline",
+            "text": "Open Modal",
+            "label": false,
+            "icon": false,
+            "disabled": false
+        },
+        "close": {
+            "modifier": "js-modalClose",
+            "styles": "modal__close is-light is-inline",
+            "text": "Close Modal",
+            "label": false,
+            "icon": false,
+            "disabled": false
+        }
+    }
+}

@@ -3,11 +3,10 @@ import { modules } from '@config'
 import Figure from './figure.component'
 import config from './figure.config.json'
 import styles from './figure.module.scss'
-import { imageElement } from '@elements'
-import { ImageProps } from '@/elements/element.types'
+import { imageElement, ImageProps } from '@elements'
 
 const imageData: ImageProps = {
-    className: config.context.image.modifier,
+    modifier: config.context.image.modifier,
     styles: config.context.image.styles,
     alt: config.context.image.alt,
     mobile: config.context.image.desktop,

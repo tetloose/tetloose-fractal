@@ -1,10 +1,9 @@
 import styles from './accordion.module.scss'
-import { ComponentClass } from '@/utilities'
-import { AccordionHTMLNodeListProps, AccordionHTMLProps } from './accordion.types'
+import { ComponentClass, HTMLProps, HTMLNodeProps } from '@utilities'
 
 export class Accordion extends ComponentClass {
-    items: AccordionHTMLNodeListProps
-    triggers: AccordionHTMLNodeListProps
+    items: HTMLNodeProps
+    triggers: HTMLNodeProps
     accordionDuration: number
     prevent: boolean
 
@@ -42,7 +41,7 @@ export class Accordion extends ComponentClass {
         const { state, items, triggers, accordionDuration } = this
         const item = items ? items[typeof state?.accordionIndex === 'number' ? state.accordionIndex : 0] : null
         const trigger = triggers ? triggers[typeof state?.accordionIndex === 'number' ? state.accordionIndex : 0] : null
-        const reveal = item?.querySelector('.js-reveal') as AccordionHTMLProps
+        const reveal = item?.querySelector('.js-reveal') as HTMLProps
         const height = reveal ? Accordion.getElementHeight(reveal) : '0px'
 
         if (!this.prevent && item && trigger && reveal && height) {

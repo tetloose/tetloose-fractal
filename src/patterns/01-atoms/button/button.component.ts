@@ -1,6 +1,6 @@
 import styles from './button.module.scss'
 
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class Button extends ComponentClass {
     constructor(module: HTMLElement) {

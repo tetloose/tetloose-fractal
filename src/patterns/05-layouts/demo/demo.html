@@ -26,6 +26,11 @@
                 {{#> @content this.content }}
                     {{{text}}}
                 {{/@content}}
+                <div class="u-spacing-t-2">
+                    {{#> @modal this.modal }}
+                        {{ render '@gallery' }}
+                    {{/@modal}}
+                </div>
             </div>
         </div>
     </section>

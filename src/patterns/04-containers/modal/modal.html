@@ -1,0 +1,17 @@
+<div
+    style="{{> initialStyle}}"
+    data-module="Modal"
+    data-animation="{{#if animation}}{{animation}}{{/if}}"
+    data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
+    data-styles="modal{{#if styles}} {{styles}}{{/if}}"
+    class="{{> initialAnimation}}">
+    {{ render '@button' open }}
+    <div
+        class="{{#if modifier}}{{modifier}} {{/if}}js-modalWindow"
+        data-styles="modal__window">
+        {{ render '@button' close }}
+        <div data-styles="modal__window-inside">
+            {{#>@partial-block}}{{/@partial-block }}
+        </div>
+    </div>
+</div>

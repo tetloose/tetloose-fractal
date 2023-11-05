@@ -25,6 +25,28 @@
             "styles": "is-align-right",
             "modifier": "u-spacing-t-2",
             "button": "@button"
+        },
+        "modal": {
+            "animation": "fade-in",
+            "duration": 400,
+            "modifier": "u-bg-dark",
+            "styles": "",
+            "open": {
+                "modifier": "js-modalOpen",
+                "styles": "modal__open is-primary is-inline",
+                "text": "View Gallery",
+                "label": false,
+                "icon": false,
+                "disabled": false
+            },
+            "close": {
+                "modifier": "js-modalClose",
+                "styles": "modal__close is-light is-inline",
+                "text": "Close",
+                "label": false,
+                "icon": false,
+                "disabled": false
+            }
         }
     }
 }

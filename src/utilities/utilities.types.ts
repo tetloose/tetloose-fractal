@@ -33,9 +33,14 @@ export type MockParams = {
     headers?: object;
 }
 
-export type FetchParams = {
+export type FetchParamsProps = {
     (input?: string | Request, init?: RequestInit): Promise<Response>;
-    mockResponse(body: string, init?: MockParams): FetchParams;
-    mockResponseOnce(body: string, init?: MockParams): FetchParams;
+    mockResponse(body: string, init?: MockParams): FetchParamsProps;
+    mockResponseOnce(body: string, init?: MockParams): FetchParamsProps;
     resetMocks(): void;
 }
+
+export type HTMLProps = HTMLElement | null
+export type HTMLNodeProps = NodeListOf<HTMLElement> | null
+export type ButtonProps = HTMLButtonElement | null
+export type HTMLVideoProps = HTMLVideoElement | null

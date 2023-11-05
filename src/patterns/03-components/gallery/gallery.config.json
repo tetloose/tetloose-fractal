@@ -1,0 +1,202 @@
+{
+    "title": "Gallery",
+    "name": "Gallery",
+    "tags": [
+        "sprint-1",
+        "author:James Tetley"
+    ],
+    "meta": {
+        "addedIn": "1.0"
+    },
+    "preview": "@preview",
+    "context": {
+        "animation": "fade-in",
+        "duration": 400,
+        "styles": "",
+        "modifier": "",
+        "leftLabel": "Click for prev image",
+        "rightLabel": "Click for next image",
+        "items": [
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 1",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 2",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 3",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 4",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 1",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 2",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 3",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 4",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 1",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            },
+            {
+                "thumbnail": {
+                    "duration": 400,
+                    "animation": "skeleton",
+                    "ratio": "21x9",
+                    "image": {
+                        "alt": "Image alt 2",
+                        "placeholder": "/images/placeholder.jpg",
+                        "mobile": "/images/mobile.jpg"
+                    }
+                },
+                "figure": {
+                    "placeholder": "/images/placeholder.jpg",
+                    "desktop": "/images/desktop.jpg",
+                    "tablet": "/images/tablet.jpg",
+                    "mobile": "/images/mobile.jpg"
+                }
+            }
+        ]
+    }
+}

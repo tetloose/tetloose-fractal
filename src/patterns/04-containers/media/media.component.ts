@@ -1,5 +1,5 @@
 import styles from './media.module.scss'
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class Media extends ComponentClass {
     constructor(module: HTMLElement) {

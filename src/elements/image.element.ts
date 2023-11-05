@@ -1,7 +1,7 @@
 import { ImageProps } from './element.types'
 
 export function imageElement(options: ImageProps): HTMLElement {
-    const { className, styles, alt, mobile, tablet, desktop } = options
+    const { modifier, styles, alt, mobile, tablet, desktop } = options
     const image = new Image()
     const srcset = `
         ${desktop ? `${desktop} 1024w,` : ''}
@@ -13,8 +13,8 @@ export function imageElement(options: ImageProps): HTMLElement {
         image.src = mobile
     }
 
-    if (className) {
-        className
+    if (modifier) {
+        modifier
             .split(' ')
             .forEach(name => name && image.classList.add(name))
     }

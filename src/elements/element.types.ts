@@ -1,5 +1,5 @@
 export type ImageProps = {
-    className?: string
+    modifier?: string
     styles?: string
     alt?: string
     mobile: string

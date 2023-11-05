@@ -1,5 +1,5 @@
 import styles from './group.module.scss'
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class Group extends ComponentClass {
     constructor(module: HTMLElement) {

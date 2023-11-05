@@ -17,7 +17,7 @@ title: Components
 
 ## &lbrace;&lbrace;> initialStyle&rbrace;&rbrace;
 
-The initial style of the component is `opacity: 0`, this is handlebar Partial. See `src/config/handlebars.js` for more info, if you add Helpers / Partials, you will need to restart the application.
+The initial style of the component is `opacity: 0`, this is a handlebar Partial. See `src/config/handlebars.js` for more info, if you add Helpers / Partials, you will need to restart the application.
 
 ## data-module="ObjectName"
 
@@ -37,7 +37,7 @@ This relates to the scss module `*.module.scss` within the Component. Types are 
 
 ## class="&lbrace;&lbrace;> initialAnimation&rbrace;&rbrace;
 
-The initial animation of the component `u-animate-hide`, this is handlebar Partial. See `src/config/handlebars.js` for more info.
+The initial animation of the component `u-animate-hide`, this is a handlebar Partial. See `src/config/handlebars.js` for more info.
 
 ## Context
 
@@ -64,7 +64,7 @@ You can write either js or ts, it's up to you. Basic Component setup:
 
 ```
 import styles from './moduleName.module.scss'
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class ObjectName extends ComponentClass {
     constructor(module: HTMLElement) {
@@ -81,7 +81,7 @@ export default (module: HTMLElement) => new ObjectName(module)
 
 ```
 import styles from './moduleName.module.scss'
-import { ComponentClass } from '@/utilities'
+import { ComponentClass } from '@utilities'
 
 export class ObjectName extends ComponentClass {
     constructor(module) {

@@ -1,4 +1,4 @@
-import { components, observer } from '@/utilities'
+import { components, observer } from '@utilities'
 
 components?.forEach((component) => {
     observer.observe(component)
