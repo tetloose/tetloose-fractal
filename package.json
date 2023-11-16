@@ -35,7 +35,7 @@
         "git:commit": "bash toolkit git-commit",
         "test": "vitest",
         "coverage": "vitest run --coverage",
-        "lint": "eslint --ext .js,.ts .",
+        "lint": "eslint --ext .js,.ts . && stylelint \"**/*.scss\"",
         "pre-commit": "yarn lint && vitest --watch false",
         "create-hook": "husky add .husky/pre-commit \"yarn pre-commit\"",
         "prepare": "husky install",
