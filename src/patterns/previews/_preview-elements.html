@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ path '/css/fractal.css' }}" rel="stylesheet">
-        <link href="{{ cssPath 'app' }}" rel="stylesheet">
+        <link href="{{ assets 'app' 'css' }}" rel="stylesheet">
     </head>
     <body>
         <main>
@@ -18,7 +18,7 @@
                 </div>
             </section>
         </main>
-        <script src="{{ jsPath 'runtime' }}"></script>
-        <script src="{{ jsPath 'main' }}"></script>
+        <script src="{{ assets 'runtime' 'js' }}"></script>
+        <script src="{{ assets 'main' 'js' }}"></script>
     </body>
 </html>

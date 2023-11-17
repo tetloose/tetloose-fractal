@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-function findFilesWithContent(folderPath, targetValue) {
+function getFileName(folderPath, targetValue) {
     const matchingFiles = []
     const folderContents = fs.readdirSync(folderPath)
 
@@ -26,17 +26,11 @@ module.exports = {
         ifAnd: function(arg1, arg2, options) {
             return (arg1 && arg2) ? options.fn(this) : options.inverse(this)
         },
-        cssPath: (filename) => {
-            const folderPath = path.resolve(__dirname, '../../public/assets/css')
-            const file = findFilesWithContent(folderPath, filename)
+        assets: (filename, ext) => {
+            const folderPath = path.resolve(__dirname, `../../public/assets/${ext}`)
+            const file = getFileName(folderPath, filename)
 
-            return file && file.length > 0 ? `/css/${file[0]}` : `/css/${filename}`
-        },
-        jsPath: (filename) => {
-            const folderPath = path.resolve(__dirname, '../../public/assets/js')
-            const file = findFilesWithContent(folderPath, filename)
-
-            return file && file.length > 0 ? `/js/${file[0]}` : `/js/${filename}`
+            return file && file.length > 0 ? `/${ext}/${file[0]}` : `/${ext}/${filename}.${ext}`
         }
     },
     partials: {
