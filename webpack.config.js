@@ -9,8 +9,12 @@ module.exports = {
     entry: config.webpack.entry,
     output: {
         path: resolve(__dirname, config.webpack.output),
-        filename: 'js/[name].js',
-        chunkFilename: 'js/[name].js'
+        filename: config.webpack.mode
+            ? 'js/[name].js'
+            : 'js/[name].[contenthash].js',
+        chunkFilename: config.webpack.mode
+            ? 'js/[name].js'
+            : 'js/[name].[contenthash].js'
     },
     stats: 'minimal',
     resolve: {
@@ -94,8 +98,12 @@ module.exports = {
     devtool: config.webpack.mode ? 'inline-source-map' : false,
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: 'css/[name].css'
+            filename: config.webpack.mode
+                ? 'css/[name].css'
+                : 'css/[name].[contenthash].css',
+            chunkFilename: config.webpack.mode
+                ? 'css/[name].css'
+                : 'css/[name].[contenthash].css'
         })
     ],
     optimization: {

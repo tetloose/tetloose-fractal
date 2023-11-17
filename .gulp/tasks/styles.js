@@ -6,6 +6,7 @@ import filter from 'gulp-filter'
 import cleanCss from 'gulp-clean-css'
 import gulpStylelint from 'gulp-stylelint'
 import gulpif from 'gulp-if'
+import rev from 'gulp-rev'
 import { styles as config } from '../config'
 
 const stylesLintFunc = () => {
@@ -25,6 +26,7 @@ const stylesLintFunc = () => {
 
 const stylesFunc = () => {
     return src([config.appEntry])
+        .pipe(gulpif(!config.mode, rev()))
         .pipe(gulpif(config.mode, init()))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
@@ -36,6 +38,7 @@ const stylesFunc = () => {
 
 const printFunc = () => {
     return src([config.printEntry])
+        .pipe(gulpif(!config.mode, rev()))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulpif(!config.mode, cleanCss()))
