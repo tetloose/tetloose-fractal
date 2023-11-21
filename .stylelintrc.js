@@ -4,14 +4,21 @@ module.exports = {
         'stylelint-order'
     ],
     rules: {
-        "selector-pseudo-class-no-unknown": [
+        'selector-pseudo-class-no-unknown': [
             true,
             {
-                "ignorePseudoClasses": [
-                    "global"
+                'ignorePseudoClasses': [
+                    'global'
                 ]
             }
         ],
+        'declaration-block-no-redundant-longhand-properties': [
+            true, {
+                'ignoreShorthands': ['grid-template']
+            }
+        ],
+        'declaration-colon-space-after': 'always-single-line',
+        'declaration-colon-newline-after': 'always-multi-line',
         'max-empty-lines': 1,
         'string-quotes': 'single',
         'indentation': 'tab',
@@ -46,7 +53,6 @@ module.exports = {
         'declaration-block-trailing-semicolon': 'always',
         'declaration-no-important': true,
         'declaration-colon-space-before': 'never',
-        'declaration-colon-space-after': 'always',
         'font-weight-notation': 'numeric',
         'font-family-name-quotes': 'always-where-recommended',
         'comment-whitespace-inside': 'always',
@@ -57,7 +63,7 @@ module.exports = {
         'media-feature-name-no-vendor-prefix': true,
         'media-feature-colon-space-before': 'never',
         'media-feature-colon-space-after': 'always',
-        "no-descending-specificity": null,
+        'no-descending-specificity': null,
         'custom-property-empty-line-before': [
             'always',
             {
