@@ -69,6 +69,7 @@ if [ "$COMPONENT_SWITCH" ]; then
         echo ""
     fi
 
+    find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.readme.md" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
     find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.readme.md" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'
     find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.html" | xargs sed -i '' -e 's/'moduleName'/'$MODULE_NAME'/gi'
     find "$DIR/$COMPONENT/" -type f -name "$COMPONENT.html" | xargs sed -i '' -e 's/'ObjectName'/'$OBJECT_NAME'/gi'

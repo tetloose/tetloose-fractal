@@ -1,9 +1,11 @@
-# ObjectName
+# Usage
+
+<pre>&lbrace;&lbrace;> @moduleName data &rbrace;&rbrace;</pre>
 
 ## Context
 
 ```
-"context": {
+"data": {
     "styles": "",
     "modifier": ""
 }
