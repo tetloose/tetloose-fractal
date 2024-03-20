@@ -15,7 +15,7 @@ export class Video extends ComponentClass {
     constructor(module: HTMLElement) {
         super(module)
 
-        this.css(this.module, styles)
+        this.css(module, styles)
         this.autoPlay = this.module.dataset.autoPlay === 'true'
         this.muted = this.module.dataset.muted === 'true'
         this.loop = this.module.dataset.loop === 'true'

@@ -18,7 +18,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     "eslint.validate": [
         "javascript",
@@ -57,8 +57,7 @@
         ".scripts": true,
         "node_modules": true,
         ".vscode": true,
-        "package": true,
-        "azure-static-web-apps-proud-meadow-04c652503.yml": true
+        "package": true
     },
     "workspace.isHidden": false
 }

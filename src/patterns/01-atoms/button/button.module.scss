@@ -4,7 +4,7 @@
 	$btn: &;
 
 	position: relative;
-	padding: rem(spacing(.8) spacing(2));
+	padding: spacing(2) spacing(4);
 	overflow: hidden;
 	background-color: transparent;
 	border-width: 1px;
@@ -19,7 +19,7 @@
 	&:global([disabled]) {
 		opacity: .2;
 
-		@include interaction(disable);
+		@include disable(true);
 	}
 
 	&.is-inline {
@@ -38,7 +38,7 @@
 		align-items: center;
 		justify-content: flex-start;
 
-		@include interaction(disable);
+		@include disable(true);
 	}
 
 	&.is-light {

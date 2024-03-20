@@ -9,6 +9,9 @@ export class ComponentClass {
     }
 
     constructor(module: HTMLElement) {
+        const { dataset } = module
+        const { animation, duration } = dataset
+
         this.module = module
         this.state = {
             motionOptions: {
@@ -17,34 +20,25 @@ export class ComponentClass {
                 property: 'scroll'
             },
             loading: {
-                animation: module.dataset.animation ?? undefined,
-                duration: parseInt(module.dataset.duration ?? '0', 10),
-                type: module.dataset.type ?? ''
+                animation: animation ?? undefined,
+                duration: parseInt(duration ?? '0', 10)
             }
         }
     }
 
     load() {
         const { module, state } = this
-        const { animation, duration, type } = state.loading
+        const { classList } = module
+        const { loading } = state
+        const { animation, duration } = loading
 
-        module.removeAttribute('style')
+        module.style.opacity = ''
 
         setTimeout(() => {
-            if (animation) {
-                module.classList.add(`u-animate-${animation}`)
-            }
+            if (animation) classList.add(`u-load-${animation}`)
 
             setTimeout(() => {
-                if (type === 'figure') {
-                    setTimeout(() => {
-                        module.classList.forEach(className => className.includes('u-animate-') && module.classList.remove(className))
-                        module.querySelector('.js-figurePlaceholder')?.remove()
-                        module.querySelector('.js-loading')?.remove()
-                    }, duration)
-                } else {
-                    module.classList.forEach(className => className.includes('u-animate-') && module.classList.remove(className))
-                }
+                classList.forEach(className => className.includes('u-load-') && classList.remove(className))
             }, duration)
         }, duration)
     }
@@ -57,7 +51,7 @@ export class ComponentClass {
         }
     }
 
-    css<T>(element: HTMLElement, styles: T) {
+    css<T>(element: HTMLElement, styles: T, loadDuration = 0) {
         if (styles && element && typeof styles === 'object') {
             const { dataset, classList } = element
 
@@ -81,20 +75,26 @@ export class ComponentClass {
                 })
         }
 
-        this.load()
+        setTimeout(() => {
+            this.load()
+        }, loadDuration)
     }
 
     motion(property = 'scroll') {
         const { module, state } = this
         const { motionOptions } = state
 
-        this.updateState('motionOptions', { ...motionOptions, property: property })
+        this.updateState('motionOptions', {
+            ...motionOptions,
+            property: property
+        })
         this.handleMotion()
 
         const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => {
+                const { state } = this
+                const { motionOptions } = state
                 const { isIntersecting } = entry
-                const { motionOptions } = this.state
                 const { scrollListener, observed } = motionOptions
 
                 if (isIntersecting && !observed) {

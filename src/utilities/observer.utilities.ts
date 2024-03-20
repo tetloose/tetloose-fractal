@@ -6,8 +6,9 @@ export const observer = new IntersectionObserver((entries, observer) => {
 
         if (target instanceof HTMLElement && entry.isIntersecting) {
             const { dataset } = target
+            const { module } = dataset
 
-            if (dataset.module) loadComponent(target, dataset.module)
+            if (module) loadComponent(target, module)
 
             observer.unobserve(target)
         }

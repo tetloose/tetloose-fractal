@@ -26,7 +26,7 @@ This partial can be shared to any component &lbrace;&lbrace;> @accordion accordi
 
 ### component.animation
 
-This is the animation effect for loading the accordion, you can see the styles here `src/styles/utils/animate.scss`. Animations are automatically named `u-animate-` so you only need to supply the last part of the argument.
+This is the animation effect for loading the accordion, you can see the styles here `src/styles/utils/animate.scss`. Animations are automatically named `u-load-` so you only need to supply the last part of the argument.
 
 ### component.duration
 

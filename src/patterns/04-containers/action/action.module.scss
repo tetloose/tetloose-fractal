@@ -3,10 +3,9 @@
 .action {
 	display: flex;
 	flex-wrap: nowrap;
-	margin-top: -(rem(spacing(2)));
-	margin-right: -(rem(calc(rem(vars(layout, gutter)) / 2)));
-	margin-left: -(rem(calc(rem(vars(layout, gutter)) / 2)));
+	margin-top: -#{spacing(8)};
 	align-items: center;
+	gap: spacing(4);
 
 	&.is-align-container :global([data-module=Button]) {
 		width: 100%;
@@ -25,8 +24,6 @@
 	}
 
 	:global([data-module=Button]) {
-		margin-top: rem(spacing(2));
-		margin-right: calc(rem(vars(layout, gutter)) / 2);
-		margin-left: calc(rem(vars(layout, gutter)) / 2);
+		margin-top: spacing(4);
 	}
 }

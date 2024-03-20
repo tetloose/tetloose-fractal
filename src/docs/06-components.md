@@ -37,7 +37,7 @@ This relates to the scss module `*.module.scss` within the Component. Types are 
 
 ## class="&lbrace;&lbrace;> initialAnimation&rbrace;&rbrace;
 
-The initial animation of the component `u-animate-hide`, this is a handlebar Partial. See `src/config/handlebars.js` for more info.
+The initial animation of the component `u-load-hide`, this is a handlebar Partial. See `src/config/handlebars.js` for more info.
 
 ## Context
 
@@ -70,7 +70,7 @@ export class ObjectName extends ComponentClass {
     constructor(module: HTMLElement) {
         super(module)
 
-        this.css(this.module, styles)
+        this.css(module, styles)
     }
 }
 
@@ -87,7 +87,7 @@ export class ObjectName extends ComponentClass {
     constructor(module) {
         super(module)
 
-        this.css(this.module, styles)
+        this.css(module, styles)
     }
 }
 

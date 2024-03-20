@@ -1,5 +1,5 @@
 .l-row {
-	$this: &;
+	$row: &;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -7,48 +7,56 @@
 	max-width: rem(vars(layout, max-width));
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: calc(rem(vars(layout, gutter)) / 2);
-	padding-left: calc(rem(vars(layout, gutter)) / 2);
+	padding-right: spacing(4);
+	padding-left: spacing(4);
 
-	&.is-justify-left {
-		justify-content: flex-start;
+	&.direction-row {
+		flex-direction: row;
 	}
 
-	&.is-justify-center {
-		justify-content: center;
+	&.direction-column {
+		flex-direction: column;
 	}
 
-	&.is-justify-right {
-		justify-content: flex-end;
-	}
-
-	&.is-align-top {
-		align-items: flex-start;
-	}
-
-	&.is-align-middle {
-		align-items: center;
-	}
-
-	&.is-align-bottom {
-		align-items: flex-end;
-	}
-
-	&.is-reverse {
+	&.reverse {
 		flex-direction: row-reverse;
 	}
 
-	&.is-relative {
-		position: relative;
+	&.justify-left {
+		justify-content: flex-start;
 	}
 
-	&.no-overflow {
-		overflow: hidden;
+	&.justify-center {
+		justify-content: center;
+	}
+
+	&.justify-right {
+		justify-content: flex-end;
+	}
+
+	&.align-top {
+		align-items: flex-start;
+	}
+
+	&.align-middle {
+		align-items: center;
+	}
+
+	&.align-bottom {
+		align-items: flex-end;
 	}
 
 	&.no-gutter {
 		padding-right: 0;
 		padding-left: 0;
+	}
+
+	&.no-gutter-l {
+		padding-left: 0;
+	}
+
+	&.no-gutter-r {
+		padding-right: 0;
 	}
 
 	@for $i from 1 through 5 {
@@ -70,91 +78,73 @@
 		}
 
 		@include mq($breakpoint) {
-			&.is-#{$selecter}-justify-left {
-				justify-content: flex-start;
+			&.#{$selecter}-direction-row {
+				flex-direction: row;
 			}
 
-			&.is-#{$selecter}-justify-center {
-				justify-content: center;
+			&.#{$selecter}-direction-column {
+				flex-direction: column;
 			}
 
-			&.is-#{$selecter}-justify-right {
-				justify-content: flex-end;
-			}
-
-			&.is-#{$selecter}-align-top {
-				align-items: flex-start;
-			}
-
-			&.is-#{$selecter}-align-middle {
-				align-items: center;
-			}
-
-			&.is-#{$selecter}-align-bottom {
-				align-items: flex-end;
-			}
-
-			&.is-#{$selecter}-reverse {
+			&.#{$selecter}-reverse {
 				flex-direction: row-reverse;
 			}
 
-			&.is-#{$selecter}-relative {
-				position: relative;
+			&.#{$selecter}-justify-left {
+				justify-content: flex-start;
 			}
 
-			&.no-#{$selecter}-overflow {
-				overflow: hidden;
+			&.#{$selecter}-justify-center {
+				justify-content: center;
 			}
 
-			&.no-#{$selecter}-gutter {
+			&.#{$selecter}-justify-right {
+				justify-content: flex-end;
+			}
+
+			&.#{$selecter}-align-top {
+				align-items: flex-start;
+			}
+
+			&.#{$selecter}-align-middle {
+				align-items: center;
+			}
+
+			&.#{$selecter}-align-bottom {
+				align-items: flex-end;
+			}
+
+			&.#{$selecter}-no-gutter {
 				padding-right: 0;
 				padding-left: 0;
+			}
+
+			&.#{$selecter}-no-gutter-l {
+				padding-left: 0;
+			}
+
+			&.#{$selecter}-no-gutter-r {
+				padding-right: 0;
 			}
 		}
 	}
 
 	&__col {
 		width: 100%;
-		padding-right: calc(rem(vars(layout, gutter)) / 2);
-		padding-left: calc(rem(vars(layout, gutter)) / 2);
-
-		&[class*=align-] {
-			display: flex;
-			width: 100%;
-		}
-
-		&.is-justify-left {
-			margin-right: auto;
-		}
-
-		&.is-justify-center {
-			margin-right: auto;
-			margin-left: auto;
-		}
-
-		&.is-justify-right {
-			margin-left: auto;
-		}
-
-		&.is-align-middle {
-			align-items: center;
-		}
-
-		&.is-align-bottom {
-			align-items: flex-end;
-		}
-
-		&.is-relative {
-			position: relative;
-		}
-
-		&.no-overflow {
-			overflow: hidden;
-		}
+		padding-right: spacing(4);
+		padding-left: spacing(4);
 
 		&.no-gutter {
 			padding-right: 0;
 			padding-left: 0;
+		}
+
+		&.no-gutter-l {
+			padding-left: 0;
+		}
+
+		&.no-gutter-r {
+			padding-right: 0;
 		}
 
 		&.is-1 {
@@ -272,6 +262,19 @@
 			}
 
 			@include mq($breakpoint) {
+				&.#{$selecter}-no-gutter {
+					padding-right: 0;
+					padding-left: 0;
+				}
+
+				&.#{$selecter}-no-gutter-l {
+					padding-left: 0;
+				}
+
+				&.#{$selecter}-no-gutter-r {
+					padding-right: 0;
+				}
+
 				&.is-#{$selecter}-1 {
 					width: column-width(12, 1);
 				}
@@ -314,43 +317,6 @@
 
 				&.is-#{$selecter}-11 {
 					width: column-width(12, 11);
-				}
-
-				&.is-#{$selecter}-justify-left {
-					margin-right: auto;
-					justify-content: flex-start;
-				}
-
-				&.is-#{$selecter}-justify-center {
-					margin-right: auto;
-					margin-left: auto;
-					justify-content: center;
-				}
-
-				&.is-#{$selecter}-justify-right {
-					margin-left: auto;
-					justify-content: flex-end;
-				}
-
-				&.is-#{$selecter}-align-middle {
-					align-items: center;
-				}
-
-				&.is-#{$selecter}-align-bottom {
-					align-items: flex-end;
-				}
-
-				&.is-#{$selecter}-relative {
-					position: relative;
-				}
-
-				&.no-#{$selecter}-overflow {
-					overflow: hidden;
-				}
-
-				&.no-#{$selecter}-gutter {
-					padding-right: 0;
-					padding-left: 0;
 				}
 
 				&.#{$selecter}-order-1 {
@@ -404,10 +370,10 @@
 		}
 	}
 
-	#{$this} {
+	#{$row} {
 		width: auto;
 		max-width: none;
-		margin-right: -(rem(vars(layout, gutter)));
-		margin-left: -(rem(vars(layout, gutter)));
+		padding-right: -#{spacing(8)};
+		padding-left: -#{spacing(8)};
 	}
 }

@@ -1,7 +1,12 @@
 import { ImageProps } from './element.types'
 
 export function imageElement(options: ImageProps): HTMLElement {
-    const { modifier, styles, alt, mobile, tablet, desktop } = options
+    const {
+        alt,
+        mobile,
+        tablet,
+        desktop
+    } = options
     const image = new Image()
     const srcset = `
         ${desktop ? `${desktop} 1024w,` : ''}
@@ -9,22 +14,11 @@ export function imageElement(options: ImageProps): HTMLElement {
         ${mobile ? `${mobile} 480w` : ''}
     `
 
-    if (mobile) {
-        image.src = mobile
-    }
-
-    if (modifier) {
-        modifier
-            .split(' ')
-            .forEach(name => name && image.classList.add(name))
-    }
-
-    if (styles) {
-        image.setAttribute('data-styles', styles)
-    }
-
+    image.classList.add('u-figure__img', 'is-loading')
     image.setAttribute('alt', alt ? alt : '')
     image.setAttribute('srcset', srcset)
+
+    if (mobile) image.src = mobile
 
     return image
 }

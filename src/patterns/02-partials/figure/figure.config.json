@@ -10,20 +10,14 @@
     },
     "preview": "@preview",
     "context": {
-        "duration": 400,
-        "animation": "skeleton",
-        "styles": "",
-        "modifier": "",
-        "ratio": "",
-        "image": {
-            "styles": "",
-            "modifier": "",
-            "alt": "Image alt",
-            "placeholder": "/images/placeholder.jpg",
-            "desktop": "/images/desktop.jpg",
-            "tablet": "/images/tablet.jpg",
-            "mobile": "/images/mobile.jpg"
-        }
+        "ratio": "16x9",
+        "size": "cover",
+        "position": "center",
+        "alt": "Image alt",
+        "placeholder": "/images/placeholder.jpg",
+        "desktop": "/images/desktop.jpg",
+        "tablet": "/images/tablet.jpg",
+        "mobile": "/images/mobile.jpg"
     },
 	"variants": [
 		{

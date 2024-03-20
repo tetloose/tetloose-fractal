@@ -50,7 +50,13 @@ Rem function is located `src/styles/mixins/rem.scss`.
 - `font-size: rem(16px);`
 - `padding: rem(16px 32px);`
 
-### Spacing with REM
+### Spacing function
 
-- `font-size: rem(spacing(1))`;
-- `padding: rem(spacing(1) spacing(2));`
+```scss
+@function spacing($size) {
+	@return rem(calc(vars(layout, spacing) * $size));
+}
+```
+
+- `font-size: spacing(1)`;
+- `padding: spacing(1) spacing(2);`

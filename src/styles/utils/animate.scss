@@ -1,78 +1,16 @@
-.u-animate-hide {
-	opacity: 0;
-	overflow-x: hidden;
-}
-
 .u-animate-fade-in {
-	opacity: 0;
-	animation-name: kf-fade;
-	animation-duration: vars(transition, med);
-	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
+	animation-name: kf-fade-in;
+	animation-duration: vars(transition-duration, med);
+	animation-timing-function: vars(transition-timing, med);
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 }
 
 .u-animate-fade-out {
-	opacity: 0;
-	animation-name: kf-fade;
-	animation-duration: vars(transition, med);
-	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
+	animation-name: kf-fade-out;
+	animation-duration: vars(transition-duration, med);
+	animation-timing-function: vars(transition-timing, med);
 	animation-iteration-count: 1;
 	animation-direction: reverse;
 	animation-fill-mode: forwards;
-}
-
-@keyframes kf-fade {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-.u-animate-skeleton {
-	position: relative;
-	animation-name: kf-skeleton;
-	animation-duration: vars(transition, med);
-	animation-timing-function: cubic-bezier(.75, .75, .75, 1);
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-
-	> img {
-		&:nth-child(2) {
-			display: block;
-			width: 100%;
-			height: 100%;
-
-			@include object-fit;
-
-			opacity: .5;
-		}
-
-		&:nth-child(3) {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			opacity: 0;
-			animation-name: kf-fade;
-			animation-duration: vars(transition, xxxslow);
-			animation-timing-function: cubic-bezier(.75, .75, .75, 1);
-			animation-iteration-count: 1;
-			animation-fill-mode: forwards;
-		}
-	}
-}
-
-@keyframes kf-skeleton {
-	to {
-		background-color: colors(skeleton, to);
-	}
-
-	from {
-		background-color: colors(skeleton, from);
-	}
 }

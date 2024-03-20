@@ -32,7 +32,9 @@ $colors: (
 		color: colors(default, dark);
 	}
 
-	.u-bg-dark &:not([data-module=Button]) {
+	.u-bg-dark &:not([data-module=Button]),
+	.u-bg-primary &:not([data-module=Button]),
+	.u-bg-secondary &:not([data-module=Button]) {
 		color: colors(default, light);
 	}
 }
@@ -42,7 +44,9 @@ $colors: (
 		color: colors(default, dark);
 	}
 
-	.u-bg-dark &:not([data-module=Button]) {
+	.u-bg-dark &:not([data-module=Button]),
+	.u-bg-primary &:not([data-module=Button]),
+	.u-bg-secondary &:not([data-module=Button]) {
 		color: colors(default, light);
 	}
 }

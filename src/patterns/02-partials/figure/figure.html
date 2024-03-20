@@ -1,22 +1,18 @@
-{{#if image}}
 <figure
     data-module="Figure"
-    data-type="figure"
     data-duration="{{#if duration}}{{duration}}{{else}}400{{/if}}"
-    data-styles="figure{{#if styles}} {{styles}}{{/if}}"
-    data-image-class-name="{{#if image.modifier}}{{image.modifier}}{{/if}}"
-    data-image-styles="figure__img{{#if image.styles}} {{image.styles}}{{/if}}"
-    data-image-alt="{{#if image.alt }}{{ image.alt }}{{/if}}"
-    data-image-mobile="{{#if image.mobile }}{{ image.mobile }}{{/if}}"
-    data-image-tablet="{{#if image.tablet }}{{ image.tablet }}{{/if}}"
-    data-image-desktop="{{#if image.desktop }}{{ image.desktop }}{{/if}}"
-    class="{{#if animation}}u-animate-{{animation}}{{/if}}{{#if modifier}} {{modifier}}{{/if}}{{#if ratio}} u-ratio-{{ratio}}{{/if}}">
+    data-styles="{{#if styles}} {{styles}}{{/if}}"
+    data-alt="{{#if alt }}{{ alt }}{{/if}}"
+    data-mobile="{{#if mobile }}{{ mobile }}{{/if}}"
+    data-tablet="{{#if tablet }}{{ tablet }}{{/if}}"
+    data-desktop="{{#if desktop }}{{ desktop }}{{/if}}"
+    class="u-figure {{#if animation}}u-load-{{animation}}{{/if}}{{#if modifier}} {{modifier}}{{/if}}{{#if ratio}} u-ratio-{{ratio}}{{/if}}{{#if size}} is-{{size}}{{/if}}{{#if position}} is-{{position}}{{/if}}">
     {{ render '@loading--centered' }}
-    {{#if image.placeholder }}
+    {{#if placeholder }}
         <img
-            class="js-figurePlaceholder"
-            src="{{ image.placeholder }}"
+            data-placeholder="true"
+            class="u-figure__img"
+            src="{{ placeholder }}"
             alt="">
     {{/if}}
 </figure>
-{{/if}}

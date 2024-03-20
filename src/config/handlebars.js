@@ -20,8 +20,17 @@ function getFileName(folderPath, targetValue) {
 
 module.exports = {
     helpers: {
+        ifLast: function(index, list, options) {
+            return (index === list.length-1) ? options.fn(this) : options.inverse(this)
+        },
+        ifFalse: function(arg, options) {
+            return (arg === false) ? options.fn(this) : options.inverse(this)
+        },
         ifEquals: function(arg1, arg2, options) {
             return (arg1 === arg2) ? options.fn(this) : options.inverse(this)
+        },
+        ifIncludes: function(arr, arg, options) {
+            return arr.includes(arg) ? options.fn(this) : options.inverse(this)
         },
         ifAnd: function(arg1, arg2, options) {
             return (arg1 && arg2) ? options.fn(this) : options.inverse(this)
@@ -35,6 +44,6 @@ module.exports = {
     },
     partials: {
         initialStyle: 'opacity: 0',
-        initialAnimation: 'u-animate-hide'
+        initialAnimation: 'u-load-hide'
     }
 }

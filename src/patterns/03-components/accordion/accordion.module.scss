@@ -13,12 +13,12 @@
 .accordion {
 	$accordion: &;
 
-	border-width: 0 0 rem(2px);
+	border-width: 0 0 spacing(.5);
 	border-style: solid;
 	border-color: colors(default, dark);
 
 	&__item {
-		border-width: rem(2px) 0 0;
+		border-width: spacing(.5) 0 0;
 		border-style: solid;
 		border-color: colors(default, dark);
 
@@ -43,7 +43,7 @@
 		position: relative;
 		width: 100%;
 		margin: 0;
-		padding: rem(spacing(.5)) rem(spacing(1));
+		padding: spacing(2) spacing(4);
 		background-color: colors(default, light);
 		color: colors(default, dark);
 		outline: none;
@@ -58,10 +58,10 @@
 			content: '';
 			position: absolute;
 			top: 50%;
-			right: rem(spacing(1));
+			right: spacing(1);
 			width: 0;
 			height: 0;
-			border-width: rem(5px) rem(5px) 0 rem(5px);
+			border-width: spacing(.8) spacing(.8) 0 spacing(.8);
 			border-style: solid;
 			border-color: colors(default, dark) transparent transparent transparent;
 			transform: translate(-50%, -50%);
@@ -70,7 +70,7 @@
 
 			[dir=rtl] & {
 				right: auto;
-				left: rem(spacing(1));
+				left: spacing(1);
 			}
 		}
 
@@ -96,7 +96,7 @@
 		@include transition('height');
 
 		:global([data-module=Content]) {
-			padding: rem(spacing(1));
+			padding: spacing(4);
 		}
 	}
 }

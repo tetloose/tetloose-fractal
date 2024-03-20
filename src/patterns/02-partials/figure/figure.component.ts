@@ -1,4 +1,3 @@
-import styles from './figure.module.scss'
 import { ComponentClass } from '@utilities'
 import { imageElement } from '@elements'
 
@@ -10,22 +9,35 @@ export class Figure extends ComponentClass {
     }
 
     createFigure() {
-        const { module } = this
-        const { imageClassName, imageStyles, imageAlt, imageMobile, imageTablet, imageDesktop } = module.dataset
+        const { module, state } = this
+        const { loading } = state
+        const { duration } = loading
+        const {
+            alt,
+            mobile,
+            tablet,
+            desktop
+        } = module.dataset
         const imageData = {
-            className: imageClassName ? imageClassName : '',
-            styles: imageStyles ? imageStyles : '',
-            alt: imageAlt ? imageAlt : '',
-            mobile: imageMobile ? imageMobile : '',
-            tablet: imageTablet ? imageTablet : '',
-            desktop: imageDesktop ? imageDesktop : ''
+            alt: alt ? alt : '',
+            mobile: mobile ? mobile : '',
+            tablet: tablet ? tablet : '',
+            desktop: desktop ? desktop : ''
         }
+        const placeholder = module.querySelector('[data-placeholder]') as HTMLImageElement
+        const spinner = module.querySelector('.js-loading') as HTMLImageElement
         const image = imageElement(imageData)
 
         image.onload = () => {
             module.appendChild(image)
 
-            this.css(module, styles)
+            this.load()
+
+            setTimeout(() => {
+                if (placeholder) placeholder.remove()
+                if (spinner) spinner.classList.add('u-load-hide')
+                image.classList.remove('is-loading')
+            }, duration)
         }
     }
 }

@@ -1,5 +1,6 @@
-.u-form label {
-	display: inline-block;
+.u-form label,
+.u-label {
+	display: block;
 
 	@extend %type-label;
 }

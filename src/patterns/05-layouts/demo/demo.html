@@ -20,31 +20,17 @@
             </div>
         {{/@media}}
     </section>
-    <section class="u-spacing-t-4 u-spacing-b-4 u-bg-dark">
-        <div class="l-row">
-            <div class="l-row__col is-med-10 is-med-justify-center">
-                {{#> @content this.content }}
-                    {{{text}}}
-                {{/@content}}
-                <div class="u-spacing-t-2">
-                    {{#> @modal this.modal }}
-                        {{ render '@gallery' }}
-                    {{/@modal}}
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="u-spacing-t-4 u-spacing-b-4">
         {{#> @form }}
-            <div class="l-row">
-                <div class="l-row__col is-med-10 is-med-justify-center">
+            <div class="l-row med-justify-center">
+                <div class="l-row__col is-med-10">
                     <div class="l-row">
-                        <div class="l-row__col is-med-6 ">
+                        <div class="l-row__col is-med-6">
                             {{render '@text'}}
                             {{render '@text'}}
                             {{render '@text'}}
                         </div>
-                        <div class="l-row__col is-med-6 ">
+                        <div class="l-row__col is-med-6">
                             {{render '@textarea'}}
                             {{#> @action this.action }}
                                 {{render "@button"}}
@@ -56,8 +42,8 @@
         {{/@form}}
     </section>
     <section class="u-spacing-t-4 u-spacing-b-4 u-bg-primary">
-        <div class="l-row">
-            <div class="l-row__col is-med-10 is-med-justify-center">
+        <div class="l-row med-justify-center">
+            <div class="l-row__col is-med-10">
                 {{render '@accordion' accordion }}
             </div>
         </div>

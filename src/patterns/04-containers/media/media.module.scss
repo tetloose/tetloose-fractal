@@ -2,21 +2,21 @@
 
 .media {
 	@include mq(vars(breakpoint, sml), max-width) {
-		margin-top: -(rem(spacing(1)));
+		margin-top: -#{spacing(4)};
 	}
 
 	@include mq(vars(breakpoint, sml)) {
-		margin-top: -(rem(vars(layout, gutter)));
+		margin-top: -#{spacing(8)};
 	}
 
 	:global([data-module=Video]),
 	:global([data-module=Figure]) {
 		@include mq(vars(breakpoint, sml), max-width) {
-			margin-top: rem(spacing(1));
+			margin-top: spacing(4);
 		}
 
 		@include mq(vars(breakpoint, sml)) {
-			margin-top: rem(vars(layout, gutter));
+			margin-top: spacing(8);
 		}
 	}
 }

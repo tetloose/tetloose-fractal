@@ -1,33 +1,33 @@
 .u-spacing-t-1 {
-	padding-top: rem(spacing(1));
+	padding-top: spacing(4);
 }
 
 .u-spacing-t-2 {
-	padding-top: rem(spacing(2));
+	padding-top: spacing(8);
 }
 
 .u-spacing-t-3 {
-	padding-top: rem(spacing(3));
+	padding-top: spacing(12);
 }
 
 .u-spacing-t-4 {
-	padding-top: rem(spacing(4));
+	padding-top: spacing(16);
 }
 
 .u-spacing-b-1 {
-	padding-bottom: rem(spacing(1));
+	padding-bottom: spacing(4);
 }
 
 .u-spacing-b-2 {
-	padding-bottom: rem(spacing(2));
+	padding-bottom: spacing(8);
 }
 
 .u-spacing-b-3 {
-	padding-bottom: rem(spacing(3));
+	padding-bottom: spacing(12);
 }
 
 .u-spacing-b-4 {
-	padding-bottom: rem(spacing(4));
+	padding-bottom: spacing(16);
 }
 
 @for $i from 1 through 5 {
@@ -50,35 +50,35 @@
 
 	@include mq($breakpoint) {
 		.u-spacing-#{$selecter}-t-1 {
-			padding-top: rem(spacing(1));
+			padding-top: spacing(4);
 		}
 
 		.u-spacing-#{$selecter}-t-2 {
-			padding-top: rem(spacing(2));
+			padding-top: spacing(8);
 		}
 
 		.u-spacing-#{$selecter}-t-3 {
-			padding-top: rem(spacing(3));
+			padding-top: spacing(12);
 		}
 
 		.u-spacing-#{$selecter}-t-4 {
-			padding-top: rem(spacing(4));
+			padding-top: spacing(16);
 		}
 
 		.u-spacing-#{$selecter}-b-1 {
-			padding-bottom: rem(spacing(1));
+			padding-bottom: spacing(4);
 		}
 
 		.u-spacing-#{$selecter}-b-2 {
-			padding-bottom: rem(spacing(2));
+			padding-bottom: spacing(8);
 		}
 
 		.u-spacing-#{$selecter}-b-3 {
-			padding-bottom: rem(spacing(3));
+			padding-bottom: spacing(12);
 		}
 
 		.u-spacing-#{$selecter}-b-4 {
-			padding-bottom: rem(spacing(4));
+			padding-bottom: spacing(16);
 		}
 	}
 }

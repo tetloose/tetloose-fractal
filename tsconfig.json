@@ -33,7 +33,7 @@
                 "./src/*"
             ],
             "@styles/*": [
-                "./src/scss/*"
+                "./src/styles/*"
             ],
             "@patterns": [
                 "./src/patterns"
@@ -94,7 +94,7 @@
         "./src/patterns/**/*.js",
         "./src/patterns/**/*.ts",
         "./src/patterns/**/*.scss",
-        "./src/scss/**/*.scss",
+        "./src/styles/**/*.scss",
         "src/**/*.ts"
     ],
     "exclude": [

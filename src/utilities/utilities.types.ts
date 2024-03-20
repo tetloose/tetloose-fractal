@@ -1,7 +1,10 @@
+export type ObjectToStringProps = {
+    [key: string]: string
+}
+
 export type LoadingProps = {
     animation?: string
     duration: number
-    type: string
 }
 
 export type MotionOptionsProps = {
@@ -10,20 +13,14 @@ export type MotionOptionsProps = {
     property: string
 }
 
-export type StateProps = string | boolean | number | HTMLElement | HTMLVideoElement | HTMLButtonElement | MotionOptionsProps | LoadingProps | null
-
-export type ObjectToStringProps = {
-    [key: string]: string
-}
-
 export type RequestProps = Array<{
     [key: string]: {
         [key: string]: string | number
     }
 }>
 
-export type ResponseProps = {
-    [key: string]: RequestProps
+export type ResponseProps<T = Record<string, unknown>> = {
+    [key: string]: T
 }
 
 export type MockParams = {
@@ -40,7 +37,11 @@ export type FetchParamsProps = {
     resetMocks(): void;
 }
 
+export type HTMLIFrame = HTMLIFrameElement | null
 export type HTMLProps = HTMLElement | null
+export type InputProps = HTMLInputElement | null
 export type HTMLNodeProps = NodeListOf<HTMLElement> | null
 export type ButtonProps = HTMLButtonElement | null
 export type HTMLVideoProps = HTMLVideoElement | null
+
+export type StateProps = string | boolean | number | HTMLElement | HTMLVideoElement | HTMLButtonElement | MotionOptionsProps | LoadingProps | null

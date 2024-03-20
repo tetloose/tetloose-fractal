@@ -20,4 +20,4 @@ This runs the dev server.
 
 If you have already run `yarn dev` and want to spin up the dev server without generating all the assets use `yarn serve`.
 
-[STRUCTURE >>](/docs/structure)
+[ARCHITECTURE >>](/docs/architecture)

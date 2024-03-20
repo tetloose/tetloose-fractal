@@ -1,5 +1,5 @@
 #!/bin/bash
 #setup
 
-eval "yarn && yarn prepare && yarn create-hook"
-eval "yarn dev"
+eval "yarn && yarn prepare"
+eval "code . && yarn dev"

@@ -31,12 +31,14 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 - `yarn dev` - Start dev server with asset generation
 - `yarn serve` - Start dev server without asset generation
 - `yarn build` - Build application
-- `yarn lint` - Lint js
+- `yarn lint` - Lint scss & js|ts
+- `yarn lint:fix` - Fix Lint issues
 - `yarn test` - Start Vitest testing suite
 - `yarn coverage` - Get Vitest coverage stats
 - `yarn favicon` - Generate favicon
 - `yarn git:commit` - Commit changes
-- `yarn gen:component` - Generate components
+- `yarn gen:component` - Generate component
+- `yarn add:component` - Add component from library
 - `yarn accessibility` - Generate accessibility reports
 
 ## Docs

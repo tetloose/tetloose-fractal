@@ -17,6 +17,7 @@ module.exports = {
                 'ignoreShorthands': ['grid-template']
             }
         ],
+        'value-keyword-case': null,
         'declaration-colon-space-after': 'always-single-line',
         'declaration-colon-newline-after': 'always-multi-line',
         'max-empty-lines': 1,
@@ -339,7 +340,10 @@ module.exports = {
     },
     ignoreFiles: [
         'src/styles/print.scss',
+        ".vscode",
+        ".scripts",
         'public',
+        "node_modules",
         'build',
         'src/styles/utils/icons.scss'
     ]

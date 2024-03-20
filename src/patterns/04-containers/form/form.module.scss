@@ -3,8 +3,8 @@
 %reset {
 	display: block;
 	width: 100%;
-	padding: rem(spacing(.5));
-	border-width: rem(2px);
+	padding: spacing(2);
+	border-width: spacing(.5);
 	border-style: solid;
 	border-color: colors(default, dark);
 	appearance: none;
@@ -20,7 +20,7 @@
 	&[disabled] {
 		opacity: .3;
 
-		@include interaction(disable);
+		@include disable(true);
 	}
 
 	&.is-hidden {
@@ -34,15 +34,15 @@
 
 .form {
 	width: 100%;
-	margin-top: (-(rem(spacing(1))));
+	margin-top: -#{spacing(4)};
 
 	&__field {
-		padding-top: rem(spacing(1));
+		padding-top: spacing(4);
 	}
 
 	&__label {
 		display: block;
-		padding-bottom: rem(spacing(.5));
+		padding-bottom: spacing(2);
 
 		@extend %type-label;
 	}
@@ -54,14 +54,14 @@
 	&__textarea {
 		@extend %reset;
 
-		min-height: rem(228px);
+		min-height: spacing(57);
 		overflow: auto;
 		resize: vertical;
 	}
 
 	&__validation {
 		display: block;
-		padding-top: rem(spacing(.5));
+		padding-top: spacing(2);
 		color: colors(default, primary);
 
 		@extend %type-label;

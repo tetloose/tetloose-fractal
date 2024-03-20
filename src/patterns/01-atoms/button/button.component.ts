@@ -6,7 +6,7 @@ export class Button extends ComponentClass {
     constructor(module: HTMLElement) {
         super(module)
 
-        this.css(this.module, styles)
+        this.css(module, styles)
     }
 }
 

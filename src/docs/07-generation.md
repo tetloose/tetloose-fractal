@@ -59,4 +59,4 @@ export const modules = {
 1. `*.html`
 2. `*.config.json`
 
-[TESTING >>](/docs/testing)
+[LIBRARY >>](/docs/library)

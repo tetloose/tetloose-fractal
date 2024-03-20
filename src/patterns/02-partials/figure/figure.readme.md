@@ -12,16 +12,14 @@ The partial initially loads a placeholder image, a super low rez blurred version
     "animation": "skeleton",
     "styles": "",
     "modifier": "",
-    "ratio": "",
-    "image": {
-        "styles": "",
-        "modifier": "",
-        "alt": "Image from unsplash.it",
-        "placeholder": "/images/placeholder.png",
-        "desktop": "/images/desktop.jpg",
-        "tablet": "/images/tablet.jpg",
-        "mobile": "/images/mobile.jpg"
-    }
+    "ratio": "16x9",
+    "size": "is-cover",
+    "position": "is-center",
+    "alt": "Image from unsplash.it",
+    "placeholder": "/images/placeholder.png",
+    "desktop": "/images/desktop.jpg",
+    "tablet": "/images/tablet.jpg",
+    "mobile": "/images/mobile.jpg"
 }
 ```
 
@@ -31,7 +29,7 @@ This is the speed of the animation, make sure the speed matches the image fade i
 
 ### animation
 
-This is the animation effect for the image load, it's default is **skeleton**, you can see the styles here `src/styles/utils/animate.scss`. Animations are automatically named `u-animate-` so you only need to supply the last part of the argument.
+This is the animation effect for the image load, it's default is **skeleton**, you can see the styles here `src/styles/utils/animate.scss`. Animations are automatically named `u-load-` so you only need to supply the last part of the argument.
 
 ### styles
 

@@ -43,12 +43,12 @@
 		@extend %type-paragraph;
 
 		@include mq(vars(breakpoint, med)) {
-			padding: rem(spacing(1));
+			padding: spacing(4);
 			border-width: 0 1px 0 0;
 		}
 
 		@include mq(vars(breakpoint, med), max-width) {
-			padding: rem(spacing(1) 0);
+			padding: spacing(4) 0;
 			border-width: 1px 0 0;
 		}
 

@@ -18,12 +18,10 @@ $vars: (
 	),
 	layout: (
 		max-width: 1440px,
-		gutter: 32px,
 		browser-context: 16px,
-		spacing: 16px
+		spacing: 4px
 	),
 	breakpoint: (
-		zero: 0,
 		sml: 480px,
 		med: 768px,
 		lrg: 1024px,
@@ -52,5 +50,30 @@ $vars: (
 		fast: 300ms,
 		xfast: 200ms,
 		xxfast: 100ms
+	),
+	transition-duration: (
+		slow: 500ms,
+		med: 400ms,
+		fast: 300ms,
+		xfast: 200ms,
+		xxfast: 100ms
+	),
+	transition-timing: (
+		slow: cubic-bezier(0, 0, .25, 1),
+		med: cubic-bezier(.25, .3, .25, 1),
+		fast: cubic-bezier(.25, .3, .25, 1),
+		ease: ease,
+		ease-in: ease-in,
+		ease-in-out: ease-in-out
+	),
+	z-index: (
+		hidden: -1,
+		zero: 0,
+		sml: 1,
+		med: 2,
+		lrg: 3,
+		xlrg: 4,
+		xxlrg: 5,
+		xxxlrg: 6
 	)
 );

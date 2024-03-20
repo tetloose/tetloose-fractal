@@ -36,10 +36,12 @@
         "test": "vitest",
         "coverage": "vitest run --coverage",
         "lint": "eslint --ext .js,.ts . && stylelint \"**/*.scss\"",
+        "lint:fix": "eslint --ext .js,.ts --fix . && stylelint \"src/**/*.scss\" --fix",
         "pre-commit": "yarn lint && vitest --watch false",
         "create-hook": "husky add .husky/pre-commit \"yarn pre-commit\"",
         "prepare": "husky install",
         "gen:component": "bash toolkit generate-component",
+        "add:component": "bash toolkit add-component",
         "accessibility": "gulp accessibility"
     },
     "dependencies": {
@@ -71,7 +73,6 @@
         "gulp-dart-sass": "^1.0.2",
         "gulp-eslint-new": "^1.7.1",
         "gulp-filter": "^7.0.0",
-        "gulp-hash": "^4.2.2",
         "gulp-icomoon-builder": "^1.0.0",
         "gulp-if": "^3.0.0",
         "gulp-jsbeautifier": "^3.0.1",

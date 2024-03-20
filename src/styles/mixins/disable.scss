@@ -1,4 +1,4 @@
-@mixin interaction($disabled: false) {
+@mixin disable($disabled: false) {
 	@if $disabled {
 		cursor: default;
 		pointer-events: none;

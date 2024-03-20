@@ -1,0 +1,30 @@
+%form-reset {
+	display: block;
+	width: 100%;
+	padding: spacing(3.25) spacing(3);
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: transparent;
+	color: color(default, dark);
+	appearance: none;
+
+	@extend %type-input;
+
+	&::placeholder {
+		color: color(default, dark);
+
+		@include transition('color');
+	}
+
+	&[disabled] {
+		opacity: .3;
+
+		@include disable(true);
+	}
+
+	@include mq-hover {
+		cursor: pointer;
+
+		@include transition('color, background-color, border-color');
+	}
+}

@@ -1,6 +1,4 @@
 export type ImageProps = {
-    modifier?: string
-    styles?: string
     alt?: string
     mobile: string
     tablet: string

@@ -1,14 +1,15 @@
 html {
 	width: 100%;
 	min-height: vars(vh, fullscreen);
-	visibility: visible;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	font-size: 100%;
 	line-height: 1.5;
+	text-rendering: optimizeLegibility;
 
 	@extend %f-body;
 	@extend %f-regular;
+	@include scrollbar;
 	@include font-smoothing;
 
 	&.no-scroll {

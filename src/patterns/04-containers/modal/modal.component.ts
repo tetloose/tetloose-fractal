@@ -12,7 +12,7 @@ export class Modal extends ComponentClass {
         this.modalOpen = this.module.querySelector('.js-modalOpen')
         this.modalClose = this.module.querySelector('.js-modalClose')
         this.modalWindow = this.module.querySelector('.js-modalWindow')
-        this.css(this.module, styles)
+        this.css(module, styles)
         this.loadEventListeners()
     }
 

@@ -1,6 +1,6 @@
 @include font-face('icons', '../icons/icons', normal, svg woff ttf);
 
-[class*=u-icon-] {
+%icons {
 	display: inline-block;
 	font-style: normal;
 	font-family: icons, sans-serif;
@@ -8,6 +8,10 @@
 	text-rendering: auto;
 
 	@include font-smoothing;
+}
+
+[class*=u-icon-] {
+    @extend %icons;
 }
 {{#icons}}
 

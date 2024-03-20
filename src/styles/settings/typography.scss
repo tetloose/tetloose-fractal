@@ -82,6 +82,12 @@
 	@extend %f-regular;
 }
 
+%type-input {
+	font-size: rem(vars(type, body));
+
+	@extend %f-regular;
+}
+
 %type-label {
 	font-size: rem(vars(type, body));
 
